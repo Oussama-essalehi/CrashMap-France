@@ -1,0 +1,29 @@
+/// Paramètre de simulation : nombre minimal d'accidents pour afficher un taux (défaut 100).
+table 'Seuil accidents'
+	lineageTag: 15460cb3-3eec-5668-9134-9188614c1b51
+
+	/// Seuil sélectionné (100 par défaut si aucune valeur n'est choisie).
+	measure 'Valeur Seuil accidents' = SELECTEDVALUE ( 'Seuil accidents'[Seuil accidents], 100 )
+		formatString: 0
+		displayFolder: Paramètres
+		lineageTag: 31de6262-912d-53e8-a024-0072b4261f4e
+
+	column 'Seuil accidents'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d8e8cdc-b336-53cf-861e-21e06a5fecc2
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Seuil accidents' = calculated
+		mode: import
+		source = GENERATESERIES ( 0, 1000, 10 )
+
+	annotation PBI_Id = 80b2af17c8775d95bb18384e64b4b2ef

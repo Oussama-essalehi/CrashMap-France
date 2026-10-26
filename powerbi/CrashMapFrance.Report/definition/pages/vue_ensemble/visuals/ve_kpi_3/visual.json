@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "ve_kpi_3",
+  "position": {
+    "x": 641,
+    "y": 95,
+    "z": 13,
+    "width": 195,
+    "height": 105,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Tués pour 100k hab"
+                }
+              },
+              "queryRef": "_Mesures.Tués pour 100k hab",
+              "nativeQueryRef": "Tués pour 100k hab"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tués / 100 000 hab. / an'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "cf_bottom",
+  "position": {
+    "x": 675,
+    "y": 405,
+    "z": 12,
+    "width": 585,
+    "height": 300,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_population"
+                    }
+                  },
+                  "Property": "dep_name"
+                }
+              },
+              "queryRef": "dim_population.dep_name",
+              "nativeQueryRef": "dep_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Tués pour 100k hab"
+                }
+              },
+              "queryRef": "_Mesures.Tués pour 100k hab",
+              "nativeQueryRef": "Tués pour 100k hab"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Nb Tués"
+                }
+              },
+              "queryRef": "_Mesures.Nb Tués",
+              "nativeQueryRef": "Nb Tués"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Nb Accidents"
+                }
+              },
+              "queryRef": "_Mesures.Nb Accidents",
+              "nativeQueryRef": "Nb Accidents"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Taux Mortalité (tués / 100 accidents)"
+                }
+              },
+              "queryRef": "_Mesures.Taux Mortalité (tués / 100 accidents)",
+              "nativeQueryRef": "Taux Mortalité (tués / 100 accidents)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Rang Département Mortalité"
+                }
+              },
+              "queryRef": "_Mesures.Rang Département Mortalité",
+              "nativeQueryRef": "Rang Département Mortalité"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Mesures"
+                  }
+                },
+                "Property": "Tués pour 100k hab"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Départements les moins touchés (tués / 100 000 hab.)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

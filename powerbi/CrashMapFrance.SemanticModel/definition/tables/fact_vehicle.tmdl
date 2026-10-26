@@ -1,0 +1,134 @@
+/// Faits au grain véhicule : une ligne par véhicule impliqué.
+table fact_vehicle
+	lineageTag: 5bf81a6c-687f-5739-bb0c-b2fa33294586
+
+	column vehicle_key
+		dataType: string
+		isHidden
+		lineageTag: 8898faa2-476e-5aba-ba63-151b34e6a027
+		summarizeBy: none
+		sourceColumn: vehicle_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column accident_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f3963486-7e45-5a77-91e6-e5aae7741846
+		summarizeBy: none
+		sourceColumn: accident_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column catv
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d209938e-d10d-55bb-8889-e201c209a70b
+		summarizeBy: none
+		sourceColumn: catv
+
+		annotation SummarizationSetBy = Automatic
+
+	column fixed_obstacle
+		dataType: string
+		lineageTag: d804c814-2b0f-53bc-b300-af86137b99f2
+		summarizeBy: none
+		sourceColumn: fixed_obstacle
+
+		annotation SummarizationSetBy = Automatic
+
+	column mobile_obstacle
+		dataType: string
+		lineageTag: 2fac9ab3-9528-53d6-968c-638f0f6576a0
+		summarizeBy: none
+		sourceColumn: mobile_obstacle
+
+		annotation SummarizationSetBy = Automatic
+
+	column impact_point
+		dataType: string
+		lineageTag: 58a38db7-f5fa-51ef-819a-41285986a206
+		summarizeBy: none
+		sourceColumn: impact_point
+
+		annotation SummarizationSetBy = Automatic
+
+	column maneuver
+		dataType: string
+		lineageTag: 09fcd611-2db5-529b-a03b-ddf2c6bc0513
+		summarizeBy: none
+		sourceColumn: maneuver
+
+		annotation SummarizationSetBy = Automatic
+
+	column engine
+		dataType: string
+		lineageTag: 5a5a9baf-bbd8-50d2-8219-1158dc47e220
+		summarizeBy: none
+		sourceColumn: engine
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_users
+		dataType: int64
+		formatString: #,0
+		lineageTag: a7515887-4d11-5541-8f58-2fd616ec3a9e
+		summarizeBy: sum
+		sourceColumn: n_users
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_killed
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7faa7e05-815a-5df6-a59e-499449c360e2
+		summarizeBy: sum
+		sourceColumn: n_killed
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_hospitalized
+		dataType: int64
+		formatString: #,0
+		lineageTag: f9b6b84f-a495-5319-816f-84e8fb4a43c3
+		summarizeBy: sum
+		sourceColumn: n_hospitalized
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_lightly_injured
+		dataType: int64
+		formatString: #,0
+		lineageTag: c8f16618-b3cc-5e7b-84a0-bd55d9a153de
+		summarizeBy: sum
+		sourceColumn: n_lightly_injured
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_vehicle = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "fact_vehicle.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"vehicle_key", type text},
+				        {"accident_id", Int64.Type},
+				        {"catv", Int64.Type},
+				        {"fixed_obstacle", type text},
+				        {"mobile_obstacle", type text},
+				        {"impact_point", type text},
+				        {"maneuver", type text},
+				        {"engine", type text},
+				        {"n_users", Int64.Type},
+				        {"n_killed", Int64.Type},
+				        {"n_hospitalized", Int64.Type},
+				        {"n_lightly_injured", Int64.Type}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

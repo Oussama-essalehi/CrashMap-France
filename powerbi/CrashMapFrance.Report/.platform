@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.1.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CrashMapFrance"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4bb13d30-2da7-5091-bdab-997e26c1514b"
+  }
+}

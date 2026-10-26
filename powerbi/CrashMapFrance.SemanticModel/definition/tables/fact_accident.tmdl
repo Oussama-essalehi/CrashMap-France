@@ -1,0 +1,302 @@
+/// Faits au grain accident : une ligne par accident corporel.
+table fact_accident
+	lineageTag: 42f65246-3345-52e2-99fc-1d00a51e780f
+
+	column accident_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 123bb2d8-d14a-5ca9-b025-f7b80baea083
+		summarizeBy: none
+		sourceColumn: accident_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fd211a23-1304-5980-981f-2d8cea6872c3
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column hour
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 75505a06-8f6b-5f87-8e67-ee87c642f556
+		summarizeBy: none
+		sourceColumn: hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_key
+		dataType: string
+		isHidden
+		lineageTag: 0bd7477c-0244-581a-8f1a-54fa1eb96868
+		summarizeBy: none
+		sourceColumn: location_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_code
+		dataType: string
+		isHidden
+		lineageTag: ca14f880-3529-5fb2-808e-95c80a96be19
+		summarizeBy: none
+		sourceColumn: dep_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column conditions_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b43bb825-8989-52db-8d21-63e8c59ce056
+		summarizeBy: none
+		sourceColumn: conditions_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column road_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 28500360-d768-586e-a891-8885f93fafee
+		summarizeBy: none
+		sourceColumn: road_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 332eb20a-4a5b-5cde-96a8-7b1de2ccb02a
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column in_town
+		dataType: boolean
+		lineageTag: c5d907ed-4d04-59bd-9e28-610f2b76e062
+		summarizeBy: none
+		sourceColumn: in_town
+
+		annotation SummarizationSetBy = Automatic
+
+	column vma
+		dataType: int64
+		formatString: 0
+		lineageTag: e54fa7a2-101a-51c2-b227-dd7f28540874
+		summarizeBy: none
+		sourceColumn: vma
+
+		annotation SummarizationSetBy = Automatic
+
+	column collision_type
+		dataType: string
+		lineageTag: cf239f22-0d91-5233-b9df-904519231777
+		summarizeBy: none
+		sourceColumn: collision_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_vehicles
+		dataType: int64
+		formatString: #,0
+		lineageTag: ab94d50b-ee49-5ba5-a698-20149ca8b53f
+		summarizeBy: sum
+		sourceColumn: n_vehicles
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_users
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7b1fcd89-e984-5e78-9745-85d049f3b39b
+		summarizeBy: sum
+		sourceColumn: n_users
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_victims
+		dataType: int64
+		formatString: #,0
+		lineageTag: b7d44453-97cc-5e81-bfa0-42a17a20d43c
+		summarizeBy: sum
+		sourceColumn: n_victims
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_killed
+		dataType: int64
+		formatString: #,0
+		lineageTag: 90750c3b-d2ab-5255-8a57-940486cd114e
+		summarizeBy: sum
+		sourceColumn: n_killed
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_hospitalized
+		dataType: int64
+		formatString: #,0
+		lineageTag: 3c797276-4bb1-5d44-892c-0fff7ac43ef1
+		summarizeBy: sum
+		sourceColumn: n_hospitalized
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_lightly_injured
+		dataType: int64
+		formatString: #,0
+		lineageTag: 95ecf250-5673-5bf0-a63b-2d53cfc21f14
+		summarizeBy: sum
+		sourceColumn: n_lightly_injured
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_unhurt
+		dataType: int64
+		formatString: #,0
+		lineageTag: 9429d89c-eeed-5330-9219-3838cf5574a3
+		summarizeBy: sum
+		sourceColumn: n_unhurt
+
+		annotation SummarizationSetBy = Automatic
+
+	column fatal
+		dataType: boolean
+		lineageTag: 4a988b28-28e8-5950-b704-46ecfcef21c3
+		summarizeBy: none
+		sourceColumn: fatal
+
+		annotation SummarizationSetBy = Automatic
+
+	column serious
+		dataType: boolean
+		lineageTag: de4ca93a-8ebf-543c-8bcf-9b4254bc76c2
+		summarizeBy: none
+		sourceColumn: serious
+
+		annotation SummarizationSetBy = Automatic
+
+	column pedestrian_involved
+		dataType: boolean
+		lineageTag: c239e61b-9f9d-5856-a675-8643ba76c894
+		summarizeBy: none
+		sourceColumn: pedestrian_involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column two_wheeler_involved
+		dataType: boolean
+		lineageTag: 02163e55-5af3-5921-814e-fa59af6bc546
+		summarizeBy: none
+		sourceColumn: two_wheeler_involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column motorised_two_wheeler_involved
+		dataType: boolean
+		lineageTag: c9b99edd-5d72-58d2-9047-f6326d445388
+		summarizeBy: none
+		sourceColumn: motorised_two_wheeler_involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column bicycle_involved
+		dataType: boolean
+		lineageTag: 4e8b127d-4dbc-5229-9c95-4d5eb63d45bb
+		summarizeBy: none
+		sourceColumn: bicycle_involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column personal_mobility_involved
+		dataType: boolean
+		lineageTag: 57453757-eebf-54f2-b2fb-971f9b67aeb8
+		summarizeBy: none
+		sourceColumn: personal_mobility_involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column heavy_vehicle_involved
+		dataType: boolean
+		lineageTag: 06d78783-8f87-5f80-99ae-5e9da0eac1b7
+		summarizeBy: none
+		sourceColumn: heavy_vehicle_involved
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: double
+		formatString: 0.000000
+		dataCategory: Latitude
+		lineageTag: 667d209c-d76f-5b39-8ed5-e72b6b27e98c
+		summarizeBy: none
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column lon
+		dataType: string
+		dataCategory: Longitude
+		lineageTag: 73d9c4ea-8a8b-5ffc-b4ce-620c6b821154
+		summarizeBy: none
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+	column coord_precise
+		dataType: boolean
+		lineageTag: 6a52a6f2-709d-5cd4-b19d-be5bda06f86c
+		summarizeBy: none
+		sourceColumn: coord_precise
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_accident = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "fact_accident.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"accident_id", Int64.Type},
+				        {"date_key", Int64.Type},
+				        {"hour", Int64.Type},
+				        {"location_key", type text},
+				        {"dep_code", type text},
+				        {"conditions_key", Int64.Type},
+				        {"road_key", Int64.Type},
+				        {"year", Int64.Type},
+				        {"in_town", type logical},
+				        {"vma", Int64.Type},
+				        {"collision_type", type text},
+				        {"n_vehicles", Int64.Type},
+				        {"n_users", Int64.Type},
+				        {"n_victims", Int64.Type},
+				        {"n_killed", Int64.Type},
+				        {"n_hospitalized", Int64.Type},
+				        {"n_lightly_injured", Int64.Type},
+				        {"n_unhurt", Int64.Type},
+				        {"fatal", type logical},
+				        {"serious", type logical},
+				        {"pedestrian_involved", type logical},
+				        {"two_wheeler_involved", type logical},
+				        {"motorised_two_wheeler_involved", type logical},
+				        {"bicycle_involved", type logical},
+				        {"personal_mobility_involved", type logical},
+				        {"heavy_vehicle_involved", type logical},
+				        {"lat", type number},
+				        {"lon", type text},
+				        {"coord_precise", type logical}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

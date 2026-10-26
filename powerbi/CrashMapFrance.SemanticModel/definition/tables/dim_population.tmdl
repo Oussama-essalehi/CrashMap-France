@@ -1,0 +1,92 @@
+/// Départements, régions, zone (métropole / outre-mer) et population INSEE 2023. Utiliser cette table pour filtrer par département ou région.
+table dim_population
+	lineageTag: c02d807c-8559-5d8b-805d-7cfc3c28cc68
+
+	column dep_code
+		dataType: string
+		lineageTag: 3c73dd1c-140e-5887-be08-41ca991d1b98
+		summarizeBy: none
+		sourceColumn: dep_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_name
+		dataType: string
+		lineageTag: 356cc921-e94c-560b-b670-1ffe0bbc6e95
+		summarizeBy: none
+		sourceColumn: dep_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_code
+		dataType: string
+		lineageTag: b8bb0286-c4f1-5dcd-8694-db499c1e098b
+		summarizeBy: none
+		sourceColumn: region_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_name
+		dataType: string
+		lineageTag: 1186fe4b-5f4d-5827-9a8d-a7c93e697901
+		summarizeBy: none
+		sourceColumn: region_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone
+		dataType: string
+		lineageTag: ee38faca-50cb-5e35-a8fc-f0e8376873c0
+		summarizeBy: none
+		sourceColumn: zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: int64
+		formatString: #,0
+		lineageTag: 1a17af76-0d8a-51b2-9d96-8ca79cbe944a
+		summarizeBy: sum
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	column population_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9627dd20-9592-536f-8f7c-da47adbcec29
+		summarizeBy: none
+		sourceColumn: population_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_geo
+		dataType: string
+		dataCategory: County
+		lineageTag: 14152bbe-d8a2-5a53-8d2b-20f801acaece
+		summarizeBy: none
+		sourceColumn: dep_geo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_population = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_population.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"dep_code", type text},
+				        {"dep_name", type text},
+				        {"region_code", type text},
+				        {"region_name", type text},
+				        {"zone", type text},
+				        {"population", Int64.Type},
+				        {"population_year", Int64.Type}
+				    }, "en-US"),
+				    WithGeo = Table.AddColumn(Typed, "dep_geo", each [dep_name] & ", France", type text)
+				in
+				    WithGeo
+
+	annotation PBI_ResultType = Table

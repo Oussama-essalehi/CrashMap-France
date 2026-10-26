@@ -1,0 +1,90 @@
+/// Catégorie de véhicule ONISR et regroupement d'analyse.
+table dim_vehicle_type
+	lineageTag: 7e0e8824-5ff6-5a2d-aa44-67bd4a3e38c5
+
+	column catv
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f442ceb-13bd-5643-aa9c-4b3c4c5b541c
+		summarizeBy: none
+		sourceColumn: catv
+
+		annotation SummarizationSetBy = Automatic
+
+	column catv_label
+		dataType: string
+		lineageTag: c2593ae9-6ec8-5683-b8e6-67d5d6eaf942
+		summarizeBy: none
+		sourceColumn: catv_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_group
+		dataType: string
+		lineageTag: e2e8fa26-77de-5e3b-b7ed-145f040ea839
+		summarizeBy: none
+		sourceColumn: vehicle_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_two_wheeler
+		dataType: boolean
+		lineageTag: ede981d1-c63e-5cf1-8bea-af25fe6f8596
+		summarizeBy: none
+		sourceColumn: is_two_wheeler
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_motorised_two_wheeler
+		dataType: boolean
+		lineageTag: 9cfc9290-3dac-5532-a89b-a67e029bd85b
+		summarizeBy: none
+		sourceColumn: is_motorised_two_wheeler
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_bicycle
+		dataType: boolean
+		lineageTag: 87d46b0f-b0ec-5a56-9a05-18a3de6f141a
+		summarizeBy: none
+		sourceColumn: is_bicycle
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_personal_mobility
+		dataType: boolean
+		lineageTag: a44798a4-84d9-5ac9-9477-6ffdf4a499ce
+		summarizeBy: none
+		sourceColumn: is_personal_mobility
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_heavy_vehicle
+		dataType: boolean
+		lineageTag: 6b56b750-c7c8-5817-84d0-304cb18434af
+		summarizeBy: none
+		sourceColumn: is_heavy_vehicle
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_vehicle_type = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_vehicle_type.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"catv", Int64.Type},
+				        {"catv_label", type text},
+				        {"vehicle_group", type text},
+				        {"is_two_wheeler", type logical},
+				        {"is_motorised_two_wheeler", type logical},
+				        {"is_bicycle", type logical},
+				        {"is_personal_mobility", type logical},
+				        {"is_heavy_vehicle", type logical}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

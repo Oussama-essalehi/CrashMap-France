@@ -1,0 +1,240 @@
+/// Mesures DAX du rapport, rangées par dossier d'affichage.
+table _Mesures
+	lineageTag: dce62937-96bb-5316-902c-7177f57ae6c5
+
+	/// Nombre d'accidents corporels (grain accident, jamais compté sur une table jointe).
+	measure 'Nb Accidents' = COUNTROWS ( fact_accident )
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: 54cd6ea4-fac8-575c-a493-d3693fed3f5e
+
+	/// Nombre d'accidents ayant fait au moins un tué (à 30 jours).
+	measure 'Nb Accidents Mortels' = CALCULATE ( [Nb Accidents], KEEPFILTERS ( fact_accident[fatal] = TRUE () ) )
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: 6e2d92ce-d74f-52b6-aeb8-1d08de61f990
+
+	/// Nombre de personnes tuées (décédées dans les 30 jours), compté au grain personne.
+	measure 'Nb Tués' = SUM ( fact_victim[killed] )
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: 52a50763-ab27-5443-bd65-a47eac50d1bd
+
+	/// Blessés hospitalisés plus de 24 h. Indicateur non labellisé depuis 2019, non comparable avant 2018.
+	measure 'Nb Blessés Hospitalisés' = SUM ( fact_victim[hospitalized] )
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: 05c91da5-6939-5490-a66b-d06f6ca49b6d
+
+	/// Blessés ayant reçu des soins sans hospitalisation de plus de 24 h.
+	measure 'Nb Blessés Légers' = SUM ( fact_victim[lightly_injured] )
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: fd10d08c-cbe9-56f7-8be3-d05be2b81a66
+
+	/// Victimes = tués + blessés hospitalisés + blessés légers (les indemnes ne sont pas des victimes).
+	measure 'Nb Victimes' = [Nb Tués] + [Nb Blessés Hospitalisés] + [Nb Blessés Légers]
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: 5a602690-85fb-5250-9a8b-d068b32b36af
+
+	/// Nombre d'usagers impliqués, indemnes compris.
+	measure 'Nb Personnes Impliquées' = COUNTROWS ( fact_victim )
+		formatString: #,0
+		displayFolder: 1. Volumes
+		lineageTag: 9954e313-bb80-5acc-b388-4ca94ac7063c
+
+	/// Tués pour 100 accidents. Vide si le contexte compte moins d'accidents que le seuil (paramètre Seuil accidents).
+	measure 'Taux Mortalité (tués / 100 accidents)' =
+			VAR nAccidents = [Nb Accidents]
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( [Nb Tués], nAccidents ) * 100 )
+		formatString: 0.00
+		displayFolder: 2. Taux
+		lineageTag: ec1ed5d2-a2eb-5632-ac9c-7d3f0706d3c2
+
+	/// Part des accidents ayant fait au moins un tué. Vide sous le seuil d'accidents.
+	measure 'Part Accidents Mortels %' =
+			VAR nAccidents = [Nb Accidents]
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( [Nb Accidents Mortels], nAccidents ) )
+		formatString: 0.0 %
+		displayFolder: 2. Taux
+		lineageTag: a1e52788-1ffb-5c3b-9d24-ef1bcdbda34e
+
+	/// Accidents par an pour 100 000 habitants (population INSEE 2023 des départements du contexte, moyenne annuelle sur les années filtrées). Territoires sans population exclus. Vide sous le seuil.
+	measure 'Accidents pour 100k hab' =
+			VAR nAccidents = CALCULATE ( [Nb Accidents], KEEPFILTERS ( NOT ISBLANK ( dim_population[population] ) ) )
+			VAR population = SUM ( dim_population[population] )
+			VAR nYears = DISTINCTCOUNT ( fact_accident[year] )
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( nAccidents, population * nYears ) * 100000 )
+		formatString: 0.0
+		displayFolder: 2. Taux
+		lineageTag: 11a96e03-9f16-5775-a4e1-d3b87b8d390e
+
+	/// Tués par an pour 100 000 habitants (population INSEE 2023, moyenne annuelle sur les années filtrées). Vide sous le seuil d'accidents.
+	measure 'Tués pour 100k hab' =
+			VAR nAccidents = CALCULATE ( [Nb Accidents], KEEPFILTERS ( NOT ISBLANK ( dim_population[population] ) ) )
+			VAR nKilled = CALCULATE ( [Nb Tués], KEEPFILTERS ( NOT ISBLANK ( dim_population[population] ) ) )
+			VAR population = SUM ( dim_population[population] )
+			VAR nYears = DISTINCTCOUNT ( fact_accident[year] )
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( nKilled, population * nYears ) * 100000 )
+		formatString: 0.0
+		displayFolder: 2. Taux
+		lineageTag: 96fddca2-8c21-52f0-985a-4b6bf0b27aea
+
+	/// Accidents sur la même période un an plus tôt (table de dates dim_date).
+	measure 'Nb Accidents N-1' = CALCULATE ( [Nb Accidents], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+		formatString: #,0
+		displayFolder: 3. Évolution
+		lineageTag: 5b2066fd-62c7-5292-be7c-0b2320d02313
+
+	/// Tués sur la même période un an plus tôt.
+	measure 'Nb Tués N-1' = CALCULATE ( [Nb Tués], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+		formatString: #,0
+		displayFolder: 3. Évolution
+		lineageTag: 8b15675e-0ddc-57d2-951a-7a6e845f588a
+
+	/// Évolution des accidents par rapport à N-1, pour une année donnée. Vide si N ou N-1 est sous le seuil.
+	measure 'Évolution Accidents %' =
+			VAR current = [Nb Accidents]
+			VAR previous = [Nb Accidents N-1]
+			RETURN
+			    IF (
+			        HASONEVALUE ( dim_date[year] ) && MIN ( current, previous ) >= [Valeur Seuil accidents],
+			        DIVIDE ( current - previous, previous )
+			    )
+		formatString: +0.0 %;-0.0 %;0.0 %
+		displayFolder: 3. Évolution
+		lineageTag: 1ce95483-a6bf-51ef-ba3c-d7a45beea965
+
+	/// Évolution des tués par rapport à N-1, pour une année donnée. Vide si les accidents de N ou N-1 sont sous le seuil.
+	measure 'Évolution Tués %' =
+			VAR current = [Nb Tués]
+			VAR previous = [Nb Tués N-1]
+			RETURN
+			    IF (
+			        HASONEVALUE ( dim_date[year] ) && MIN ( [Nb Accidents], [Nb Accidents N-1] ) >= [Valeur Seuil accidents],
+			        DIVIDE ( current - previous, previous )
+			    )
+		formatString: +0.0 %;-0.0 %;0.0 %
+		displayFolder: 3. Évolution
+		lineageTag: d9a3e5c0-af3f-5461-b0b9-7041fe7ca44f
+
+	/// Rang du département sur les tués pour 100 000 habitants (1 = le plus touché) parmi les départements visibles ayant un taux.
+	measure 'Rang Département Mortalité' =
+			IF (
+			    ISINSCOPE ( dim_population[dep_name] ) && NOT ISBLANK ( [Tués pour 100k hab] ),
+			    RANKX (
+			        FILTER ( ALLSELECTED ( dim_population[dep_name] ), NOT ISBLANK ( [Tués pour 100k hab] ) ),
+			        [Tués pour 100k hab], , DESC, DENSE
+			    )
+			)
+		formatString: 0
+		displayFolder: 4. Classement
+		lineageTag: 05bf8458-1bf5-59ae-bd71-f2cd8a4946b3
+
+	/// Part des accidents survenus entre 21h et 6h. Vide sous le seuil d'accidents.
+	measure 'Part Accidents de Nuit %' =
+			VAR nAccidents = [Nb Accidents]
+			VAR nNight = CALCULATE ( [Nb Accidents], KEEPFILTERS ( dim_time_band[time_band] = "Nuit (21h-6h)" ) )
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( nNight, nAccidents ) )
+		formatString: 0.0 %
+		displayFolder: 5. Parts
+		lineageTag: 9853a53b-5861-5de5-aaaa-c434ae15f82a
+
+	/// Part des accidents impliquant un deux-roues (motorisé ou vélo) ou un EDP. Vide sous le seuil.
+	measure 'Part Deux-Roues %' =
+			VAR nAccidents = [Nb Accidents]
+			VAR nTwoWheelers = CALCULATE ( [Nb Accidents], KEEPFILTERS ( fact_accident[two_wheeler_involved] = TRUE () ) )
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( nTwoWheelers, nAccidents ) )
+		formatString: 0.0 %
+		displayFolder: 5. Parts
+		lineageTag: dbca88f4-f92e-5f5e-9e3c-b4fb15c70196
+
+	/// Part des personnes impliquées (gravité connue) qui ont été tuées. Vide si moins d'accidents que le seuil.
+	measure '% Tués parmi impliqués' =
+			VAR nAccidents = DISTINCTCOUNT ( fact_victim[accident_id] )
+			VAR nKnown = CALCULATE ( COUNTROWS ( fact_victim ), KEEPFILTERS ( NOT ISBLANK ( fact_victim[grav] ) ) )
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( [Nb Tués], nKnown ) )
+		formatString: 0.0 %
+		displayFolder: 6. Victimes et équipement
+		lineageTag: 81f7c623-9d05-5efb-992f-74cc7da81ea9
+
+	/// Part des personnes impliquées (gravité connue) tuées ou hospitalisées. Vide sous le seuil.
+	measure '% Tués ou Hospitalisés' =
+			VAR nAccidents = DISTINCTCOUNT ( fact_victim[accident_id] )
+			VAR nKnown = CALCULATE ( COUNTROWS ( fact_victim ), KEEPFILTERS ( NOT ISBLANK ( fact_victim[grav] ) ) )
+			RETURN
+			    IF ( nAccidents >= [Valeur Seuil accidents], DIVIDE ( [Nb Tués] + [Nb Blessés Hospitalisés], nKnown ) )
+		formatString: 0.0 %
+		displayFolder: 6. Victimes et équipement
+		lineageTag: 0933736b-84a4-57a5-bcdd-667636e70c32
+
+	/// Occupants de voiture portant la ceinture : part de tués.
+	measure '% Tués Voiture avec ceinture' =
+			CALCULATE (
+			    [% Tués parmi impliqués],
+			    KEEPFILTERS ( dim_user_type[user_mode] = "Voiture (VL)" ),
+			    KEEPFILTERS ( fact_victim[seatbelt_worn] = TRUE () )
+			)
+		formatString: 0.0 %
+		displayFolder: 6. Victimes et équipement
+		lineageTag: 51157891-a00b-51bb-8df2-6d35980b92bb
+
+	/// Occupants de voiture ne portant pas la ceinture (équipement connu) : part de tués.
+	measure '% Tués Voiture sans ceinture' =
+			CALCULATE (
+			    [% Tués parmi impliqués],
+			    KEEPFILTERS ( dim_user_type[user_mode] = "Voiture (VL)" ),
+			    KEEPFILTERS ( fact_victim[seatbelt_worn] = FALSE () )
+			)
+		formatString: 0.0 %
+		displayFolder: 6. Victimes et équipement
+		lineageTag: 66ff18ed-971e-5bdf-8693-91a611bea227
+
+	/// Usagers de deux-roues motorisés (motos, cyclomoteurs) portant le casque : part de tués.
+	measure '% Tués 2RM avec casque' =
+			CALCULATE (
+			    [% Tués parmi impliqués],
+			    KEEPFILTERS ( dim_user_type[user_mode] IN {"Moto > 125 cm3", "Moto 50-125 cm3", "Cyclomoteur <= 50 cm3"} ),
+			    KEEPFILTERS ( fact_victim[helmet_worn] = TRUE () )
+			)
+		formatString: 0.0 %
+		displayFolder: 6. Victimes et équipement
+		lineageTag: 26005d1f-f421-515e-9b5a-3423364e8177
+
+	/// Usagers de deux-roues motorisés sans casque (équipement connu) : part de tués.
+	measure '% Tués 2RM sans casque' =
+			CALCULATE (
+			    [% Tués parmi impliqués],
+			    KEEPFILTERS ( dim_user_type[user_mode] IN {"Moto > 125 cm3", "Moto 50-125 cm3", "Cyclomoteur <= 50 cm3"} ),
+			    KEEPFILTERS ( fact_victim[helmet_worn] = FALSE () )
+			)
+		formatString: 0.0 %
+		displayFolder: 6. Victimes et équipement
+		lineageTag: 2d082e3d-3b68-596c-95aa-7ea213db8799
+
+	column Colonne
+		dataType: string
+		isHidden
+		lineageTag: daa4465b-47ec-5d51-9a56-725755ef1bd6
+		summarizeBy: none
+		sourceColumn: Colonne
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Mesures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Colonne = text], {})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

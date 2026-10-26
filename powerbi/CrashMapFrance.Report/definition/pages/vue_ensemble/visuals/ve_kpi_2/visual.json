@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "ve_kpi_2",
+  "position": {
+    "x": 434,
+    "y": 95,
+    "z": 12,
+    "width": 195,
+    "height": 105,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Taux Mortalité (tués / 100 accidents)"
+                }
+              },
+              "queryRef": "_Mesures.Taux Mortalité (tués / 100 accidents)",
+              "nativeQueryRef": "Taux Mortalité (tués / 100 accidents)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tués / 100 accidents'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "qui_equipement",
+  "position": {
+    "x": 650,
+    "y": 405,
+    "z": 14,
+    "width": 610,
+    "height": 300,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "% Tués Voiture avec ceinture"
+                }
+              },
+              "queryRef": "_Mesures.% Tués Voiture avec ceinture",
+              "nativeQueryRef": "% Tués Voiture avec ceinture"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "% Tués Voiture sans ceinture"
+                }
+              },
+              "queryRef": "_Mesures.% Tués Voiture sans ceinture",
+              "nativeQueryRef": "% Tués Voiture sans ceinture"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "% Tués 2RM avec casque"
+                }
+              },
+              "queryRef": "_Mesures.% Tués 2RM avec casque",
+              "nativeQueryRef": "% Tués 2RM avec casque"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "% Tués 2RM sans casque"
+                }
+              },
+              "queryRef": "_Mesures.% Tués 2RM sans casque",
+              "nativeQueryRef": "% Tués 2RM sans casque"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Équipement de sécurité et part de tués (à catégorie d''usager égale)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

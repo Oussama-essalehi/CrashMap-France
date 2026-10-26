@@ -1,0 +1,218 @@
+/// Faits au grain personne : une ligne par usager impliqué (y compris indemnes).
+table fact_victim
+	lineageTag: 17993552-62a6-590d-b31d-f0e6495fc462
+
+	column victim_id
+		dataType: string
+		isHidden
+		lineageTag: 08b4600c-a142-56c5-aff4-308f999c695f
+		summarizeBy: none
+		sourceColumn: victim_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column accident_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cc8d6fa7-a580-5ce1-83ae-44da25179b8e
+		summarizeBy: none
+		sourceColumn: accident_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_key
+		dataType: string
+		isHidden
+		lineageTag: 4ecc4f79-c65a-5117-a095-67c298cb24fb
+		summarizeBy: none
+		sourceColumn: vehicle_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_type_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bd5aa52a-94e1-5a00-8d32-d3a981255ab6
+		summarizeBy: none
+		sourceColumn: user_type_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column catv
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9559f3cd-c98c-5d11-9252-3efe34fd4061
+		summarizeBy: none
+		sourceColumn: catv
+
+		annotation SummarizationSetBy = Automatic
+
+	column grav
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a8036fa5-0ec8-5507-b67a-582b62a88af8
+		summarizeBy: none
+		sourceColumn: grav
+
+		annotation SummarizationSetBy = Automatic
+
+	column severity
+		dataType: string
+		lineageTag: 569bebe4-4c71-5bbe-975f-75841586e3ec
+		summarizeBy: none
+		sourceColumn: severity
+		sortByColumn: severity_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column severity_order
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4c1b4280-43cc-566d-99dd-bf48962d6465
+		summarizeBy: none
+		sourceColumn: severity_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column killed
+		dataType: int64
+		formatString: #,0
+		lineageTag: 397420ec-1e4f-5570-bd91-9dd6a6d28473
+		summarizeBy: sum
+		sourceColumn: killed
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospitalized
+		dataType: int64
+		formatString: #,0
+		lineageTag: e4099541-6017-59d8-9211-d65be9f0fab3
+		summarizeBy: sum
+		sourceColumn: hospitalized
+
+		annotation SummarizationSetBy = Automatic
+
+	column lightly_injured
+		dataType: int64
+		formatString: #,0
+		lineageTag: b11d5b12-5dd5-577c-95f3-561290438f25
+		summarizeBy: sum
+		sourceColumn: lightly_injured
+
+		annotation SummarizationSetBy = Automatic
+
+	column unhurt
+		dataType: int64
+		formatString: #,0
+		lineageTag: 1d3c1cad-c04e-5eb3-b532-dd1962c7aad1
+		summarizeBy: sum
+		sourceColumn: unhurt
+
+		annotation SummarizationSetBy = Automatic
+
+	column sex
+		dataType: string
+		lineageTag: 5acda8bd-c6a6-50b3-8071-f78679f65055
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: 879bb77d-2221-554d-ae86-a5cd3c0f231c
+		summarizeBy: none
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_band
+		dataType: string
+		lineageTag: e16e0c4c-7e57-5da1-a5d2-20e3838050aa
+		summarizeBy: none
+		sourceColumn: age_band
+		sortByColumn: age_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_band_order
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8cc9498e-1eec-5f5f-9e2d-79bc5ef96fde
+		summarizeBy: none
+		sourceColumn: age_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column trip_purpose
+		dataType: string
+		lineageTag: a1dc6112-cca7-51e5-a275-88e546b670e9
+		summarizeBy: none
+		sourceColumn: trip_purpose
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipment_known
+		dataType: boolean
+		lineageTag: f7d103db-5668-58b1-aa7f-cdd28c25dc8f
+		summarizeBy: none
+		sourceColumn: equipment_known
+
+		annotation SummarizationSetBy = Automatic
+
+	column seatbelt_worn
+		dataType: boolean
+		lineageTag: fcbbfb88-be05-5fc2-bad5-30d3042d5509
+		summarizeBy: none
+		sourceColumn: seatbelt_worn
+
+		annotation SummarizationSetBy = Automatic
+
+	column helmet_worn
+		dataType: boolean
+		lineageTag: 89b93bb4-7bd2-53ce-9cef-08af1461efce
+		summarizeBy: none
+		sourceColumn: helmet_worn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_victim = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "fact_victim.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"victim_id", type text},
+				        {"accident_id", Int64.Type},
+				        {"vehicle_key", type text},
+				        {"user_type_key", Int64.Type},
+				        {"catv", Int64.Type},
+				        {"grav", Int64.Type},
+				        {"severity", type text},
+				        {"severity_order", Int64.Type},
+				        {"killed", Int64.Type},
+				        {"hospitalized", Int64.Type},
+				        {"lightly_injured", Int64.Type},
+				        {"unhurt", Int64.Type},
+				        {"sex", type text},
+				        {"age", Int64.Type},
+				        {"age_band", type text},
+				        {"age_band_order", Int64.Type},
+				        {"trip_purpose", type text},
+				        {"equipment_known", type logical},
+				        {"seatbelt_worn", type logical},
+				        {"helmet_worn", type logical}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

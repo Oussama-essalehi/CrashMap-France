@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "ve_kpi_5",
+  "position": {
+    "x": 1055,
+    "y": 95,
+    "z": 15,
+    "width": 195,
+    "height": 105,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Part Accidents de Nuit %"
+                }
+              },
+              "queryRef": "_Mesures.Part Accidents de Nuit %",
+              "nativeQueryRef": "Part Accidents de Nuit %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Part d''accidents de nuit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

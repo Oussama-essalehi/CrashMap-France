@@ -1,0 +1,109 @@
+/// Commune et localisation (en / hors agglomération) de l'accident.
+table dim_location
+	lineageTag: fdd04628-c2fa-5e3a-ae03-657b1448879f
+
+	column location_key
+		dataType: string
+		isHidden
+		lineageTag: c3b09ce3-e7e5-5a14-8a9c-99a4b8bb3fbc
+		summarizeBy: none
+		sourceColumn: location_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column com_code
+		dataType: string
+		lineageTag: 8dc877da-1386-5f81-8005-169e33b5d3ab
+		summarizeBy: none
+		sourceColumn: com_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column com_name
+		dataType: string
+		lineageTag: 11d83bc2-7986-58f5-9925-081321f67a1a
+		summarizeBy: none
+		sourceColumn: com_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column com_population
+		dataType: int64
+		formatString: #,0
+		lineageTag: 97a0c184-da80-50bc-9b83-1ff402d58efb
+		summarizeBy: sum
+		sourceColumn: com_population
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_code
+		dataType: string
+		lineageTag: 3b2a1159-c4e1-56bc-8754-d507d09559b1
+		summarizeBy: none
+		sourceColumn: dep_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_name
+		dataType: string
+		lineageTag: 56a8d832-21bb-5191-a2b7-98e0865391bc
+		summarizeBy: none
+		sourceColumn: dep_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_name
+		dataType: string
+		lineageTag: 7e98b36a-08fc-5868-9fef-63f0f9c0ba79
+		summarizeBy: none
+		sourceColumn: region_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone
+		dataType: string
+		lineageTag: dd67615e-cb8d-5b7f-8b60-8d2c0e34e9c4
+		summarizeBy: none
+		sourceColumn: zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column in_town
+		dataType: boolean
+		lineageTag: 633abda5-bbc2-5343-8271-f6f7c3a101b2
+		summarizeBy: none
+		sourceColumn: in_town
+
+		annotation SummarizationSetBy = Automatic
+
+	column in_town_label
+		dataType: string
+		lineageTag: f5af6664-d6c8-557c-ad02-db8e2010ad76
+		summarizeBy: none
+		sourceColumn: in_town_label
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_location = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_location.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"location_key", type text},
+				        {"com_code", type text},
+				        {"com_name", type text},
+				        {"com_population", Int64.Type},
+				        {"dep_code", type text},
+				        {"dep_name", type text},
+				        {"region_name", type text},
+				        {"zone", type text},
+				        {"in_town", type logical},
+				        {"in_town_label", type text}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

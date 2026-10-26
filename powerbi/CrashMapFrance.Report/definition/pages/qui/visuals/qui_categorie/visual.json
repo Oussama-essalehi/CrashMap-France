@@ -1,0 +1,105 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "qui_categorie",
+  "position": {
+    "x": 860,
+    "y": 95,
+    "z": 12,
+    "width": 400,
+    "height": 300,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_user_type"
+                    }
+                  },
+                  "Property": "catu_label"
+                }
+              },
+              "queryRef": "dim_user_type.catu_label",
+              "nativeQueryRef": "catu_label"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Nb Tués"
+                }
+              },
+              "queryRef": "_Mesures.Nb Tués",
+              "nativeQueryRef": "Nb Tués"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Nb Blessés Hospitalisés"
+                }
+              },
+              "queryRef": "_Mesures.Nb Blessés Hospitalisés",
+              "nativeQueryRef": "Nb Blessés Hospitalisés"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Nb Blessés Légers"
+                }
+              },
+              "queryRef": "_Mesures.Nb Blessés Légers",
+              "nativeQueryRef": "Nb Blessés Légers"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Victimes par catégorie d''usager'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
