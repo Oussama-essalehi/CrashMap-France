@@ -1,0 +1,19 @@
+age_band,sex,n_persons,n_killed,pct_killed
+0-13 ans,Féminin,14354,163,1.14
+0-13 ans,Masculin,20190,241,1.19
+14-17 ans,Féminin,9989,104,1.04
+14-17 ans,Masculin,22460,448,1.99
+18-24 ans,Féminin,42411,589,1.39
+18-24 ans,Masculin,96969,2716,2.8
+25-34 ans,Féminin,44897,458,1.02
+25-34 ans,Masculin,107204,2648,2.47
+35-44 ans,Féminin,34151,374,1.1
+35-44 ans,Masculin,82926,2068,2.49
+45-54 ans,Féminin,30481,447,1.47
+45-54 ans,Masculin,71072,1982,2.79
+55-64 ans,Féminin,24497,499,2.04
+55-64 ans,Masculin,52013,1931,3.71
+65-74 ans,Féminin,16677,601,3.6
+65-74 ans,Masculin,27360,1543,5.64
+75 ans et +,Féminin,15234,1127,7.4
+75 ans et +,Masculin,20946,1938,9.25

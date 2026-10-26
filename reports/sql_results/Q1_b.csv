@@ -1,0 +1,8 @@
+weekday_name,n_accidents,n_killed,killed_per_100_accidents,rank_death_rate
+Lundi,44344,2421,5.46,5
+Mardi,47605,2466,5.18,7
+Mercredi,47455,2618,5.52,4
+Jeudi,48300,2586,5.35,6
+Vendredi,54048,3184,5.89,3
+Samedi,46334,3415,7.37,2
+Dimanche,39542,3187,8.06,1

@@ -1,0 +1,15 @@
+time_band,lighting,n_accidents,n_killed,n_fatal_accidents,killed_per_100_accidents,pct_fatal_accidents
+Nuit (21h-6h),,53913,5194,4782,9.63,8.87
+Nuit (21h-6h),Jour / crépuscule,3968,339,309,8.54,7.79
+Nuit (21h-6h),Nuit (éclairage),49945,4855,4473,9.72,8.96
+Matin (6h-10h),,56801,3030,2888,5.33,5.08
+Matin (6h-10h),Jour / crépuscule,50058,2534,2420,5.06,4.83
+Matin (6h-10h),Nuit (éclairage),6743,496,468,7.36,6.94
+Journée (10h-17h),,126404,7006,6640,5.54,5.25
+Journée (10h-17h),Jour / crépuscule,126037,6985,6622,5.54,5.25
+Journée (10h-17h),Nuit (éclairage),367,21,18,5.72,4.9
+Soirée (17h-21h),,90501,4645,4386,5.13,4.85
+Soirée (17h-21h),Jour / crépuscule,59875,2908,2740,4.86,4.58
+Soirée (17h-21h),Nuit (éclairage),30626,1737,1646,5.67,5.37
+,Jour / crépuscule,239938,12766,12091,5.32,5.04
+,Nuit (éclairage),87681,7109,6605,8.11,7.53

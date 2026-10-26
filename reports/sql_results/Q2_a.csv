@@ -1,0 +1,108 @@
+dep_code,dep_name,region_name,population,n_accidents,n_killed,killed_per_100k_per_year,accidents_per_100k_per_year,killed_per_100_accidents,rank_killed_per_100k,rank_death_rate
+978,Saint-Martin,Collectivités d'outre-mer,31620.0,192,32,16.87,101.2,16.67,1.0,4.0
+971,Guadeloupe,Guadeloupe,388493.0,2812,306,13.13,120.64,10.88,2.0,35.0
+973,Guyane,Guyane,296053.0,3099,205,11.54,174.46,6.62,3.0,76.0
+2B,Haute-Corse,Corse,189722.0,1791,108,9.49,157.34,6.03,4.0,82.0
+52,Haute-Marne,Grand Est,172981.0,678,97,9.35,65.33,14.31,5.0,13.0
+58,Nièvre,Bourgogne-Franche-Comté,206356.0,993,115,9.29,80.2,11.58,6.0,31.0
+89,Yonne,Bourgogne-Franche-Comté,340359.0,1141,185,9.06,55.87,16.21,7.0,7.0
+04,Alpes-de-Haute-Provence,Provence-Alpes-Côte d'Azur,172385.0,1212,91,8.8,117.18,7.51,8.0,67.0
+39,Jura,Bourgogne-Franche-Comté,266940.0,810,141,8.8,50.57,17.41,8.0,3.0
+61,Orne,Normandie,282417.0,1377,149,8.79,81.26,10.82,10.0,36.0
+05,Hautes-Alpes,Provence-Alpes-Côte d'Azur,147756.0,1324,76,8.57,149.35,5.74,11.0,86.0
+11,Aude,Occitanie,387874.0,1996,194,8.34,85.77,9.72,12.0,45.0
+82,Tarn-et-Garonne,Occitanie,271650.0,889,134,8.22,54.54,15.07,13.0,11.0
+10,Aube,Grand Est,317296.0,2137,154,8.09,112.25,7.21,14.0,72.0
+09,Ariège,Occitanie,159684.0,825,74,7.72,86.11,8.97,15.0,50.0
+2A,Corse-du-Sud,Corse,170548.0,1562,79,7.72,152.65,5.06,15.0,91.0
+48,Lozère,Occitanie,79964.0,444,37,7.71,92.54,8.33,17.0,58.0
+47,Lot-et-Garonne,Nouvelle-Aquitaine,341487.0,1250,155,7.56,61.01,12.4,18.0,26.0
+18,Cher,Centre-Val de Loire,305233.0,987,138,7.54,53.89,13.98,19.0,14.0
+55,Meuse,Grand Est,185178.0,655,83,7.47,58.95,12.67,20.0,23.0
+71,Saône-et-Loire,Bourgogne-Franche-Comté,564938.0,2821,253,7.46,83.22,8.97,21.0,50.0
+12,Aveyron,Occitanie,289413.0,1094,129,7.43,63.0,11.79,22.0,28.0
+46,Lot,Occitanie,181747.0,604,80,7.34,55.39,13.25,23.0,19.0
+70,Haute-Saône,Bourgogne-Franche-Comté,239102.0,642,105,7.32,44.75,16.36,24.0,5.0
+972,Martinique,Martinique,364348.0,3074,160,7.32,140.62,5.2,24.0,90.0
+43,Haute-Loire,Auvergne-Rhône-Alpes,235575.0,988,102,7.22,69.9,10.32,26.0,40.0
+03,Allier,Auvergne-Rhône-Alpes,341713.0,1410,146,7.12,68.77,10.35,27.0,38.0
+32,Gers,Occitanie,198955.0,822,85,7.12,68.86,10.34,27.0,39.0
+36,Indre,Centre-Val de Loire,221574.0,695,94,7.07,52.28,13.53,29.0,15.0
+24,Dordogne,Nouvelle-Aquitaine,427558.0,1141,174,6.78,44.48,15.25,30.0,10.0
+07,Ardèche,Auvergne-Rhône-Alpes,342599.0,1623,139,6.76,78.96,8.56,31.0,55.0
+81,Tarn,Occitanie,407233.0,1263,165,6.75,51.69,13.06,32.0,20.0
+17,Charente-Maritime,Nouvelle-Aquitaine,688067.0,2804,275,6.66,67.92,9.81,33.0,44.0
+41,Loir-et-Cher,Centre-Val de Loire,337089.0,1208,134,6.63,59.73,11.09,34.0,33.0
+23,Creuse,Nouvelle-Aquitaine,118760.0,300,47,6.6,42.1,15.67,35.0,9.0
+40,Landes,Nouvelle-Aquitaine,445828.0,1046,171,6.39,39.1,16.35,36.0,6.0
+30,Gard,Occitanie,784471.0,2549,299,6.35,54.16,11.73,37.0,29.0
+79,Deux-Sèvres,Nouvelle-Aquitaine,385771.0,1129,147,6.35,48.78,13.02,37.0,21.0
+85,Vendée,Pays de la Loire,732903.0,2059,277,6.3,46.82,13.45,39.0,17.0
+28,Eure-et-Loir,Centre-Val de Loire,443227.0,1439,164,6.17,54.11,11.4,40.0,32.0
+15,Cantal,Auvergne-Rhône-Alpes,148813.0,812,55,6.16,90.94,6.77,41.0,74.0
+26,Drôme,Auvergne-Rhône-Alpes,536948.0,1854,197,6.11,57.55,10.63,42.0,37.0
+22,Côtes-d'Armor,Bretagne,629517.0,2482,229,6.06,65.71,9.23,43.0,47.0
+50,Manche,Normandie,512167.0,2432,186,6.05,79.14,7.65,44.0,66.0
+80,Somme,Hauts-de-France,575371.0,2307,209,6.05,66.83,9.06,44.0,49.0
+84,Vaucluse,Provence-Alpes-Côte d'Azur,582656.0,1923,210,6.01,55.01,10.92,46.0,34.0
+88,Vosges,Grand Est,367295.0,1044,132,5.99,47.37,12.64,47.0,24.0
+02,Aisne,Hauts-de-France,534380.0,1295,191,5.96,40.39,14.75,48.0,12.0
+08,Ardennes,Grand Est,271604.0,601,96,5.89,36.88,15.97,49.0,8.0
+51,Marne,Grand Est,574142.0,3192,201,5.83,92.66,6.3,50.0,78.0
+01,Ain,Auvergne-Rhône-Alpes,694945.0,2627,242,5.8,63.0,9.21,51.0,48.0
+73,Savoie,Auvergne-Rhône-Alpes,460217.0,1559,159,5.76,56.46,10.2,52.0,41.0
+19,Corrèze,Nouvelle-Aquitaine,248289.0,1081,85,5.71,72.56,7.86,53.0,61.0
+27,Eure,Normandie,616217.0,2623,210,5.68,70.94,8.01,54.0,60.0
+86,Vienne,Nouvelle-Aquitaine,449082.0,1317,153,5.68,48.88,11.62,54.0,30.0
+66,Pyrénées-Orientales,Occitanie,504938.0,2169,170,5.61,71.59,7.84,56.0,63.0
+65,Hautes-Pyrénées,Occitanie,237032.0,1185,79,5.55,83.32,6.67,57.0,75.0
+83,Var,Provence-Alpes-Côte d'Azur,1135585.0,4809,378,5.55,70.58,7.86,57.0,61.0
+16,Charente,Nouvelle-Aquitaine,361286.0,881,119,5.49,40.64,13.51,59.0,16.0
+56,Morbihan,Bretagne,804597.0,3184,261,5.41,65.95,8.2,60.0,59.0
+64,Pyrénées-Atlantiques,Nouvelle-Aquitaine,725655.0,5213,234,5.37,119.73,4.49,61.0,96.0
+63,Puy-de-Dôme,Auvergne-Rhône-Alpes,678624.0,2959,215,5.28,72.67,7.27,62.0,68.0
+34,Hérault,Occitanie,1248501.0,4034,385,5.14,53.85,9.54,63.0,46.0
+53,Mayenne,Pays de la Loire,314446.0,748,96,5.09,39.65,12.83,64.0,22.0
+21,Côte-d'Or,Bourgogne-Franche-Comté,551336.0,1251,167,5.05,37.82,13.35,65.0,18.0
+87,Haute-Vienne,Nouvelle-Aquitaine,379464.0,2412,115,5.05,105.94,4.77,65.0,95.0
+72,Sarthe,Pays de la Loire,579227.0,2378,172,4.95,68.42,7.23,67.0,70.0
+45,Loiret,Centre-Val de Loire,705712.0,2829,205,4.84,66.81,7.25,68.0,69.0
+13,Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2112170.0,14473,607,4.79,114.2,4.19,69.0,97.0
+74,Haute-Savoie,Auvergne-Rhône-Alpes,881729.0,2997,252,4.76,56.65,8.41,70.0,56.0
+37,Indre-et-Loire,Centre-Val de Loire,631334.0,3592,180,4.75,94.83,5.01,71.0,92.0
+25,Doubs,Bourgogne-Franche-Comté,560477.0,1879,157,4.67,55.88,8.36,72.0,57.0
+06,Alpes-Maritimes,Provence-Alpes-Côte d'Azur,1142503.0,5304,314,4.58,77.37,5.92,73.0,84.0
+974,La Réunion,La Réunion,899660.0,4873,239,4.43,90.27,4.9,74.0,94.0
+33,Gironde,Nouvelle-Aquitaine,1716986.0,7734,455,4.42,75.07,5.88,75.0,85.0
+14,Calvados,Normandie,722979.0,3032,191,4.4,69.9,6.3,76.0,78.0
+60,Oise,Hauts-de-France,846757.0,2992,216,4.25,58.89,7.22,77.0,71.0
+38,Isère,Auvergne-Rhône-Alpes,1324225.0,3915,337,4.24,49.27,8.61,78.0,54.0
+77,Seine-et-Marne,Île-de-France,1484180.0,5292,374,4.2,59.43,7.07,79.0,73.0
+29,Finistère,Bretagne,957671.0,4307,240,4.18,74.96,5.57,80.0,87.0
+90,Territoire de Belfort,Bourgogne-Franche-Comté,143144.0,277,35,4.08,32.25,12.64,81.0,24.0
+54,Meurthe-et-Moselle,Grand Est,743353.0,3334,180,4.04,74.75,5.4,82.0,89.0
+42,Loire,Auvergne-Rhône-Alpes,788024.0,2435,188,3.98,51.5,7.72,83.0,64.0
+49,Maine-et-Loire,Pays de la Loire,853768.0,4024,200,3.9,78.55,4.97,84.0,93.0
+44,Loire-Atlantique,Pays de la Loire,1517043.0,3550,352,3.87,39.0,9.92,85.0,43.0
+35,Ille-et-Vilaine,Bretagne,1145286.0,4308,258,3.75,62.69,5.99,86.0,83.0
+62,Pas-de-Calais,Hauts-de-France,1479365.0,3242,330,3.72,36.52,10.18,87.0,42.0
+57,Moselle,Grand Est,1068899.0,1997,237,3.7,31.14,11.87,88.0,27.0
+31,Haute-Garonne,Occitanie,1494734.0,3789,330,3.68,42.25,8.71,89.0,53.0
+76,Seine-Maritime,Normandie,1281667.0,4317,283,3.68,56.14,6.56,89.0,77.0
+68,Haut-Rhin,Grand Est,784356.0,2164,166,3.53,45.98,7.67,91.0,65.0
+67,Bas-Rhin,Grand Est,1178940.0,3819,236,3.34,53.99,6.18,92.0,81.0
+59,Nord,Hauts-de-France,2645946.0,5834,518,3.26,36.75,8.88,93.0,52.0
+69,Rhône,Auvergne-Rhône-Alpes,1940015.0,12715,327,2.81,109.23,2.57,94.0,99.0
+91,Essonne,Île-de-France,1351891.0,8099,204,2.51,99.85,2.52,95.0,100.0
+78,Yvelines,Île-de-France,1508510.0,4060,222,2.45,44.86,5.47,96.0,88.0
+95,Val-d'Oise,Île-de-France,1290942.0,5191,164,2.12,67.02,3.16,97.0,98.0
+75,Paris,Île-de-France,2119412.0,29430,226,1.78,231.43,0.77,98.0,104.0
+93,Seine-Saint-Denis,Île-de-France,1710659.0,16595,163,1.59,161.68,0.98,99.0,101.0
+94,Val-de-Marne,Île-de-France,1435612.0,13783,131,1.52,160.01,0.95,100.0,102.0
+92,Hauts-de-Seine,Île-de-France,1670575.0,14367,136,1.36,143.33,0.95,101.0,102.0
+975,Saint-Pierre-et-Miquelon,Collectivités d'outre-mer,5957.0,19,1,,,,,
+976,Mayotte,Mayotte,,1077,67,,,6.22,,80.0
+977,Saint-Barthélemy,Collectivités d'outre-mer,10755.0,87,11,,,,,
+986,Wallis-et-Futuna,Collectivités d'outre-mer,,62,12,,,,,
+987,Polynésie française,Collectivités d'outre-mer,,979,195,,,19.92,,1.0
+988,Nouvelle-Calédonie,Collectivités d'outre-mer,,1598,293,,,18.34,,2.0
