@@ -1,0 +1,16 @@
+factor,label,n,levels,chi2,dof,p_value,cramers_v
+vma_band,Vitesse maximale autorisée,322057,6,8539.2,5,0.0,0.1628
+in_town_label,Localisation,327628,2,7749.5,1,0.0,0.1538
+col_label,Type de collision,326009,7,5828.0,6,0.0,0.1337
+catr_label,Catégorie de route,327628,8,4967.6,7,0.0,0.1231
+lum_label,Luminosité,327619,5,4513.4,4,0.0,0.1174
+vehicles_label,Nombre de véhicules,327628,3,2727.6,2,0.0,0.0912
+int_label,Type d'intersection,327614,9,2565.1,8,0.0,0.0885
+plan_label,Tracé,327585,4,1546.8,3,0.0,0.0687
+two_wheeler_label,Deux-roues ou EDP impliqué,327628,2,1269.4,1,4.940169411135986e-278,0.0622
+time_band,Tranche horaire,327628,4,1217.1,3,1.4078532964370697e-263,0.061
+atm_label,Conditions météo,327602,9,435.1,8,5.875164827349077e-89,0.0364
+weekday,Jour de la semaine,327628,7,426.8,6,4.916293198980559e-89,0.0361
+weekend_label,Semaine / week-end,327628,2,390.5,1,6.3673944232098965e-87,0.0345
+surf_label,État de la surface,327550,9,104.1,8,6.316440444808128e-19,0.0178
+pedestrian_label,Piéton impliqué,327628,2,4.6,1,0.03156277556856632,0.0038

@@ -1,0 +1,8 @@
+col_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+Autre collision,96929,8466,8096,8.73,8.35,8.18,8.53
+Deux véhicules - frontale,33417,3792,3432,11.35,10.27,9.95,10.6
+Deux véhicules - par l'arrière,42818,1229,1171,2.87,2.73,2.58,2.89
+Deux véhicules - par le côté,98640,2513,2373,2.55,2.41,2.31,2.5
+Sans collision,32956,2642,2548,8.02,7.73,7.45,8.02
+Trois véhicules et plus - collisions multiples,9606,902,773,9.39,8.05,7.52,8.61
+Trois véhicules et plus - en chaîne,11643,302,274,2.59,2.35,2.09,2.64

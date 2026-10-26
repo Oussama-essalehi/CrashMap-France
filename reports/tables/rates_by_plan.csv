@@ -1,0 +1,5 @@
+plan_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+En courbe à droite,28699,2909,2697,10.14,9.4,9.07,9.74
+En courbe à gauche,31320,2795,2608,8.92,8.33,8.03,8.64
+En « S »,4402,443,421,10.06,9.56,8.73,10.47
+Partie rectiligne,263164,13720,12962,5.21,4.93,4.84,5.01

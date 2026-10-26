@@ -1,0 +1,13 @@
+feature,Régression logistique (pondérée),Gradient boosting,label
+vehicles,0.0347,0.0518,Nombre de véhicules
+road,0.04976,0.05095,Catégorie de route
+speed,0.04037,0.04123,Vitesse maximale autorisée
+pedestrian,0.00025,0.02524,Piéton impliqué
+location,0.02637,0.02414,Localisation
+two_wheeler,2e-05,0.01373,Deux-roues ou EDP impliqué
+intersection,0.00942,0.01178,Intersection
+light,0.00451,0.0083,Luminosité
+time_band,0.00298,0.0038,Tranche horaire
+weather,0.0032,0.00253,Météo
+surface,0.00015,0.00189,Surface
+day_type,0.00024,0.00067,Type de jour

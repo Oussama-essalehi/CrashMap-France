@@ -1,0 +1,5 @@
+time_band,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+Journée (10h-17h),126407,7007,6641,5.54,5.25,5.13,5.38
+Matin (6h-10h),56802,3030,2888,5.33,5.08,4.91,5.27
+Nuit (21h-6h),53914,5195,4783,9.64,8.87,8.63,9.11
+Soirée (17h-21h),90505,4645,4386,5.13,4.85,4.71,4.99

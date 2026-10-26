@@ -1,0 +1,10 @@
+atm_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+Autre,1504,161,147,10.7,9.77,8.37,11.38
+Brouillard - fumée,2277,320,295,14.05,12.96,11.64,14.4
+Neige - grêle,1025,80,75,7.8,7.32,5.88,9.08
+Normale,258945,15420,14514,5.95,5.61,5.52,5.69
+Pluie forte,7599,513,476,6.75,6.26,5.74,6.83
+Pluie légère,36659,1904,1790,5.19,4.88,4.67,5.11
+Temps couvert,12844,894,843,6.96,6.56,6.15,7.0
+Temps éblouissant,5781,467,450,8.08,7.78,7.12,8.5
+Vent fort - tempête,968,112,102,11.57,10.54,8.76,12.63

@@ -1,0 +1,4 @@
+catu_label,n_persons,n_flag,n_accidents,pct,ci_low,ci_high
+Conducteur,552854,14100,325598,2.55,2.51,2.59
+Passager,134375,2849,80149,2.12,2.04,2.2
+Piéton,57510,2928,53430,5.09,4.91,5.27
