@@ -6,7 +6,8 @@ Differences handled (observed on the 2019-2024 files, see docs/methodology.md):
 * ``id_usager`` does not exist in usagers-2019 and usagers-2020;
 * 2020 files use CRLF line endings, other years LF;
 * codes may carry a leading space (``" -1"``);
-* ``id_vehicule`` / ``id_usager`` use a space as thousands separator (``"138 306 524"``);
+* ``id_vehicule`` / ``id_usager`` use a non-breaking space (U+00A0) as thousands separator
+  (``"138 306 524"``);
 * department codes are not zero-padded in 2019 (``"1"`` instead of ``"01"``);
 * latitude / longitude use a comma as decimal separator with 7 to 10 decimals depending on the year;
 * free-text artefacts in numeric columns (``"#VALEURMULTI"``, ``"#ERREUR"``, ``"(1)"``, ``"N/A"``).
@@ -80,9 +81,9 @@ def clean_text(series: pd.Series) -> pd.Series:
 
 
 def parse_id(series: pd.Series) -> pd.Series:
-    """Identifiers: remove the thousands-separator spaces (``'138 306 524'`` -> ``'138306524'``)."""
-    s = clean_text(series).str.replace(r"\s+", "", regex=True)
-    return s
+    """Identifiers: keep letters and digits only, which drops the thousands separators (regular or
+    non-breaking spaces): ``'138\u00a0306\u00a0524'`` -> ``'138306524'``."""
+    return clean_text(series).str.replace(r"[^0-9A-Za-z]", "", regex=True)
 
 
 def parse_int(series: pd.Series) -> pd.Series:

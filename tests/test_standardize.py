@@ -51,7 +51,8 @@ def test_codes_with_leading_space_and_artefacts():
 
 
 def test_ids_lose_thousands_separator():
-    assert st.parse_id(pd.Series(["138 306 524", "201 764"])).tolist() == ["138306524", "201764"]
+    raw = pd.Series(["138 306 524", "201\u00a0764", "1\u202f099\u00a0700"])
+    assert st.parse_id(raw).tolist() == ["138306524", "201764", "1099700"]
 
 
 @pytest.mark.parametrize("raw, expected", [("1", "01"), ("01", "01"), ("2A", "2A"), ("2b", "2B"),
