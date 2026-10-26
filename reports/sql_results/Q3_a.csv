@@ -1,0 +1,51 @@
+factor,modality,n_accidents,n_killed,killed_per_100_accidents,pct_fatal_accidents,rank_in_factor
+Catégorie de route,Route nationale,21134,2047,9.69,8.77,1
+Catégorie de route,Route départementale,122714,11558,9.42,8.85,2
+Catégorie de route,Hors réseau public,397,34,8.56,8.31,3
+Catégorie de route,Autre,1977,134,6.78,6.22,4
+Catégorie de route,Route de métropole urbaine,9797,529,5.4,5.06,5
+Catégorie de route,Autoroute,30949,1562,5.05,4.57,6
+Catégorie de route,Parc de stationnement ouvert à la circulation publique,2412,120,4.98,4.89,7
+Catégorie de route,Voie communale,138248,3893,2.82,2.75,8
+Intersection,Passage à niveau,669,137,20.48,19.28,1
+Intersection,Hors intersection,210562,15981,7.59,7.12,2
+Intersection,Autre intersection,14406,653,4.53,4.27,3
+Intersection,Intersection en Y,7155,288,4.03,3.79,4
+Intersection,Giratoire,13934,447,3.21,3.09,5
+Intersection,Intersection en T,36108,1108,3.07,2.95,6
+Intersection,Intersection en X,39547,1171,2.96,2.82,7
+Intersection,Intersection à plus de 4 branches,1862,37,1.99,1.93,8
+Intersection,Place,3371,55,1.63,1.63,9
+Luminosité,Nuit sans éclairage public,33324,4870,14.61,13.49,1
+Luminosité,Nuit avec éclairage public non allumé,3210,301,9.38,8.91,2
+Luminosité,Crépuscule ou aube,21529,1453,6.75,6.31,3
+Luminosité,Plein jour,218409,11313,5.18,4.91,4
+Luminosité,Nuit avec éclairage public allumé,51147,1938,3.79,3.57,5
+Météo,Brouillard - fumée,2277,320,14.05,12.96,1
+Météo,Vent fort - tempête,968,112,11.57,10.54,2
+Météo,Autre,1504,161,10.7,9.77,3
+Météo,Temps éblouissant,5781,467,8.08,7.78,4
+Météo,Neige - grêle,1025,80,7.8,7.32,5
+Météo,Temps couvert,12844,894,6.96,6.56,6
+Météo,Pluie forte,7599,513,6.75,6.26,7
+Météo,Normale,258945,15420,5.95,5.61,8
+Météo,Pluie légère,36659,1904,5.19,4.88,9
+Surface,Inondée,157,21,13.38,11.46,1
+Surface,Boue,276,36,13.04,11.59,2
+Surface,Verglacée,1172,121,10.32,9.13,3
+Surface,Autre,1769,170,9.61,9.1,4
+Surface,Enneigée,506,37,7.31,6.72,5
+Surface,Mouillée,60788,3804,6.26,5.84,6
+Surface,Normale,261815,15632,5.97,5.63,7
+Surface,Flaques,550,27,4.91,4.91,8
+Surface,Corps gras - huile,517,16,3.09,3.09,9
+Tracé,En courbe à droite,28699,2909,10.14,9.4,1
+Tracé,En « S »,4402,443,10.06,9.56,2
+Tracé,En courbe à gauche,31320,2795,8.92,8.33,3
+Tracé,Partie rectiligne,263164,13720,5.21,4.93,4
+Vitesse maximale autorisée,80-90 km/h,71324,9155,12.84,11.93,1
+Vitesse maximale autorisée,130 km/h,6212,775,12.48,11.01,2
+Vitesse maximale autorisée,60-70 km/h,24316,1928,7.93,7.44,3
+Vitesse maximale autorisée,100-110 km/h,11547,845,7.32,6.78,4
+Vitesse maximale autorisée,40-50 km/h,165941,5522,3.33,3.2,5
+Vitesse maximale autorisée,<= 30 km/h,42717,1049,2.46,2.39,6

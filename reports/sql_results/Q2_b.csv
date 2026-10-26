@@ -1,0 +1,20 @@
+localisation,road_category,n_accidents,n_killed,killed_per_100_accidents,pct_of_deaths
+En agglomération,Hors réseau public,232,17,7.33,0.09
+En agglomération,Route nationale,6012,362,6.02,1.82
+En agglomération,Parc de stationnement ouvert à la circulation publique,2126,104,4.89,0.52
+En agglomération,Autre,1388,64,4.61,0.32
+En agglomération,Route départementale,61466,2646,4.3,13.31
+En agglomération,Autoroute,879,37,4.21,0.19
+En agglomération,Route de métropole urbaine,7164,295,4.12,1.48
+En agglomération,Toutes routes,208478,6502,3.12,32.71
+En agglomération,Voie communale,129211,2977,2.3,14.98
+Hors agglomération,Route départementale,61248,8912,14.55,44.84
+Hors agglomération,Autre,589,70,11.88,0.35
+Hors agglomération,Toutes routes,119150,13375,11.23,67.29
+Hors agglomération,Route nationale,15122,1685,11.14,8.48
+Hors agglomération,Hors réseau public,165,17,10.3,0.09
+Hors agglomération,Voie communale,9037,916,10.14,4.61
+Hors agglomération,Route de métropole urbaine,2633,234,8.89,1.18
+Hors agglomération,Parc de stationnement ouvert à la circulation publique,286,16,5.59,0.08
+Hors agglomération,Autoroute,30070,1525,5.07,7.67
+Total,Toutes routes,327628,19877,6.07,100.0

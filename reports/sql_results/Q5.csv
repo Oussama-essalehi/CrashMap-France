@@ -1,0 +1,16 @@
+localisation,lighting,users,vehicles,n_accidents,n_killed,pct_fatal_accidents,rank_fatal_share
+Hors agglo,Nuit,Piéton,2 véhicules et +,209,115,52.63,1
+Hors agglo,Nuit,Piéton,1 véhicule,1467,603,40.56,2
+Hors agglo,Jour,Vélo / EDP,1 véhicule,992,242,24.4,3
+Hors agglo,Nuit,Vélo / EDP,2 véhicules et +,553,125,22.06,4
+Hors agglo,Nuit,Véhicules seuls,1 véhicule,12318,1920,14.41,5
+Hors agglo,Jour,Piéton,2 véhicules et +,210,31,14.29,6
+Hors agglo,Jour,Véhicules seuls,1 véhicule,17230,2441,13.35,7
+Hors agglo,Jour,Piéton,1 véhicule,1817,242,12.66,8
+Hors agglo,Nuit,2RM,1 véhicule,2468,300,12.16,9
+Hors agglo,Nuit,2RM,2 véhicules et +,3636,461,11.88,10
+En agglo,Jour,Véhicules seuls,1 véhicule,7822,818,10.13,11
+Hors agglo,Jour,Vélo / EDP,2 véhicules et +,3910,387,9.72,12
+Hors agglo,Nuit,Véhicules seuls,2 véhicules et +,12427,1241,8.64,13
+Hors agglo,Jour,2RM,1 véhicule,8772,749,8.33,14
+En agglo,Nuit,Véhicules seuls,1 véhicule,7577,696,8.06,15

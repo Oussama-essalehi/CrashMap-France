@@ -1,0 +1,16 @@
+localisation,time_band,user_mode,n_killed,pct_of_deaths,cumulative_pct
+Hors agglomération,Journée (10h-17h),Voiture (VL),2556,12.86,12.9
+Hors agglomération,Nuit (21h-6h),Voiture (VL),2142,10.78,23.6
+Hors agglomération,Soirée (17h-21h),Voiture (VL),1655,8.33,32.0
+Hors agglomération,Matin (6h-10h),Voiture (VL),1205,6.06,38.0
+Hors agglomération,Journée (10h-17h),Moto > 125 cm3,967,4.86,42.9
+En agglomération,Journée (10h-17h),Piéton,829,4.17,47.1
+Hors agglomération,Soirée (17h-21h),Moto > 125 cm3,713,3.59,50.6
+En agglomération,Nuit (21h-6h),Voiture (VL),694,3.49,54.1
+En agglomération,Journée (10h-17h),Voiture (VL),589,2.96,57.1
+Hors agglomération,Nuit (21h-6h),Piéton,477,2.4,59.5
+En agglomération,Soirée (17h-21h),Piéton,440,2.21,61.7
+En agglomération,Matin (6h-10h),Piéton,422,2.12,63.8
+Hors agglomération,Journée (10h-17h),Vélo (y.c. VAE),415,2.09,65.9
+En agglomération,Soirée (17h-21h),Voiture (VL),306,1.54,67.5
+Hors agglomération,Nuit (21h-6h),Moto > 125 cm3,303,1.52,69.0
