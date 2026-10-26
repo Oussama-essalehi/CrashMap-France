@@ -1,0 +1,303 @@
+{
+  "years": [
+    2019,
+    2024
+  ],
+  "accidents_total": 327628,
+  "killed_total": 19877,
+  "accidents_by_year": {
+    "2019": 58840,
+    "2020": 47744,
+    "2021": 56518,
+    "2022": 55302,
+    "2023": 54822,
+    "2024": 54402
+  },
+  "killed_by_year": {
+    "2019": 3498,
+    "2020": 2780,
+    "2021": 3219,
+    "2022": 3550,
+    "2023": 3398,
+    "2024": 3432
+  },
+  "killed_change_last_vs_first_pct": -1.9,
+  "killed_per_100_overall": 6.07,
+  "killed_per_100_night_band": 9.64,
+  "killed_per_100_day_band": 5.54,
+  "share_accidents_night_band_pct": 16.5,
+  "share_killed_night_band_pct": 26.1,
+  "killed_per_100_out_of_town": 11.23,
+  "killed_per_100_in_town": 3.12,
+  "share_accidents_out_of_town_pct": 36.4,
+  "share_killed_out_of_town_pct": 67.3,
+  "killed_per_100_pedestrian_involved": 5.61,
+  "killed_per_100_two_wheeler_involved": 4.24,
+  "top_cramers_v": [
+    {
+      "label": "Vitesse maximale autorisée",
+      "cramers_v": 0.1628
+    },
+    {
+      "label": "Localisation",
+      "cramers_v": 0.1538
+    },
+    {
+      "label": "Type de collision",
+      "cramers_v": 0.1337
+    },
+    {
+      "label": "Catégorie de route",
+      "cramers_v": 0.1231
+    },
+    {
+      "label": "Luminosité",
+      "cramers_v": 0.1174
+    }
+  ],
+  "killed_by_mode": {
+    "Voiture (VL)": 9415,
+    "Moto > 125 cm3": 3173,
+    "Piéton": 2928,
+    "Vélo (y.c. VAE)": 1356,
+    "Cyclomoteur <= 50 cm3": 847,
+    "Utilitaire (VU)": 699,
+    "Moto 50-125 cm3": 630,
+    "Poids lourd": 245,
+    "EDP motorisé (trottinette...)": 169,
+    "Voiturette": 139,
+    "Quad": 119,
+    "Engin spécial / agricole": 92,
+    "Bus / car": 28,
+    "Autre / indéterminé": 23,
+    "EDP non motorisé": 13,
+    "Train / tramway": 1
+  },
+  "share_killed_car_pct": 47.4,
+  "share_killed_motorbike_pct": 23.4,
+  "share_killed_pedestrian_pct": 14.7,
+  "share_killed_men_pct": 78.1,
+  "equipment": [
+    {
+      "group": "Conducteurs de voiture",
+      "worn": "Porté",
+      "n_persons": 284245,
+      "pct_killed": 1.7,
+      "pct_killed_or_hosp": 10.33,
+      "relative_risk_killed_not_worn": 4.09
+    },
+    {
+      "group": "Conducteurs de voiture",
+      "worn": "Non porté",
+      "n_persons": 19084,
+      "pct_killed": 6.95,
+      "pct_killed_or_hosp": 18.42,
+      "relative_risk_killed_not_worn": 4.09
+    },
+    {
+      "group": "Passagers de voiture",
+      "worn": "Porté",
+      "n_persons": 87780,
+      "pct_killed": 1.5,
+      "pct_killed_or_hosp": 14.0,
+      "relative_risk_killed_not_worn": 3.81
+    },
+    {
+      "group": "Passagers de voiture",
+      "worn": "Non porté",
+      "n_persons": 11713,
+      "pct_killed": 5.72,
+      "pct_killed_or_hosp": 23.77,
+      "relative_risk_killed_not_worn": 3.81
+    },
+    {
+      "group": "Conducteurs de moto > 125 cm3",
+      "worn": "Porté",
+      "n_persons": 51454,
+      "pct_killed": 5.53,
+      "pct_killed_or_hosp": 40.66,
+      "relative_risk_killed_not_worn": 1.41
+    },
+    {
+      "group": "Conducteurs de moto > 125 cm3",
+      "worn": "Non porté",
+      "n_persons": 1527,
+      "pct_killed": 7.79,
+      "pct_killed_or_hosp": 42.89,
+      "relative_risk_killed_not_worn": 1.41
+    },
+    {
+      "group": "Conducteurs de moto 50-125 cm3",
+      "worn": "Porté",
+      "n_persons": 20601,
+      "pct_killed": 2.54,
+      "pct_killed_or_hosp": 28.42,
+      "relative_risk_killed_not_worn": 2.33
+    },
+    {
+      "group": "Conducteurs de moto 50-125 cm3",
+      "worn": "Non porté",
+      "n_persons": 1147,
+      "pct_killed": 5.93,
+      "pct_killed_or_hosp": 40.54,
+      "relative_risk_killed_not_worn": 2.33
+    },
+    {
+      "group": "Conducteurs de cyclomoteur",
+      "worn": "Porté",
+      "n_persons": 32985,
+      "pct_killed": 2.06,
+      "pct_killed_or_hosp": 30.21,
+      "relative_risk_killed_not_worn": 2.17
+    },
+    {
+      "group": "Conducteurs de cyclomoteur",
+      "worn": "Non porté",
+      "n_persons": 2076,
+      "pct_killed": 4.48,
+      "pct_killed_or_hosp": 37.81,
+      "relative_risk_killed_not_worn": 2.17
+    },
+    {
+      "group": "Cyclistes",
+      "worn": "Porté",
+      "n_persons": 15427,
+      "pct_killed": 4.29,
+      "pct_killed_or_hosp": 31.43,
+      "relative_risk_killed_not_worn": 0.9
+    },
+    {
+      "group": "Cyclistes",
+      "worn": "Non porté",
+      "n_persons": 16541,
+      "pct_killed": 3.86,
+      "pct_killed_or_hosp": 26.23,
+      "relative_risk_killed_not_worn": 0.9
+    },
+    {
+      "group": "Conducteurs d'EDP motorisé",
+      "worn": "Porté",
+      "n_persons": 2337,
+      "pct_killed": 1.24,
+      "pct_killed_or_hosp": 14.98,
+      "relative_risk_killed_not_worn": 1.49
+    },
+    {
+      "group": "Conducteurs d'EDP motorisé",
+      "worn": "Non porté",
+      "n_persons": 6855,
+      "pct_killed": 1.85,
+      "pct_killed_or_hosp": 19.08,
+      "relative_risk_killed_not_worn": 1.49
+    }
+  ],
+  "top_departments_killed_per_100k": [
+    {
+      "dep_code": "978",
+      "dep_name": "Saint-Martin",
+      "zone": "Outre-mer (COM)",
+      "killed_per_100k_per_year": 16.87,
+      "n_accidents": 192
+    },
+    {
+      "dep_code": "971",
+      "dep_name": "Guadeloupe",
+      "zone": "Outre-mer (DROM)",
+      "killed_per_100k_per_year": 13.13,
+      "n_accidents": 2812
+    },
+    {
+      "dep_code": "973",
+      "dep_name": "Guyane",
+      "zone": "Outre-mer (DROM)",
+      "killed_per_100k_per_year": 11.54,
+      "n_accidents": 3099
+    },
+    {
+      "dep_code": "2B",
+      "dep_name": "Haute-Corse",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 9.49,
+      "n_accidents": 1791
+    },
+    {
+      "dep_code": "52",
+      "dep_name": "Haute-Marne",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 9.35,
+      "n_accidents": 678
+    },
+    {
+      "dep_code": "58",
+      "dep_name": "Nièvre",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 9.29,
+      "n_accidents": 993
+    },
+    {
+      "dep_code": "89",
+      "dep_name": "Yonne",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 9.06,
+      "n_accidents": 1141
+    },
+    {
+      "dep_code": "04",
+      "dep_name": "Alpes-de-Haute-Provence",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 8.8,
+      "n_accidents": 1212
+    },
+    {
+      "dep_code": "39",
+      "dep_name": "Jura",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 8.8,
+      "n_accidents": 810
+    },
+    {
+      "dep_code": "61",
+      "dep_name": "Orne",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 8.79,
+      "n_accidents": 1377
+    }
+  ],
+  "bottom_departments_killed_per_100k": [
+    {
+      "dep_code": "95",
+      "dep_name": "Val-d'Oise",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 2.12,
+      "n_accidents": 5191
+    },
+    {
+      "dep_code": "75",
+      "dep_name": "Paris",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 1.78,
+      "n_accidents": 29430
+    },
+    {
+      "dep_code": "93",
+      "dep_name": "Seine-Saint-Denis",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 1.59,
+      "n_accidents": 16595
+    },
+    {
+      "dep_code": "94",
+      "dep_name": "Val-de-Marne",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 1.52,
+      "n_accidents": 13783
+    },
+    {
+      "dep_code": "92",
+      "dep_name": "Hauts-de-Seine",
+      "zone": "Métropole",
+      "killed_per_100k_per_year": 1.36,
+      "n_accidents": 14367
+    }
+  ]
+}

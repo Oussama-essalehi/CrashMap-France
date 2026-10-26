@@ -1,0 +1,6 @@
+lum_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+Crépuscule ou aube,21529,1453,1359,6.75,6.31,6.0,6.65
+Nuit avec éclairage public allumé,51147,1938,1825,3.79,3.57,3.41,3.73
+Nuit avec éclairage public non allumé,3210,301,286,9.38,8.91,7.97,9.94
+Nuit sans éclairage public,33324,4870,4494,14.61,13.49,13.12,13.86
+Plein jour,218409,11313,10732,5.18,4.91,4.82,5.01

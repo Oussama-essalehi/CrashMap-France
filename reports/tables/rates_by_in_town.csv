@@ -1,0 +1,3 @@
+in_town_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+En agglomération,208478,6502,6275,3.12,3.01,2.94,3.08
+Hors agglomération,119150,13375,12423,11.23,10.43,10.25,10.6

@@ -1,0 +1,43 @@
+{
+  "logit": {
+    "n": 322020,
+    "pseudo_r2": 0.106,
+    "aic": 124762.8,
+    "fatal_rate_pct": 5.63
+  },
+  "predictive_check": {
+    "train_years": [
+      2019,
+      2023
+    ],
+    "test_year": 2024,
+    "n_train": 268451,
+    "n_test": 53569,
+    "fatal_rate_train_pct": 5.58,
+    "fatal_rate_test_pct": 5.85,
+    "models": {
+      "Régression logistique (pondérée)": {
+        "roc_auc": 0.7559,
+        "average_precision": 0.1476,
+        "precision_at_0_5": 0.1234,
+        "recall_at_0_5": 0.7086
+      },
+      "Gradient boosting": {
+        "roc_auc": 0.7775,
+        "average_precision": 0.1879,
+        "precision_at_0_5": 0.1257,
+        "recall_at_0_5": 0.7711
+      }
+    }
+  },
+  "top_factors_sentences": [
+    "Vitesse maximale autorisée « 130 km/h » (au lieu de « 40-50 km/h ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 6,3 (IC 95 % : 5,6 à 7,2).",
+    "Intersection « Passage à niveau » (au lieu de « Hors intersection ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 4,7 (IC 95 % : 3,8 à 5,9).",
+    "Vitesse maximale autorisée « 80-90 km/h » (au lieu de « 40-50 km/h ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 1,9 (IC 95 % : 1,8 à 2,1).",
+    "Localisation « Hors agglomération » (au lieu de « En agglomération ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 1,9 (IC 95 % : 1,8 à 2,0).",
+    "Luminosité « Nuit avec éclairage public non allumé » (au lieu de « Plein jour ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 1,8 (IC 95 % : 1,6 à 2,0).",
+    "Vitesse maximale autorisée « 100-110 km/h » (au lieu de « 40-50 km/h ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 1,8 (IC 95 % : 1,6 à 2,0).",
+    "Catégorie de route « Route départementale » (au lieu de « Voie communale ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 1,7 (IC 95 % : 1,6 à 1,8).",
+    "Nombre de véhicules « 1 véhicule » (au lieu de « 2 véhicules ») : à autres facteurs égaux, la cote d'un accident mortel est multipliée par 1,7 (IC 95 % : 1,6 à 1,7)."
+  ]
+}

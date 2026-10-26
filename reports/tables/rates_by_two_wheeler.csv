@@ -1,0 +1,3 @@
+two_wheeler_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+Non,177406,13501,12482,7.61,7.04,6.92,7.16
+Oui,150222,6376,6216,4.24,4.14,4.04,4.24

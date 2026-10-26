@@ -1,0 +1,4 @@
+vehicles_label,n_accidents,n_killed,n_fatal,killed_per_100,pct_fatal,pct_fatal_ci_low,pct_fatal_ci_high
+1 véhicule,124971,10931,10468,8.75,8.38,8.22,8.53
+2 véhicules,179819,7614,7063,4.23,3.93,3.84,4.02
+3 véhicules et +,22838,1332,1167,5.83,5.11,4.83,5.4

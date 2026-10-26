@@ -1,0 +1,15 @@
+group,equipment,worn,n_persons,n_killed,n_killed_or_hosp,pct_killed,pct_killed_ci_low,pct_killed_ci_high,pct_killed_or_hosp,ci_low,ci_high,relative_risk_killed_not_worn
+Conducteurs de voiture,Ceinture,Porté,284245,4841,29357,1.7,1.66,1.75,10.33,10.22,10.44,4.09
+Conducteurs de voiture,Ceinture,Non porté,19084,1326,3515,6.95,6.6,7.32,18.42,17.87,18.97,4.09
+Passagers de voiture,Ceinture,Porté,87780,1318,12288,1.5,1.42,1.58,14.0,13.77,14.23,3.81
+Passagers de voiture,Ceinture,Non porté,11713,670,2784,5.72,5.31,6.16,23.77,23.01,24.55,3.81
+Conducteurs de moto > 125 cm3,Casque,Porté,51454,2846,20923,5.53,5.34,5.73,40.66,40.24,41.09,1.41
+Conducteurs de moto > 125 cm3,Casque,Non porté,1527,119,655,7.79,6.55,9.25,42.89,40.43,45.39,1.41
+Conducteurs de moto 50-125 cm3,Casque,Porté,20601,523,5855,2.54,2.33,2.76,28.42,27.81,29.04,2.33
+Conducteurs de moto 50-125 cm3,Casque,Non porté,1147,68,465,5.93,4.7,7.45,40.54,37.74,43.41,2.33
+Conducteurs de cyclomoteur,Casque,Porté,32985,681,9964,2.06,1.92,2.22,30.21,29.71,30.71,2.17
+Conducteurs de cyclomoteur,Casque,Non porté,2076,93,785,4.48,3.67,5.46,37.81,35.75,39.92,2.17
+Cyclistes,Casque,Porté,15427,662,4849,4.29,3.98,4.62,31.43,30.7,32.17,0.9
+Cyclistes,Casque,Non porté,16541,638,4339,3.86,3.57,4.16,26.23,25.57,26.91,0.9
+Conducteurs d'EDP motorisé,Casque,Porté,2337,29,350,1.24,0.87,1.78,14.98,13.59,16.48,1.49
+Conducteurs d'EDP motorisé,Casque,Non porté,6855,127,1308,1.85,1.56,2.2,19.08,18.17,20.03,1.49

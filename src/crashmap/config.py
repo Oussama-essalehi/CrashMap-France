@@ -89,3 +89,5 @@ def setup_logging(level: int = logging.INFO) -> None:
         format="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
         datefmt="%H:%M:%S",
     )
+    for noisy in ("kaleido", "choreographer", "urllib3"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
