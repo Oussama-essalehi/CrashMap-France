@@ -1,0 +1,28 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+	annotation __PBI_TimeIntelligenceEnabled = 0
+
+	annotation PBI_QueryOrder = ["DataFolder", "dim_date", "dim_time_band", "dim_location", "dim_population", "dim_conditions", "dim_road", "dim_user_type", "dim_vehicle_type", "fact_accident", "fact_vehicle", "fact_victim", "_Mesures"]
+
+	annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_date
+ref table dim_time_band
+ref table dim_location
+ref table dim_population
+ref table dim_conditions
+ref table dim_road
+ref table dim_user_type
+ref table dim_vehicle_type
+ref table fact_accident
+ref table fact_vehicle
+ref table fact_victim
+ref table _Mesures
+ref table 'Seuil accidents'

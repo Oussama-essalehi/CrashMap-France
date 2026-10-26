@@ -1,0 +1,97 @@
+/// Luminosité, conditions météo et état de la surface (dimension combinée).
+table dim_conditions
+	lineageTag: 31cb8866-8f69-52e6-9be8-b69a4cc9716d
+
+	column conditions_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 30003944-caab-5408-a6c0-179558001aab
+		summarizeBy: none
+		sourceColumn: conditions_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column lum
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6369f2d5-d466-5764-b021-db28259d36c3
+		summarizeBy: none
+		sourceColumn: lum
+
+		annotation SummarizationSetBy = Automatic
+
+	column lum_label
+		dataType: string
+		lineageTag: 36181bc3-34d0-5992-b795-5b48c590e20f
+		summarizeBy: none
+		sourceColumn: lum_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column atm
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0cdcacdd-7986-5c58-a30e-5fdaf4d8c430
+		summarizeBy: none
+		sourceColumn: atm
+
+		annotation SummarizationSetBy = Automatic
+
+	column atm_label
+		dataType: string
+		lineageTag: 2063807d-2f0b-5079-8d56-3c09f31dea0a
+		summarizeBy: none
+		sourceColumn: atm_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column surf
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 455c4284-4434-5cc9-b0cb-a1e48f4df6a1
+		summarizeBy: none
+		sourceColumn: surf
+
+		annotation SummarizationSetBy = Automatic
+
+	column surf_label
+		dataType: string
+		lineageTag: 54059662-b766-568a-9340-7d6137c5ff7d
+		summarizeBy: none
+		sourceColumn: surf_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column night
+		dataType: boolean
+		lineageTag: a1a8dd6e-2366-54be-8950-9fbe894a92da
+		summarizeBy: none
+		sourceColumn: night
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_conditions = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_conditions.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"conditions_key", Int64.Type},
+				        {"lum", Int64.Type},
+				        {"lum_label", type text},
+				        {"atm", Int64.Type},
+				        {"atm_label", type text},
+				        {"surf", Int64.Type},
+				        {"surf_label", type text},
+				        {"night", type logical}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

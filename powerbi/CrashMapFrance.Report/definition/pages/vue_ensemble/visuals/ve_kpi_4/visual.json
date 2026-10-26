@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "ve_kpi_4",
+  "position": {
+    "x": 848,
+    "y": 95,
+    "z": 14,
+    "width": 195,
+    "height": 105,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Évolution Tués %"
+                }
+              },
+              "queryRef": "_Mesures.Évolution Tués %",
+              "nativeQueryRef": "Évolution Tués %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Évolution des tués vs N-1'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

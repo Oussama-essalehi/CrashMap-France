@@ -1,0 +1,57 @@
+/// Catégorie d'usager (conducteur, passager, piéton) et mode de déplacement.
+table dim_user_type
+	lineageTag: 3dd26c6f-de06-5b97-96a3-3c20240224b8
+
+	column user_type_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 25bfbcb9-ee50-5c5a-ae32-8a75ee74cda9
+		summarizeBy: none
+		sourceColumn: user_type_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column catu
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 356e8b85-e801-5870-9eab-f431ecd6e0c0
+		summarizeBy: none
+		sourceColumn: catu
+
+		annotation SummarizationSetBy = Automatic
+
+	column catu_label
+		dataType: string
+		lineageTag: 43619ab5-9b7e-57e6-8374-f26521cafd68
+		summarizeBy: none
+		sourceColumn: catu_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_mode
+		dataType: string
+		lineageTag: b73ae03f-f1ac-5b7d-8132-c09bc7d415e6
+		summarizeBy: none
+		sourceColumn: user_mode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_user_type = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_user_type.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"user_type_key", Int64.Type},
+				        {"catu", Int64.Type},
+				        {"catu_label", type text},
+				        {"user_mode", type text}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

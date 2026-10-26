@@ -1,0 +1,43 @@
+relationship 5838f364-77d8-5cbf-9e90-84ad0b9e581b
+	fromColumn: fact_accident.date_key
+	toColumn: dim_date.date_key
+
+relationship d14a6281-d311-5ae4-b9a7-c47ad2610fc3
+	fromColumn: fact_accident.hour
+	toColumn: dim_time_band.hour
+
+relationship 32a282ac-e8f8-53d0-a410-5c4e801c7132
+	fromColumn: fact_accident.location_key
+	toColumn: dim_location.location_key
+
+relationship b8b6d999-7d32-5e78-b8fb-5db1d53f463f
+	fromColumn: fact_accident.dep_code
+	toColumn: dim_population.dep_code
+
+relationship 0711cfd0-fb1e-52b0-a37d-cbf06e3273fb
+	fromColumn: fact_accident.conditions_key
+	toColumn: dim_conditions.conditions_key
+
+relationship 2a5741cf-847c-55a4-b142-ed83b728ecf4
+	fromColumn: fact_accident.road_key
+	toColumn: dim_road.road_key
+
+relationship 2702fa5a-8561-5f50-8899-326284ba91fe
+	fromColumn: fact_vehicle.accident_id
+	toColumn: fact_accident.accident_id
+
+relationship d7579a5a-3866-5bb1-9c87-17ccee3f3be5
+	fromColumn: fact_vehicle.catv
+	toColumn: dim_vehicle_type.catv
+
+relationship 49853254-9c63-51e3-82c2-b80029f336db
+	fromColumn: fact_victim.accident_id
+	toColumn: fact_accident.accident_id
+
+relationship 593dc520-6c3c-52b0-bfef-ef135fd1d95a
+	fromColumn: fact_victim.user_type_key
+	toColumn: dim_user_type.user_type_key
+
+relationship 7de96fd4-0b95-50bd-82ae-c899ede4671f
+	fromColumn: fact_victim.catv
+	toColumn: dim_vehicle_type.catv

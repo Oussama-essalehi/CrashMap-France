@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "qd_tranche",
+  "position": {
+    "x": 860,
+    "y": 405,
+    "z": 14,
+    "width": 400,
+    "height": 300,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_time_band"
+                    }
+                  },
+                  "Property": "time_band"
+                }
+              },
+              "queryRef": "dim_time_band.time_band",
+              "nativeQueryRef": "time_band"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Taux Mortalité (tués / 100 accidents)"
+                }
+              },
+              "queryRef": "_Mesures.Taux Mortalité (tués / 100 accidents)",
+              "nativeQueryRef": "Taux Mortalité (tués / 100 accidents)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tués pour 100 accidents par tranche horaire'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

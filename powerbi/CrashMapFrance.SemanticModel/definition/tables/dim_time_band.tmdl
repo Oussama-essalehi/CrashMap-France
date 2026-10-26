@@ -1,0 +1,58 @@
+/// Heure de la journée et tranche horaire (nuit, matin, journée, soirée).
+table dim_time_band
+	lineageTag: c241a45e-8743-55b5-aba6-1deb6ba0e266
+
+	column hour
+		dataType: int64
+		formatString: 0
+		lineageTag: 700c38ab-ddad-5dfe-9329-73f4c95f6d7c
+		summarizeBy: none
+		sourceColumn: hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column hour_label
+		dataType: string
+		lineageTag: 7348d877-b0a4-52cc-9eb2-e782bc8b2dd0
+		summarizeBy: none
+		sourceColumn: hour_label
+		sortByColumn: hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_band
+		dataType: string
+		lineageTag: 27e5c79e-ffcc-5a46-858b-0ebcf4edfb1d
+		summarizeBy: none
+		sourceColumn: time_band
+		sortByColumn: time_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_band_order
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9122c0ad-57f1-5a9c-8fa6-ce905b349ef7
+		summarizeBy: none
+		sourceColumn: time_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_time_band = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_time_band.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"hour", Int64.Type},
+				        {"hour_label", type text},
+				        {"time_band", type text},
+				        {"time_band_order", Int64.Type}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

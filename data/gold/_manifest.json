@@ -1,0 +1,224 @@
+[
+  {
+    "table": "dim_date",
+    "file": "dim_date.csv",
+    "rows": 2192,
+    "columns": [
+      "date_key",
+      "date",
+      "year",
+      "quarter",
+      "month",
+      "month_name",
+      "year_month",
+      "day",
+      "day_of_week",
+      "weekday_name",
+      "is_weekend",
+      "is_covid_year"
+    ],
+    "size_mb": 0.15,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_time_band",
+    "file": "dim_time_band.csv",
+    "rows": 24,
+    "columns": [
+      "hour",
+      "hour_label",
+      "time_band",
+      "time_band_order"
+    ],
+    "size_mb": 0.0,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_location",
+    "file": "dim_location.csv",
+    "rows": 34136,
+    "columns": [
+      "location_key",
+      "com_code",
+      "com_name",
+      "com_population",
+      "dep_code",
+      "dep_name",
+      "region_name",
+      "zone",
+      "in_town",
+      "in_town_label"
+    ],
+    "size_mb": 3.31,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_population",
+    "file": "dim_population.csv",
+    "rows": 107,
+    "columns": [
+      "dep_code",
+      "dep_name",
+      "region_code",
+      "region_name",
+      "zone",
+      "population",
+      "population_year"
+    ],
+    "size_mb": 0.01,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_conditions",
+    "file": "dim_conditions.csv",
+    "rows": 295,
+    "columns": [
+      "conditions_key",
+      "lum",
+      "lum_label",
+      "atm",
+      "atm_label",
+      "surf",
+      "surf_label",
+      "night"
+    ],
+    "size_mb": 0.02,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_road",
+    "file": "dim_road.csv",
+    "rows": 944,
+    "columns": [
+      "road_key",
+      "catr",
+      "catr_label",
+      "vma_band",
+      "vma_band_order",
+      "plan",
+      "plan_label",
+      "intersection",
+      "intersection_label"
+    ],
+    "size_mb": 0.07,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_user_type",
+    "file": "dim_user_type.csv",
+    "rows": 33,
+    "columns": [
+      "user_type_key",
+      "catu",
+      "catu_label",
+      "user_mode"
+    ],
+    "size_mb": 0.0,
+    "tracked_in_git": true
+  },
+  {
+    "table": "dim_vehicle_type",
+    "file": "dim_vehicle_type.csv",
+    "rows": 31,
+    "columns": [
+      "catv",
+      "catv_label",
+      "vehicle_group",
+      "is_two_wheeler",
+      "is_motorised_two_wheeler",
+      "is_bicycle",
+      "is_personal_mobility",
+      "is_heavy_vehicle"
+    ],
+    "size_mb": 0.0,
+    "tracked_in_git": true
+  },
+  {
+    "table": "fact_accident",
+    "file": "fact_accident.csv",
+    "rows": 327628,
+    "columns": [
+      "accident_id",
+      "date_key",
+      "hour",
+      "location_key",
+      "dep_code",
+      "conditions_key",
+      "road_key",
+      "year",
+      "in_town",
+      "vma",
+      "collision_type",
+      "n_vehicles",
+      "n_users",
+      "n_victims",
+      "n_killed",
+      "n_hospitalized",
+      "n_lightly_injured",
+      "n_unhurt",
+      "fatal",
+      "serious",
+      "pedestrian_involved",
+      "two_wheeler_involved",
+      "motorised_two_wheeler_involved",
+      "bicycle_involved",
+      "personal_mobility_involved",
+      "heavy_vehicle_involved",
+      "lat",
+      "lon",
+      "coord_precise"
+    ],
+    "size_mb": 54.11,
+    "tracked_in_git": false
+  },
+  {
+    "table": "fact_vehicle",
+    "file": "fact_vehicle.csv",
+    "rows": 559847,
+    "columns": [
+      "vehicle_key",
+      "accident_id",
+      "catv",
+      "fixed_obstacle",
+      "mobile_obstacle",
+      "impact_point",
+      "maneuver",
+      "engine",
+      "n_users",
+      "n_killed",
+      "n_hospitalized",
+      "n_lightly_injured"
+    ],
+    "size_mb": 63.42,
+    "tracked_in_git": false
+  },
+  {
+    "table": "fact_victim",
+    "file": "fact_victim.csv",
+    "rows": 745158,
+    "columns": [
+      "victim_id",
+      "accident_id",
+      "vehicle_key",
+      "user_type_key",
+      "catv",
+      "grav",
+      "severity",
+      "severity_order",
+      "killed",
+      "hospitalized",
+      "lightly_injured",
+      "unhurt",
+      "sex",
+      "age",
+      "age_band",
+      "age_band_order",
+      "trip_purpose",
+      "equipment_known",
+      "seatbelt_worn",
+      "helmet_worn"
+    ],
+    "size_mb": 100.76,
+    "tracked_in_git": false
+  }
+]

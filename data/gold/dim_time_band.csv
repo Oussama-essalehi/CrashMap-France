@@ -1,0 +1,25 @@
+hour,hour_label,time_band,time_band_order
+0,00h,Nuit (21h-6h),1
+1,01h,Nuit (21h-6h),1
+2,02h,Nuit (21h-6h),1
+3,03h,Nuit (21h-6h),1
+4,04h,Nuit (21h-6h),1
+5,05h,Nuit (21h-6h),1
+6,06h,Matin (6h-10h),2
+7,07h,Matin (6h-10h),2
+8,08h,Matin (6h-10h),2
+9,09h,Matin (6h-10h),2
+10,10h,Journée (10h-17h),3
+11,11h,Journée (10h-17h),3
+12,12h,Journée (10h-17h),3
+13,13h,Journée (10h-17h),3
+14,14h,Journée (10h-17h),3
+15,15h,Journée (10h-17h),3
+16,16h,Journée (10h-17h),3
+17,17h,Soirée (17h-21h),4
+18,18h,Soirée (17h-21h),4
+19,19h,Soirée (17h-21h),4
+20,20h,Soirée (17h-21h),4
+21,21h,Nuit (21h-6h),1
+22,22h,Nuit (21h-6h),1
+23,23h,Nuit (21h-6h),1

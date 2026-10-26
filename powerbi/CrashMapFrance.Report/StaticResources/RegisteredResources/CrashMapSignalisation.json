@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/main/Report%20Theme%20JSON%20Schema/reportThemeSchema-2.159.json",
+  "name": "CrashMap Signalisation",
+  "dataColors": [
+    "#1F5FAE",
+    "#E8A20C",
+    "#16825D",
+    "#D1342B",
+    "#4AA3DF",
+    "#0F3B6E",
+    "#9C6B00",
+    "#0B5A3F"
+  ],
+  "foreground": "#1F2933",
+  "foregroundNeutralSecondary": "#52514E",
+  "foregroundNeutralTertiary": "#8A8985",
+  "background": "#FFFFFF",
+  "backgroundLight": "#F4F5F7",
+  "backgroundNeutral": "#E6E5E1",
+  "tableAccent": "#1F5FAE",
+  "good": "#16825D",
+  "neutral": "#E8A20C",
+  "bad": "#D1342B",
+  "maximum": "#D1342B",
+  "center": "#F4F5F7",
+  "minimum": "#1F5FAE",
+  "null": "#C8C8C8",
+  "hyperlink": "#1F5FAE",
+  "visitedHyperlink": "#0F3B6E",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13,
+      "color": "#1F2933"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#1F2933"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#52514E"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 26,
+      "color": "#1F5FAE"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "show": true,
+            "fontSize": 12,
+            "fontColor": {
+              "solid": {
+                "color": "#1F2933"
+              }
+            }
+          }
+        ],
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#E6E5E1"
+              }
+            },
+            "radius": 6
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F4F5F7"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

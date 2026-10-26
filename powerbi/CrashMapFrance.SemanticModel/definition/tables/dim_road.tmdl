@@ -1,0 +1,109 @@
+/// Catégorie de route, tranche de vitesse autorisée, tracé et type d'intersection.
+table dim_road
+	lineageTag: 153fe86d-30ca-5e8d-b25a-28d1853cd0bc
+
+	column road_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1e20ccf1-db88-5da9-8cf0-f9d9a98db624
+		summarizeBy: none
+		sourceColumn: road_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column catr
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7782d1bf-c231-5186-ab2e-8158d65869d5
+		summarizeBy: none
+		sourceColumn: catr
+
+		annotation SummarizationSetBy = Automatic
+
+	column catr_label
+		dataType: string
+		lineageTag: b93450e5-ee63-5f92-80f0-28d58ad802f6
+		summarizeBy: none
+		sourceColumn: catr_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column vma_band
+		dataType: string
+		lineageTag: 8fc53490-e71b-5a3a-8bb7-40db39747abb
+		summarizeBy: none
+		sourceColumn: vma_band
+		sortByColumn: vma_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column vma_band_order
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 34efadb1-886b-5ffd-ad45-dda5021ee815
+		summarizeBy: none
+		sourceColumn: vma_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column plan
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ff0b7afb-92f2-5630-af29-432cd8b25846
+		summarizeBy: none
+		sourceColumn: plan
+
+		annotation SummarizationSetBy = Automatic
+
+	column plan_label
+		dataType: string
+		lineageTag: b221186a-c01c-59a5-b180-d3b740268607
+		summarizeBy: none
+		sourceColumn: plan_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column intersection
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1233096b-d7e4-5396-9337-c81629ee88c2
+		summarizeBy: none
+		sourceColumn: intersection
+
+		annotation SummarizationSetBy = Automatic
+
+	column intersection_label
+		dataType: string
+		lineageTag: 36921198-09ca-5865-9af8-5ee28875a467
+		summarizeBy: none
+		sourceColumn: intersection_label
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_road = m
+		mode: import
+		source =
+				let
+				    Folder = Text.TrimEnd(DataFolder, {"\", "/"}) & "\",
+				    Source = Csv.Document(File.Contents(Folder & "dim_road.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {
+				        {"road_key", Int64.Type},
+				        {"catr", Int64.Type},
+				        {"catr_label", type text},
+				        {"vma_band", type text},
+				        {"vma_band_order", Int64.Type},
+				        {"plan", Int64.Type},
+				        {"plan_label", type text},
+				        {"intersection", Int64.Type},
+				        {"intersection_label", type text}
+				    }, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

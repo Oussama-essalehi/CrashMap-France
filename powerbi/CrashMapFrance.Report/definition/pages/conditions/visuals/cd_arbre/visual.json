@@ -1,0 +1,161 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "cd_arbre",
+  "position": {
+    "x": 860,
+    "y": 300,
+    "z": 20,
+    "width": 400,
+    "height": 405,
+    "tabOrder": 20
+  },
+  "visual": {
+    "visualType": "decompositionTreeVisual",
+    "query": {
+      "queryState": {
+        "Analyze": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Taux Mortalité (tués / 100 accidents)"
+                }
+              },
+              "queryRef": "_Mesures.Taux Mortalité (tués / 100 accidents)",
+              "nativeQueryRef": "Taux Mortalité (tués / 100 accidents)"
+            }
+          ]
+        },
+        "ExplainBy": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_location"
+                    }
+                  },
+                  "Property": "in_town_label"
+                }
+              },
+              "queryRef": "dim_location.in_town_label",
+              "nativeQueryRef": "in_town_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_road"
+                    }
+                  },
+                  "Property": "catr_label"
+                }
+              },
+              "queryRef": "dim_road.catr_label",
+              "nativeQueryRef": "catr_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_road"
+                    }
+                  },
+                  "Property": "vma_band"
+                }
+              },
+              "queryRef": "dim_road.vma_band",
+              "nativeQueryRef": "vma_band"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_conditions"
+                    }
+                  },
+                  "Property": "lum_label"
+                }
+              },
+              "queryRef": "dim_conditions.lum_label",
+              "nativeQueryRef": "lum_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_time_band"
+                    }
+                  },
+                  "Property": "time_band"
+                }
+              },
+              "queryRef": "dim_time_band.time_band",
+              "nativeQueryRef": "time_band"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_conditions"
+                    }
+                  },
+                  "Property": "atm_label"
+                }
+              },
+              "queryRef": "dim_conditions.atm_label",
+              "nativeQueryRef": "atm_label"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_road"
+                    }
+                  },
+                  "Property": "intersection_label"
+                }
+              },
+              "queryRef": "dim_road.intersection_label",
+              "nativeQueryRef": "intersection_label"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arbre de décomposition : tués pour 100 accidents'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

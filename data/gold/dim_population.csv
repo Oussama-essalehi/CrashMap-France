@@ -1,0 +1,108 @@
+dep_code,dep_name,region_code,region_name,zone,population,population_year
+01,Ain,84,Auvergne-Rhône-Alpes,Métropole,694945,2023
+02,Aisne,32,Hauts-de-France,Métropole,534380,2023
+03,Allier,84,Auvergne-Rhône-Alpes,Métropole,341713,2023
+04,Alpes-de-Haute-Provence,93,Provence-Alpes-Côte d'Azur,Métropole,172385,2023
+05,Hautes-Alpes,93,Provence-Alpes-Côte d'Azur,Métropole,147756,2023
+06,Alpes-Maritimes,93,Provence-Alpes-Côte d'Azur,Métropole,1142503,2023
+07,Ardèche,84,Auvergne-Rhône-Alpes,Métropole,342599,2023
+08,Ardennes,44,Grand Est,Métropole,271604,2023
+09,Ariège,76,Occitanie,Métropole,159684,2023
+10,Aube,44,Grand Est,Métropole,317296,2023
+11,Aude,76,Occitanie,Métropole,387874,2023
+12,Aveyron,76,Occitanie,Métropole,289413,2023
+13,Bouches-du-Rhône,93,Provence-Alpes-Côte d'Azur,Métropole,2112170,2023
+14,Calvados,28,Normandie,Métropole,722979,2023
+15,Cantal,84,Auvergne-Rhône-Alpes,Métropole,148813,2023
+16,Charente,75,Nouvelle-Aquitaine,Métropole,361286,2023
+17,Charente-Maritime,75,Nouvelle-Aquitaine,Métropole,688067,2023
+18,Cher,24,Centre-Val de Loire,Métropole,305233,2023
+19,Corrèze,75,Nouvelle-Aquitaine,Métropole,248289,2023
+21,Côte-d'Or,27,Bourgogne-Franche-Comté,Métropole,551336,2023
+22,Côtes-d'Armor,53,Bretagne,Métropole,629517,2023
+23,Creuse,75,Nouvelle-Aquitaine,Métropole,118760,2023
+24,Dordogne,75,Nouvelle-Aquitaine,Métropole,427558,2023
+25,Doubs,27,Bourgogne-Franche-Comté,Métropole,560477,2023
+26,Drôme,84,Auvergne-Rhône-Alpes,Métropole,536948,2023
+27,Eure,28,Normandie,Métropole,616217,2023
+28,Eure-et-Loir,24,Centre-Val de Loire,Métropole,443227,2023
+29,Finistère,53,Bretagne,Métropole,957671,2023
+2A,Corse-du-Sud,94,Corse,Métropole,170548,2023
+2B,Haute-Corse,94,Corse,Métropole,189722,2023
+30,Gard,76,Occitanie,Métropole,784471,2023
+31,Haute-Garonne,76,Occitanie,Métropole,1494734,2023
+32,Gers,76,Occitanie,Métropole,198955,2023
+33,Gironde,75,Nouvelle-Aquitaine,Métropole,1716986,2023
+34,Hérault,76,Occitanie,Métropole,1248501,2023
+35,Ille-et-Vilaine,53,Bretagne,Métropole,1145286,2023
+36,Indre,24,Centre-Val de Loire,Métropole,221574,2023
+37,Indre-et-Loire,24,Centre-Val de Loire,Métropole,631334,2023
+38,Isère,84,Auvergne-Rhône-Alpes,Métropole,1324225,2023
+39,Jura,27,Bourgogne-Franche-Comté,Métropole,266940,2023
+40,Landes,75,Nouvelle-Aquitaine,Métropole,445828,2023
+41,Loir-et-Cher,24,Centre-Val de Loire,Métropole,337089,2023
+42,Loire,84,Auvergne-Rhône-Alpes,Métropole,788024,2023
+43,Haute-Loire,84,Auvergne-Rhône-Alpes,Métropole,235575,2023
+44,Loire-Atlantique,52,Pays de la Loire,Métropole,1517043,2023
+45,Loiret,24,Centre-Val de Loire,Métropole,705712,2023
+46,Lot,76,Occitanie,Métropole,181747,2023
+47,Lot-et-Garonne,75,Nouvelle-Aquitaine,Métropole,341487,2023
+48,Lozère,76,Occitanie,Métropole,79964,2023
+49,Maine-et-Loire,52,Pays de la Loire,Métropole,853768,2023
+50,Manche,28,Normandie,Métropole,512167,2023
+51,Marne,44,Grand Est,Métropole,574142,2023
+52,Haute-Marne,44,Grand Est,Métropole,172981,2023
+53,Mayenne,52,Pays de la Loire,Métropole,314446,2023
+54,Meurthe-et-Moselle,44,Grand Est,Métropole,743353,2023
+55,Meuse,44,Grand Est,Métropole,185178,2023
+56,Morbihan,53,Bretagne,Métropole,804597,2023
+57,Moselle,44,Grand Est,Métropole,1068899,2023
+58,Nièvre,27,Bourgogne-Franche-Comté,Métropole,206356,2023
+59,Nord,32,Hauts-de-France,Métropole,2645946,2023
+60,Oise,32,Hauts-de-France,Métropole,846757,2023
+61,Orne,28,Normandie,Métropole,282417,2023
+62,Pas-de-Calais,32,Hauts-de-France,Métropole,1479365,2023
+63,Puy-de-Dôme,84,Auvergne-Rhône-Alpes,Métropole,678624,2023
+64,Pyrénées-Atlantiques,75,Nouvelle-Aquitaine,Métropole,725655,2023
+65,Hautes-Pyrénées,76,Occitanie,Métropole,237032,2023
+66,Pyrénées-Orientales,76,Occitanie,Métropole,504938,2023
+67,Bas-Rhin,44,Grand Est,Métropole,1178940,2023
+68,Haut-Rhin,44,Grand Est,Métropole,784356,2023
+69,Rhône,84,Auvergne-Rhône-Alpes,Métropole,1940015,2023
+70,Haute-Saône,27,Bourgogne-Franche-Comté,Métropole,239102,2023
+71,Saône-et-Loire,27,Bourgogne-Franche-Comté,Métropole,564938,2023
+72,Sarthe,52,Pays de la Loire,Métropole,579227,2023
+73,Savoie,84,Auvergne-Rhône-Alpes,Métropole,460217,2023
+74,Haute-Savoie,84,Auvergne-Rhône-Alpes,Métropole,881729,2023
+75,Paris,11,Île-de-France,Métropole,2119412,2023
+76,Seine-Maritime,28,Normandie,Métropole,1281667,2023
+77,Seine-et-Marne,11,Île-de-France,Métropole,1484180,2023
+78,Yvelines,11,Île-de-France,Métropole,1508510,2023
+79,Deux-Sèvres,75,Nouvelle-Aquitaine,Métropole,385771,2023
+80,Somme,32,Hauts-de-France,Métropole,575371,2023
+81,Tarn,76,Occitanie,Métropole,407233,2023
+82,Tarn-et-Garonne,76,Occitanie,Métropole,271650,2023
+83,Var,93,Provence-Alpes-Côte d'Azur,Métropole,1135585,2023
+84,Vaucluse,93,Provence-Alpes-Côte d'Azur,Métropole,582656,2023
+85,Vendée,52,Pays de la Loire,Métropole,732903,2023
+86,Vienne,75,Nouvelle-Aquitaine,Métropole,449082,2023
+87,Haute-Vienne,75,Nouvelle-Aquitaine,Métropole,379464,2023
+88,Vosges,44,Grand Est,Métropole,367295,2023
+89,Yonne,27,Bourgogne-Franche-Comté,Métropole,340359,2023
+90,Territoire de Belfort,27,Bourgogne-Franche-Comté,Métropole,143144,2023
+91,Essonne,11,Île-de-France,Métropole,1351891,2023
+92,Hauts-de-Seine,11,Île-de-France,Métropole,1670575,2023
+93,Seine-Saint-Denis,11,Île-de-France,Métropole,1710659,2023
+94,Val-de-Marne,11,Île-de-France,Métropole,1435612,2023
+95,Val-d'Oise,11,Île-de-France,Métropole,1290942,2023
+971,Guadeloupe,01,Guadeloupe,Outre-mer (DROM),388493,2023
+972,Martinique,02,Martinique,Outre-mer (DROM),364348,2023
+973,Guyane,03,Guyane,Outre-mer (DROM),296053,2023
+974,La Réunion,04,La Réunion,Outre-mer (DROM),899660,2023
+975,Saint-Pierre-et-Miquelon,,Collectivités d'outre-mer,Outre-mer (COM),5957,2023
+976,Mayotte,,Mayotte,Outre-mer (DROM),,2023
+977,Saint-Barthélemy,,Collectivités d'outre-mer,Outre-mer (COM),10755,2023
+978,Saint-Martin,,Collectivités d'outre-mer,Outre-mer (COM),31620,2023
+986,Wallis-et-Futuna,,Collectivités d'outre-mer,Outre-mer (COM),,2023
+987,Polynésie française,,Collectivités d'outre-mer,Outre-mer (COM),,2023
+988,Nouvelle-Calédonie,,Collectivités d'outre-mer,Outre-mer (COM),,2023
