@@ -1,0 +1,9 @@
+[project]
+name = "crashmap"
+version = "1.0.0"
+description = "Road accidents in France 2019-2024 (ONISR open data): cleaning, SQL star schema, analysis, maps and Power BI."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,51 @@
+# CrashMap France - project configuration
+
+data:
+  # data.gouv.fr dataset "Bases de données annuelles des accidents corporels de la circulation routière"
+  # (producer: ONISR). Resource URLs are resolved at run time through the data.gouv.fr API.
+  dataset_id: "53698f4ca3a729239d2036df"
+  api_url: "https://www.data.gouv.fr/api/1/datasets/{dataset_id}/"
+  # First year of the post-2019 format. Earlier years use another format and are out of scope.
+  first_year: 2019
+  # Last year to download. "latest" = most recent year with all 4 files on data.gouv.fr.
+  last_year: latest
+  # INSEE "Populations de référence 2023" (en vigueur au 1er janvier 2026), fichier d'ensemble.
+  # Page: https://www.insee.fr/fr/statistiques/8680726?sommaire=8681011
+  insee_population_url: "https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.zip"
+  insee_population_year: 2023
+  # French departments GeoJSON (IGN Admin Express, Licence Ouverte), simplified geometry.
+  departments_geojson_url: "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson"
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  gold: data/gold
+  figures: reports/figures
+  maps: reports/maps
+
+analysis:
+  # Minimum number of accidents in a group before any rate is shown (SQL, Python and Power BI).
+  min_accidents_for_rate: 100
+  # Year treated as an anomaly in trend comparisons (COVID-19 lockdowns).
+  covid_year: 2020
+  random_state: 42
+
+maps:
+  focus_city:
+    name: Toulouse
+    insee_code: "31555"
+    center: [43.6045, 1.4440]
+    zoom: 12
+  dbscan:
+    radius_m: 100
+    min_samples: 8
+  top_hotspots: 10
+  max_html_mb: 20
+
+postgres:
+  # Credentials come from environment variables (see .env.example); these are local defaults.
+  host_env: POSTGRES_HOST
+  port_env: POSTGRES_PORT
+  db_env: POSTGRES_DB
+  user_env: POSTGRES_USER
+  password_env: POSTGRES_PASSWORD
