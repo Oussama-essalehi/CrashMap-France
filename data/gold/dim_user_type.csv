@@ -1,0 +1,34 @@
+user_type_key,catu,catu_label,user_mode
+1,1,Conducteur,Autre / indéterminé
+2,1,Conducteur,Bus / car
+3,1,Conducteur,Cyclomoteur <= 50 cm3
+4,1,Conducteur,EDP motorisé (trottinette...)
+5,1,Conducteur,EDP non motorisé
+6,1,Conducteur,Engin spécial / agricole
+7,1,Conducteur,Moto 50-125 cm3
+8,1,Conducteur,Moto > 125 cm3
+9,1,Conducteur,Poids lourd
+10,1,Conducteur,Quad
+11,1,Conducteur,Train / tramway
+12,1,Conducteur,Utilitaire (VU)
+13,1,Conducteur,Voiture (VL)
+14,1,Conducteur,Voiturette
+15,1,Conducteur,Vélo (y.c. VAE)
+16,1,Conducteur,
+17,2,Passager,Autre / indéterminé
+18,2,Passager,Bus / car
+19,2,Passager,Cyclomoteur <= 50 cm3
+20,2,Passager,EDP motorisé (trottinette...)
+21,2,Passager,EDP non motorisé
+22,2,Passager,Engin spécial / agricole
+23,2,Passager,Moto 50-125 cm3
+24,2,Passager,Moto > 125 cm3
+25,2,Passager,Poids lourd
+26,2,Passager,Quad
+27,2,Passager,Train / tramway
+28,2,Passager,Utilitaire (VU)
+29,2,Passager,Voiture (VL)
+30,2,Passager,Voiturette
+31,2,Passager,Vélo (y.c. VAE)
+32,2,Passager,
+33,3,Piéton,Piéton

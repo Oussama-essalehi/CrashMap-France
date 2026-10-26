@@ -1,0 +1,945 @@
+road_key,catr,catr_label,vma_band,vma_band_order,plan,plan_label,intersection,intersection_label
+1,1,Autoroute,100-110 km/h,5,1,Partie rectiligne,1,Hors intersection
+2,1,Autoroute,100-110 km/h,5,1,Partie rectiligne,3,Intersection en T
+3,1,Autoroute,100-110 km/h,5,1,Partie rectiligne,4,Intersection en Y
+4,1,Autoroute,100-110 km/h,5,1,Partie rectiligne,6,Giratoire
+5,1,Autoroute,100-110 km/h,5,1,Partie rectiligne,9,Autre intersection
+6,1,Autoroute,100-110 km/h,5,2,En courbe à gauche,1,Hors intersection
+7,1,Autoroute,100-110 km/h,5,2,En courbe à gauche,4,Intersection en Y
+8,1,Autoroute,100-110 km/h,5,2,En courbe à gauche,6,Giratoire
+9,1,Autoroute,100-110 km/h,5,2,En courbe à gauche,9,Autre intersection
+10,1,Autoroute,100-110 km/h,5,3,En courbe à droite,1,Hors intersection
+11,1,Autoroute,100-110 km/h,5,3,En courbe à droite,4,Intersection en Y
+12,1,Autoroute,100-110 km/h,5,3,En courbe à droite,6,Giratoire
+13,1,Autoroute,100-110 km/h,5,3,En courbe à droite,9,Autre intersection
+14,1,Autoroute,100-110 km/h,5,4,En « S »,1,Hors intersection
+15,1,Autoroute,130 km/h,6,1,Partie rectiligne,1,Hors intersection
+16,1,Autoroute,130 km/h,6,1,Partie rectiligne,3,Intersection en T
+17,1,Autoroute,130 km/h,6,1,Partie rectiligne,4,Intersection en Y
+18,1,Autoroute,130 km/h,6,1,Partie rectiligne,6,Giratoire
+19,1,Autoroute,130 km/h,6,1,Partie rectiligne,9,Autre intersection
+20,1,Autoroute,130 km/h,6,2,En courbe à gauche,1,Hors intersection
+21,1,Autoroute,130 km/h,6,2,En courbe à gauche,4,Intersection en Y
+22,1,Autoroute,130 km/h,6,2,En courbe à gauche,9,Autre intersection
+23,1,Autoroute,130 km/h,6,3,En courbe à droite,1,Hors intersection
+24,1,Autoroute,130 km/h,6,3,En courbe à droite,4,Intersection en Y
+25,1,Autoroute,130 km/h,6,3,En courbe à droite,9,Autre intersection
+26,1,Autoroute,130 km/h,6,4,En « S »,1,Hors intersection
+27,1,Autoroute,130 km/h,6,4,En « S »,9,Autre intersection
+28,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+29,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+30,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+31,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+32,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,5,Intersection à plus de 4 branches
+33,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+34,1,Autoroute,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+35,1,Autoroute,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+36,1,Autoroute,40-50 km/h,2,2,En courbe à gauche,2,Intersection en X
+37,1,Autoroute,40-50 km/h,2,2,En courbe à gauche,3,Intersection en T
+38,1,Autoroute,40-50 km/h,2,2,En courbe à gauche,4,Intersection en Y
+39,1,Autoroute,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+40,1,Autoroute,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+41,1,Autoroute,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+42,1,Autoroute,40-50 km/h,2,3,En courbe à droite,2,Intersection en X
+43,1,Autoroute,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+44,1,Autoroute,40-50 km/h,2,3,En courbe à droite,4,Intersection en Y
+45,1,Autoroute,40-50 km/h,2,3,En courbe à droite,6,Giratoire
+46,1,Autoroute,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+47,1,Autoroute,40-50 km/h,2,4,En « S »,1,Hors intersection
+48,1,Autoroute,40-50 km/h,2,4,En « S »,4,Intersection en Y
+49,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+50,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,2,Intersection en X
+51,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,3,Intersection en T
+52,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,4,Intersection en Y
+53,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,5,Intersection à plus de 4 branches
+54,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,6,Giratoire
+55,1,Autoroute,60-70 km/h,3,1,Partie rectiligne,9,Autre intersection
+56,1,Autoroute,60-70 km/h,3,2,En courbe à gauche,1,Hors intersection
+57,1,Autoroute,60-70 km/h,3,2,En courbe à gauche,2,Intersection en X
+58,1,Autoroute,60-70 km/h,3,2,En courbe à gauche,3,Intersection en T
+59,1,Autoroute,60-70 km/h,3,2,En courbe à gauche,4,Intersection en Y
+60,1,Autoroute,60-70 km/h,3,2,En courbe à gauche,9,Autre intersection
+61,1,Autoroute,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+62,1,Autoroute,60-70 km/h,3,3,En courbe à droite,3,Intersection en T
+63,1,Autoroute,60-70 km/h,3,3,En courbe à droite,4,Intersection en Y
+64,1,Autoroute,60-70 km/h,3,3,En courbe à droite,6,Giratoire
+65,1,Autoroute,60-70 km/h,3,3,En courbe à droite,9,Autre intersection
+66,1,Autoroute,60-70 km/h,3,4,En « S »,1,Hors intersection
+67,1,Autoroute,60-70 km/h,3,4,En « S »,9,Autre intersection
+68,1,Autoroute,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+69,1,Autoroute,80-90 km/h,4,1,Partie rectiligne,2,Intersection en X
+70,1,Autoroute,80-90 km/h,4,1,Partie rectiligne,3,Intersection en T
+71,1,Autoroute,80-90 km/h,4,1,Partie rectiligne,4,Intersection en Y
+72,1,Autoroute,80-90 km/h,4,1,Partie rectiligne,6,Giratoire
+73,1,Autoroute,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+74,1,Autoroute,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+75,1,Autoroute,80-90 km/h,4,2,En courbe à gauche,2,Intersection en X
+76,1,Autoroute,80-90 km/h,4,2,En courbe à gauche,3,Intersection en T
+77,1,Autoroute,80-90 km/h,4,2,En courbe à gauche,4,Intersection en Y
+78,1,Autoroute,80-90 km/h,4,2,En courbe à gauche,6,Giratoire
+79,1,Autoroute,80-90 km/h,4,2,En courbe à gauche,9,Autre intersection
+80,1,Autoroute,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+81,1,Autoroute,80-90 km/h,4,3,En courbe à droite,2,Intersection en X
+82,1,Autoroute,80-90 km/h,4,3,En courbe à droite,3,Intersection en T
+83,1,Autoroute,80-90 km/h,4,3,En courbe à droite,4,Intersection en Y
+84,1,Autoroute,80-90 km/h,4,3,En courbe à droite,6,Giratoire
+85,1,Autoroute,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+86,1,Autoroute,80-90 km/h,4,4,En « S »,1,Hors intersection
+87,1,Autoroute,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+88,1,Autoroute,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+89,1,Autoroute,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+90,1,Autoroute,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+91,1,Autoroute,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+92,1,Autoroute,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+93,1,Autoroute,<= 30 km/h,1,2,En courbe à gauche,4,Intersection en Y
+94,1,Autoroute,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+95,1,Autoroute,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+96,1,Autoroute,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+97,1,Autoroute,<= 30 km/h,1,3,En courbe à droite,3,Intersection en T
+98,1,Autoroute,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+99,1,Autoroute,<= 30 km/h,1,4,En « S »,1,Hors intersection
+100,1,Autoroute,<= 30 km/h,1,4,En « S »,9,Autre intersection
+101,1,Autoroute,,,1,Partie rectiligne,1,Hors intersection
+102,1,Autoroute,,,1,Partie rectiligne,2,Intersection en X
+103,1,Autoroute,,,1,Partie rectiligne,3,Intersection en T
+104,1,Autoroute,,,1,Partie rectiligne,4,Intersection en Y
+105,1,Autoroute,,,1,Partie rectiligne,5,Intersection à plus de 4 branches
+106,1,Autoroute,,,1,Partie rectiligne,6,Giratoire
+107,1,Autoroute,,,1,Partie rectiligne,9,Autre intersection
+108,1,Autoroute,,,2,En courbe à gauche,1,Hors intersection
+109,1,Autoroute,,,2,En courbe à gauche,2,Intersection en X
+110,1,Autoroute,,,2,En courbe à gauche,3,Intersection en T
+111,1,Autoroute,,,2,En courbe à gauche,4,Intersection en Y
+112,1,Autoroute,,,2,En courbe à gauche,5,Intersection à plus de 4 branches
+113,1,Autoroute,,,2,En courbe à gauche,6,Giratoire
+114,1,Autoroute,,,2,En courbe à gauche,9,Autre intersection
+115,1,Autoroute,,,3,En courbe à droite,1,Hors intersection
+116,1,Autoroute,,,3,En courbe à droite,2,Intersection en X
+117,1,Autoroute,,,3,En courbe à droite,3,Intersection en T
+118,1,Autoroute,,,3,En courbe à droite,4,Intersection en Y
+119,1,Autoroute,,,3,En courbe à droite,7,Place
+120,1,Autoroute,,,3,En courbe à droite,9,Autre intersection
+121,1,Autoroute,,,4,En « S »,1,Hors intersection
+122,1,Autoroute,,,4,En « S »,2,Intersection en X
+123,1,Autoroute,,,4,En « S »,3,Intersection en T
+124,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,1,Hors intersection
+125,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,2,Intersection en X
+126,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,3,Intersection en T
+127,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,4,Intersection en Y
+128,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,6,Giratoire
+129,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,8,Passage à niveau
+130,2,Route nationale,100-110 km/h,5,1,Partie rectiligne,9,Autre intersection
+131,2,Route nationale,100-110 km/h,5,2,En courbe à gauche,1,Hors intersection
+132,2,Route nationale,100-110 km/h,5,2,En courbe à gauche,2,Intersection en X
+133,2,Route nationale,100-110 km/h,5,2,En courbe à gauche,3,Intersection en T
+134,2,Route nationale,100-110 km/h,5,2,En courbe à gauche,4,Intersection en Y
+135,2,Route nationale,100-110 km/h,5,2,En courbe à gauche,6,Giratoire
+136,2,Route nationale,100-110 km/h,5,2,En courbe à gauche,9,Autre intersection
+137,2,Route nationale,100-110 km/h,5,3,En courbe à droite,1,Hors intersection
+138,2,Route nationale,100-110 km/h,5,3,En courbe à droite,3,Intersection en T
+139,2,Route nationale,100-110 km/h,5,3,En courbe à droite,4,Intersection en Y
+140,2,Route nationale,100-110 km/h,5,3,En courbe à droite,6,Giratoire
+141,2,Route nationale,100-110 km/h,5,3,En courbe à droite,9,Autre intersection
+142,2,Route nationale,100-110 km/h,5,4,En « S »,1,Hors intersection
+143,2,Route nationale,100-110 km/h,5,4,En « S »,9,Autre intersection
+144,2,Route nationale,130 km/h,6,1,Partie rectiligne,1,Hors intersection
+145,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+146,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+147,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+148,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+149,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,5,Intersection à plus de 4 branches
+150,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+151,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,7,Place
+152,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,8,Passage à niveau
+153,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+154,2,Route nationale,40-50 km/h,2,1,Partie rectiligne,,
+155,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+156,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,2,Intersection en X
+157,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,3,Intersection en T
+158,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,4,Intersection en Y
+159,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+160,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,7,Place
+161,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,8,Passage à niveau
+162,2,Route nationale,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+163,2,Route nationale,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+164,2,Route nationale,40-50 km/h,2,3,En courbe à droite,2,Intersection en X
+165,2,Route nationale,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+166,2,Route nationale,40-50 km/h,2,3,En courbe à droite,4,Intersection en Y
+167,2,Route nationale,40-50 km/h,2,3,En courbe à droite,5,Intersection à plus de 4 branches
+168,2,Route nationale,40-50 km/h,2,3,En courbe à droite,6,Giratoire
+169,2,Route nationale,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+170,2,Route nationale,40-50 km/h,2,4,En « S »,1,Hors intersection
+171,2,Route nationale,40-50 km/h,2,4,En « S »,2,Intersection en X
+172,2,Route nationale,40-50 km/h,2,4,En « S »,3,Intersection en T
+173,2,Route nationale,40-50 km/h,2,4,En « S »,4,Intersection en Y
+174,2,Route nationale,40-50 km/h,2,4,En « S »,6,Giratoire
+175,2,Route nationale,40-50 km/h,2,4,En « S »,9,Autre intersection
+176,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+177,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,2,Intersection en X
+178,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,3,Intersection en T
+179,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,4,Intersection en Y
+180,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,5,Intersection à plus de 4 branches
+181,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,6,Giratoire
+182,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,7,Place
+183,2,Route nationale,60-70 km/h,3,1,Partie rectiligne,9,Autre intersection
+184,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,1,Hors intersection
+185,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,2,Intersection en X
+186,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,3,Intersection en T
+187,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,4,Intersection en Y
+188,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,6,Giratoire
+189,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,8,Passage à niveau
+190,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,9,Autre intersection
+191,2,Route nationale,60-70 km/h,3,2,En courbe à gauche,,
+192,2,Route nationale,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+193,2,Route nationale,60-70 km/h,3,3,En courbe à droite,2,Intersection en X
+194,2,Route nationale,60-70 km/h,3,3,En courbe à droite,3,Intersection en T
+195,2,Route nationale,60-70 km/h,3,3,En courbe à droite,4,Intersection en Y
+196,2,Route nationale,60-70 km/h,3,3,En courbe à droite,6,Giratoire
+197,2,Route nationale,60-70 km/h,3,3,En courbe à droite,8,Passage à niveau
+198,2,Route nationale,60-70 km/h,3,3,En courbe à droite,9,Autre intersection
+199,2,Route nationale,60-70 km/h,3,4,En « S »,1,Hors intersection
+200,2,Route nationale,60-70 km/h,3,4,En « S »,3,Intersection en T
+201,2,Route nationale,60-70 km/h,3,4,En « S »,4,Intersection en Y
+202,2,Route nationale,60-70 km/h,3,4,En « S »,6,Giratoire
+203,2,Route nationale,60-70 km/h,3,4,En « S »,9,Autre intersection
+204,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+205,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,2,Intersection en X
+206,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,3,Intersection en T
+207,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,4,Intersection en Y
+208,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,5,Intersection à plus de 4 branches
+209,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,6,Giratoire
+210,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,7,Place
+211,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,8,Passage à niveau
+212,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+213,2,Route nationale,80-90 km/h,4,1,Partie rectiligne,,
+214,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+215,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,2,Intersection en X
+216,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,3,Intersection en T
+217,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,4,Intersection en Y
+218,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,6,Giratoire
+219,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,8,Passage à niveau
+220,2,Route nationale,80-90 km/h,4,2,En courbe à gauche,9,Autre intersection
+221,2,Route nationale,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+222,2,Route nationale,80-90 km/h,4,3,En courbe à droite,2,Intersection en X
+223,2,Route nationale,80-90 km/h,4,3,En courbe à droite,3,Intersection en T
+224,2,Route nationale,80-90 km/h,4,3,En courbe à droite,4,Intersection en Y
+225,2,Route nationale,80-90 km/h,4,3,En courbe à droite,6,Giratoire
+226,2,Route nationale,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+227,2,Route nationale,80-90 km/h,4,4,En « S »,1,Hors intersection
+228,2,Route nationale,80-90 km/h,4,4,En « S »,3,Intersection en T
+229,2,Route nationale,80-90 km/h,4,4,En « S »,4,Intersection en Y
+230,2,Route nationale,80-90 km/h,4,4,En « S »,6,Giratoire
+231,2,Route nationale,80-90 km/h,4,4,En « S »,8,Passage à niveau
+232,2,Route nationale,80-90 km/h,4,4,En « S »,9,Autre intersection
+233,2,Route nationale,80-90 km/h,4,,,5,Intersection à plus de 4 branches
+234,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+235,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+236,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+237,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,4,Intersection en Y
+238,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,5,Intersection à plus de 4 branches
+239,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+240,2,Route nationale,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+241,2,Route nationale,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+242,2,Route nationale,<= 30 km/h,1,2,En courbe à gauche,3,Intersection en T
+243,2,Route nationale,<= 30 km/h,1,2,En courbe à gauche,4,Intersection en Y
+244,2,Route nationale,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+245,2,Route nationale,<= 30 km/h,1,2,En courbe à gauche,7,Place
+246,2,Route nationale,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+247,2,Route nationale,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+248,2,Route nationale,<= 30 km/h,1,3,En courbe à droite,3,Intersection en T
+249,2,Route nationale,<= 30 km/h,1,3,En courbe à droite,4,Intersection en Y
+250,2,Route nationale,<= 30 km/h,1,3,En courbe à droite,6,Giratoire
+251,2,Route nationale,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+252,2,Route nationale,<= 30 km/h,1,4,En « S »,1,Hors intersection
+253,2,Route nationale,<= 30 km/h,1,4,En « S »,6,Giratoire
+254,2,Route nationale,<= 30 km/h,1,4,En « S »,8,Passage à niveau
+255,2,Route nationale,,,1,Partie rectiligne,1,Hors intersection
+256,2,Route nationale,,,1,Partie rectiligne,2,Intersection en X
+257,2,Route nationale,,,1,Partie rectiligne,3,Intersection en T
+258,2,Route nationale,,,1,Partie rectiligne,4,Intersection en Y
+259,2,Route nationale,,,1,Partie rectiligne,5,Intersection à plus de 4 branches
+260,2,Route nationale,,,1,Partie rectiligne,6,Giratoire
+261,2,Route nationale,,,1,Partie rectiligne,9,Autre intersection
+262,2,Route nationale,,,2,En courbe à gauche,1,Hors intersection
+263,2,Route nationale,,,2,En courbe à gauche,2,Intersection en X
+264,2,Route nationale,,,2,En courbe à gauche,3,Intersection en T
+265,2,Route nationale,,,2,En courbe à gauche,4,Intersection en Y
+266,2,Route nationale,,,2,En courbe à gauche,6,Giratoire
+267,2,Route nationale,,,2,En courbe à gauche,9,Autre intersection
+268,2,Route nationale,,,3,En courbe à droite,1,Hors intersection
+269,2,Route nationale,,,3,En courbe à droite,3,Intersection en T
+270,2,Route nationale,,,3,En courbe à droite,4,Intersection en Y
+271,2,Route nationale,,,3,En courbe à droite,6,Giratoire
+272,2,Route nationale,,,3,En courbe à droite,9,Autre intersection
+273,2,Route nationale,,,4,En « S »,1,Hors intersection
+274,2,Route nationale,,,4,En « S »,2,Intersection en X
+275,2,Route nationale,,,,,2,Intersection en X
+276,2,Route nationale,,,,,3,Intersection en T
+277,3,Route départementale,100-110 km/h,5,1,Partie rectiligne,1,Hors intersection
+278,3,Route départementale,100-110 km/h,5,1,Partie rectiligne,2,Intersection en X
+279,3,Route départementale,100-110 km/h,5,1,Partie rectiligne,3,Intersection en T
+280,3,Route départementale,100-110 km/h,5,1,Partie rectiligne,4,Intersection en Y
+281,3,Route départementale,100-110 km/h,5,1,Partie rectiligne,6,Giratoire
+282,3,Route départementale,100-110 km/h,5,1,Partie rectiligne,9,Autre intersection
+283,3,Route départementale,100-110 km/h,5,2,En courbe à gauche,1,Hors intersection
+284,3,Route départementale,100-110 km/h,5,2,En courbe à gauche,2,Intersection en X
+285,3,Route départementale,100-110 km/h,5,2,En courbe à gauche,3,Intersection en T
+286,3,Route départementale,100-110 km/h,5,2,En courbe à gauche,5,Intersection à plus de 4 branches
+287,3,Route départementale,100-110 km/h,5,2,En courbe à gauche,6,Giratoire
+288,3,Route départementale,100-110 km/h,5,2,En courbe à gauche,9,Autre intersection
+289,3,Route départementale,100-110 km/h,5,3,En courbe à droite,1,Hors intersection
+290,3,Route départementale,100-110 km/h,5,3,En courbe à droite,4,Intersection en Y
+291,3,Route départementale,100-110 km/h,5,3,En courbe à droite,6,Giratoire
+292,3,Route départementale,100-110 km/h,5,3,En courbe à droite,9,Autre intersection
+293,3,Route départementale,100-110 km/h,5,4,En « S »,1,Hors intersection
+294,3,Route départementale,130 km/h,6,1,Partie rectiligne,1,Hors intersection
+295,3,Route départementale,130 km/h,6,1,Partie rectiligne,8,Passage à niveau
+296,3,Route départementale,130 km/h,6,3,En courbe à droite,9,Autre intersection
+297,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+298,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+299,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+300,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+301,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,5,Intersection à plus de 4 branches
+302,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+303,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,7,Place
+304,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,8,Passage à niveau
+305,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+306,3,Route départementale,40-50 km/h,2,1,Partie rectiligne,,
+307,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+308,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,2,Intersection en X
+309,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,3,Intersection en T
+310,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,4,Intersection en Y
+311,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,5,Intersection à plus de 4 branches
+312,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+313,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,7,Place
+314,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,8,Passage à niveau
+315,3,Route départementale,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+316,3,Route départementale,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+317,3,Route départementale,40-50 km/h,2,3,En courbe à droite,2,Intersection en X
+318,3,Route départementale,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+319,3,Route départementale,40-50 km/h,2,3,En courbe à droite,4,Intersection en Y
+320,3,Route départementale,40-50 km/h,2,3,En courbe à droite,5,Intersection à plus de 4 branches
+321,3,Route départementale,40-50 km/h,2,3,En courbe à droite,6,Giratoire
+322,3,Route départementale,40-50 km/h,2,3,En courbe à droite,7,Place
+323,3,Route départementale,40-50 km/h,2,3,En courbe à droite,8,Passage à niveau
+324,3,Route départementale,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+325,3,Route départementale,40-50 km/h,2,4,En « S »,1,Hors intersection
+326,3,Route départementale,40-50 km/h,2,4,En « S »,2,Intersection en X
+327,3,Route départementale,40-50 km/h,2,4,En « S »,3,Intersection en T
+328,3,Route départementale,40-50 km/h,2,4,En « S »,4,Intersection en Y
+329,3,Route départementale,40-50 km/h,2,4,En « S »,5,Intersection à plus de 4 branches
+330,3,Route départementale,40-50 km/h,2,4,En « S »,6,Giratoire
+331,3,Route départementale,40-50 km/h,2,4,En « S »,7,Place
+332,3,Route départementale,40-50 km/h,2,4,En « S »,8,Passage à niveau
+333,3,Route départementale,40-50 km/h,2,4,En « S »,9,Autre intersection
+334,3,Route départementale,40-50 km/h,2,,,6,Giratoire
+335,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+336,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,2,Intersection en X
+337,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,3,Intersection en T
+338,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,4,Intersection en Y
+339,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,5,Intersection à plus de 4 branches
+340,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,6,Giratoire
+341,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,7,Place
+342,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,8,Passage à niveau
+343,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,9,Autre intersection
+344,3,Route départementale,60-70 km/h,3,1,Partie rectiligne,,
+345,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,1,Hors intersection
+346,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,2,Intersection en X
+347,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,3,Intersection en T
+348,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,4,Intersection en Y
+349,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,5,Intersection à plus de 4 branches
+350,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,6,Giratoire
+351,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,8,Passage à niveau
+352,3,Route départementale,60-70 km/h,3,2,En courbe à gauche,9,Autre intersection
+353,3,Route départementale,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+354,3,Route départementale,60-70 km/h,3,3,En courbe à droite,2,Intersection en X
+355,3,Route départementale,60-70 km/h,3,3,En courbe à droite,3,Intersection en T
+356,3,Route départementale,60-70 km/h,3,3,En courbe à droite,4,Intersection en Y
+357,3,Route départementale,60-70 km/h,3,3,En courbe à droite,6,Giratoire
+358,3,Route départementale,60-70 km/h,3,3,En courbe à droite,8,Passage à niveau
+359,3,Route départementale,60-70 km/h,3,3,En courbe à droite,9,Autre intersection
+360,3,Route départementale,60-70 km/h,3,4,En « S »,1,Hors intersection
+361,3,Route départementale,60-70 km/h,3,4,En « S »,2,Intersection en X
+362,3,Route départementale,60-70 km/h,3,4,En « S »,3,Intersection en T
+363,3,Route départementale,60-70 km/h,3,4,En « S »,4,Intersection en Y
+364,3,Route départementale,60-70 km/h,3,4,En « S »,6,Giratoire
+365,3,Route départementale,60-70 km/h,3,4,En « S »,8,Passage à niveau
+366,3,Route départementale,60-70 km/h,3,4,En « S »,9,Autre intersection
+367,3,Route départementale,60-70 km/h,3,,,6,Giratoire
+368,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+369,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,2,Intersection en X
+370,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,3,Intersection en T
+371,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,4,Intersection en Y
+372,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,5,Intersection à plus de 4 branches
+373,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,6,Giratoire
+374,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,7,Place
+375,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,8,Passage à niveau
+376,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+377,3,Route départementale,80-90 km/h,4,1,Partie rectiligne,,
+378,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+379,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,2,Intersection en X
+380,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,3,Intersection en T
+381,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,4,Intersection en Y
+382,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,5,Intersection à plus de 4 branches
+383,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,6,Giratoire
+384,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,7,Place
+385,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,8,Passage à niveau
+386,3,Route départementale,80-90 km/h,4,2,En courbe à gauche,9,Autre intersection
+387,3,Route départementale,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+388,3,Route départementale,80-90 km/h,4,3,En courbe à droite,2,Intersection en X
+389,3,Route départementale,80-90 km/h,4,3,En courbe à droite,3,Intersection en T
+390,3,Route départementale,80-90 km/h,4,3,En courbe à droite,4,Intersection en Y
+391,3,Route départementale,80-90 km/h,4,3,En courbe à droite,5,Intersection à plus de 4 branches
+392,3,Route départementale,80-90 km/h,4,3,En courbe à droite,6,Giratoire
+393,3,Route départementale,80-90 km/h,4,3,En courbe à droite,8,Passage à niveau
+394,3,Route départementale,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+395,3,Route départementale,80-90 km/h,4,4,En « S »,1,Hors intersection
+396,3,Route départementale,80-90 km/h,4,4,En « S »,2,Intersection en X
+397,3,Route départementale,80-90 km/h,4,4,En « S »,3,Intersection en T
+398,3,Route départementale,80-90 km/h,4,4,En « S »,4,Intersection en Y
+399,3,Route départementale,80-90 km/h,4,4,En « S »,5,Intersection à plus de 4 branches
+400,3,Route départementale,80-90 km/h,4,4,En « S »,6,Giratoire
+401,3,Route départementale,80-90 km/h,4,4,En « S »,8,Passage à niveau
+402,3,Route départementale,80-90 km/h,4,4,En « S »,9,Autre intersection
+403,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+404,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+405,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+406,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,4,Intersection en Y
+407,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,5,Intersection à plus de 4 branches
+408,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+409,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,7,Place
+410,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,8,Passage à niveau
+411,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+412,3,Route départementale,<= 30 km/h,1,1,Partie rectiligne,,
+413,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+414,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,2,Intersection en X
+415,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,3,Intersection en T
+416,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,4,Intersection en Y
+417,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,5,Intersection à plus de 4 branches
+418,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+419,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,7,Place
+420,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,8,Passage à niveau
+421,3,Route départementale,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+422,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+423,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,2,Intersection en X
+424,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,3,Intersection en T
+425,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,4,Intersection en Y
+426,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,5,Intersection à plus de 4 branches
+427,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,6,Giratoire
+428,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,7,Place
+429,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,8,Passage à niveau
+430,3,Route départementale,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+431,3,Route départementale,<= 30 km/h,1,4,En « S »,1,Hors intersection
+432,3,Route départementale,<= 30 km/h,1,4,En « S »,2,Intersection en X
+433,3,Route départementale,<= 30 km/h,1,4,En « S »,3,Intersection en T
+434,3,Route départementale,<= 30 km/h,1,4,En « S »,4,Intersection en Y
+435,3,Route départementale,<= 30 km/h,1,4,En « S »,6,Giratoire
+436,3,Route départementale,<= 30 km/h,1,4,En « S »,9,Autre intersection
+437,3,Route départementale,,,1,Partie rectiligne,1,Hors intersection
+438,3,Route départementale,,,1,Partie rectiligne,2,Intersection en X
+439,3,Route départementale,,,1,Partie rectiligne,3,Intersection en T
+440,3,Route départementale,,,1,Partie rectiligne,4,Intersection en Y
+441,3,Route départementale,,,1,Partie rectiligne,5,Intersection à plus de 4 branches
+442,3,Route départementale,,,1,Partie rectiligne,6,Giratoire
+443,3,Route départementale,,,1,Partie rectiligne,7,Place
+444,3,Route départementale,,,1,Partie rectiligne,8,Passage à niveau
+445,3,Route départementale,,,1,Partie rectiligne,9,Autre intersection
+446,3,Route départementale,,,2,En courbe à gauche,1,Hors intersection
+447,3,Route départementale,,,2,En courbe à gauche,2,Intersection en X
+448,3,Route départementale,,,2,En courbe à gauche,3,Intersection en T
+449,3,Route départementale,,,2,En courbe à gauche,4,Intersection en Y
+450,3,Route départementale,,,2,En courbe à gauche,6,Giratoire
+451,3,Route départementale,,,2,En courbe à gauche,9,Autre intersection
+452,3,Route départementale,,,3,En courbe à droite,1,Hors intersection
+453,3,Route départementale,,,3,En courbe à droite,2,Intersection en X
+454,3,Route départementale,,,3,En courbe à droite,3,Intersection en T
+455,3,Route départementale,,,3,En courbe à droite,4,Intersection en Y
+456,3,Route départementale,,,3,En courbe à droite,5,Intersection à plus de 4 branches
+457,3,Route départementale,,,3,En courbe à droite,6,Giratoire
+458,3,Route départementale,,,3,En courbe à droite,8,Passage à niveau
+459,3,Route départementale,,,3,En courbe à droite,9,Autre intersection
+460,3,Route départementale,,,4,En « S »,1,Hors intersection
+461,3,Route départementale,,,4,En « S »,3,Intersection en T
+462,3,Route départementale,,,4,En « S »,6,Giratoire
+463,3,Route départementale,,,,,1,Hors intersection
+464,3,Route départementale,,,,,2,Intersection en X
+465,3,Route départementale,,,,,3,Intersection en T
+466,3,Route départementale,,,,,4,Intersection en Y
+467,3,Route départementale,,,,,6,Giratoire
+468,3,Route départementale,,,,,9,Autre intersection
+469,4,Voie communale,100-110 km/h,5,1,Partie rectiligne,1,Hors intersection
+470,4,Voie communale,100-110 km/h,5,1,Partie rectiligne,8,Passage à niveau
+471,4,Voie communale,100-110 km/h,5,1,Partie rectiligne,9,Autre intersection
+472,4,Voie communale,100-110 km/h,5,2,En courbe à gauche,1,Hors intersection
+473,4,Voie communale,100-110 km/h,5,2,En courbe à gauche,9,Autre intersection
+474,4,Voie communale,100-110 km/h,5,3,En courbe à droite,1,Hors intersection
+475,4,Voie communale,100-110 km/h,5,3,En courbe à droite,3,Intersection en T
+476,4,Voie communale,130 km/h,6,1,Partie rectiligne,1,Hors intersection
+477,4,Voie communale,130 km/h,6,1,Partie rectiligne,8,Passage à niveau
+478,4,Voie communale,130 km/h,6,1,Partie rectiligne,9,Autre intersection
+479,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+480,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+481,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+482,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+483,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,5,Intersection à plus de 4 branches
+484,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+485,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,7,Place
+486,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,8,Passage à niveau
+487,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+488,4,Voie communale,40-50 km/h,2,1,Partie rectiligne,,
+489,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+490,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,2,Intersection en X
+491,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,3,Intersection en T
+492,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,4,Intersection en Y
+493,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,5,Intersection à plus de 4 branches
+494,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+495,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,7,Place
+496,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,8,Passage à niveau
+497,4,Voie communale,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+498,4,Voie communale,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+499,4,Voie communale,40-50 km/h,2,3,En courbe à droite,2,Intersection en X
+500,4,Voie communale,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+501,4,Voie communale,40-50 km/h,2,3,En courbe à droite,4,Intersection en Y
+502,4,Voie communale,40-50 km/h,2,3,En courbe à droite,5,Intersection à plus de 4 branches
+503,4,Voie communale,40-50 km/h,2,3,En courbe à droite,6,Giratoire
+504,4,Voie communale,40-50 km/h,2,3,En courbe à droite,7,Place
+505,4,Voie communale,40-50 km/h,2,3,En courbe à droite,8,Passage à niveau
+506,4,Voie communale,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+507,4,Voie communale,40-50 km/h,2,4,En « S »,1,Hors intersection
+508,4,Voie communale,40-50 km/h,2,4,En « S »,2,Intersection en X
+509,4,Voie communale,40-50 km/h,2,4,En « S »,3,Intersection en T
+510,4,Voie communale,40-50 km/h,2,4,En « S »,4,Intersection en Y
+511,4,Voie communale,40-50 km/h,2,4,En « S »,5,Intersection à plus de 4 branches
+512,4,Voie communale,40-50 km/h,2,4,En « S »,6,Giratoire
+513,4,Voie communale,40-50 km/h,2,4,En « S »,7,Place
+514,4,Voie communale,40-50 km/h,2,4,En « S »,8,Passage à niveau
+515,4,Voie communale,40-50 km/h,2,4,En « S »,9,Autre intersection
+516,4,Voie communale,40-50 km/h,2,,,1,Hors intersection
+517,4,Voie communale,40-50 km/h,2,,,5,Intersection à plus de 4 branches
+518,4,Voie communale,40-50 km/h,2,,,8,Passage à niveau
+519,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+520,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,2,Intersection en X
+521,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,3,Intersection en T
+522,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,4,Intersection en Y
+523,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,5,Intersection à plus de 4 branches
+524,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,6,Giratoire
+525,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,7,Place
+526,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,8,Passage à niveau
+527,4,Voie communale,60-70 km/h,3,1,Partie rectiligne,9,Autre intersection
+528,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,1,Hors intersection
+529,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,2,Intersection en X
+530,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,3,Intersection en T
+531,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,4,Intersection en Y
+532,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,6,Giratoire
+533,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,8,Passage à niveau
+534,4,Voie communale,60-70 km/h,3,2,En courbe à gauche,9,Autre intersection
+535,4,Voie communale,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+536,4,Voie communale,60-70 km/h,3,3,En courbe à droite,2,Intersection en X
+537,4,Voie communale,60-70 km/h,3,3,En courbe à droite,3,Intersection en T
+538,4,Voie communale,60-70 km/h,3,3,En courbe à droite,4,Intersection en Y
+539,4,Voie communale,60-70 km/h,3,3,En courbe à droite,6,Giratoire
+540,4,Voie communale,60-70 km/h,3,3,En courbe à droite,9,Autre intersection
+541,4,Voie communale,60-70 km/h,3,4,En « S »,1,Hors intersection
+542,4,Voie communale,60-70 km/h,3,4,En « S »,2,Intersection en X
+543,4,Voie communale,60-70 km/h,3,4,En « S »,3,Intersection en T
+544,4,Voie communale,60-70 km/h,3,4,En « S »,4,Intersection en Y
+545,4,Voie communale,60-70 km/h,3,4,En « S »,6,Giratoire
+546,4,Voie communale,60-70 km/h,3,4,En « S »,9,Autre intersection
+547,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+548,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,2,Intersection en X
+549,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,3,Intersection en T
+550,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,4,Intersection en Y
+551,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,5,Intersection à plus de 4 branches
+552,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,6,Giratoire
+553,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,7,Place
+554,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,8,Passage à niveau
+555,4,Voie communale,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+556,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+557,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,2,Intersection en X
+558,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,3,Intersection en T
+559,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,4,Intersection en Y
+560,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,6,Giratoire
+561,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,8,Passage à niveau
+562,4,Voie communale,80-90 km/h,4,2,En courbe à gauche,9,Autre intersection
+563,4,Voie communale,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+564,4,Voie communale,80-90 km/h,4,3,En courbe à droite,2,Intersection en X
+565,4,Voie communale,80-90 km/h,4,3,En courbe à droite,3,Intersection en T
+566,4,Voie communale,80-90 km/h,4,3,En courbe à droite,4,Intersection en Y
+567,4,Voie communale,80-90 km/h,4,3,En courbe à droite,6,Giratoire
+568,4,Voie communale,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+569,4,Voie communale,80-90 km/h,4,4,En « S »,1,Hors intersection
+570,4,Voie communale,80-90 km/h,4,4,En « S »,2,Intersection en X
+571,4,Voie communale,80-90 km/h,4,4,En « S »,3,Intersection en T
+572,4,Voie communale,80-90 km/h,4,4,En « S »,4,Intersection en Y
+573,4,Voie communale,80-90 km/h,4,4,En « S »,9,Autre intersection
+574,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+575,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+576,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+577,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,4,Intersection en Y
+578,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,5,Intersection à plus de 4 branches
+579,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+580,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,7,Place
+581,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,8,Passage à niveau
+582,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+583,4,Voie communale,<= 30 km/h,1,1,Partie rectiligne,,
+584,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+585,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,2,Intersection en X
+586,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,3,Intersection en T
+587,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,4,Intersection en Y
+588,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,5,Intersection à plus de 4 branches
+589,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+590,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,7,Place
+591,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,8,Passage à niveau
+592,4,Voie communale,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+593,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+594,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,2,Intersection en X
+595,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,3,Intersection en T
+596,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,4,Intersection en Y
+597,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,5,Intersection à plus de 4 branches
+598,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,6,Giratoire
+599,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,7,Place
+600,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,8,Passage à niveau
+601,4,Voie communale,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+602,4,Voie communale,<= 30 km/h,1,4,En « S »,1,Hors intersection
+603,4,Voie communale,<= 30 km/h,1,4,En « S »,2,Intersection en X
+604,4,Voie communale,<= 30 km/h,1,4,En « S »,3,Intersection en T
+605,4,Voie communale,<= 30 km/h,1,4,En « S »,4,Intersection en Y
+606,4,Voie communale,<= 30 km/h,1,4,En « S »,6,Giratoire
+607,4,Voie communale,<= 30 km/h,1,4,En « S »,7,Place
+608,4,Voie communale,<= 30 km/h,1,4,En « S »,9,Autre intersection
+609,4,Voie communale,,,1,Partie rectiligne,1,Hors intersection
+610,4,Voie communale,,,1,Partie rectiligne,2,Intersection en X
+611,4,Voie communale,,,1,Partie rectiligne,3,Intersection en T
+612,4,Voie communale,,,1,Partie rectiligne,4,Intersection en Y
+613,4,Voie communale,,,1,Partie rectiligne,5,Intersection à plus de 4 branches
+614,4,Voie communale,,,1,Partie rectiligne,6,Giratoire
+615,4,Voie communale,,,1,Partie rectiligne,7,Place
+616,4,Voie communale,,,1,Partie rectiligne,8,Passage à niveau
+617,4,Voie communale,,,1,Partie rectiligne,9,Autre intersection
+618,4,Voie communale,,,1,Partie rectiligne,,
+619,4,Voie communale,,,2,En courbe à gauche,1,Hors intersection
+620,4,Voie communale,,,2,En courbe à gauche,2,Intersection en X
+621,4,Voie communale,,,2,En courbe à gauche,3,Intersection en T
+622,4,Voie communale,,,2,En courbe à gauche,4,Intersection en Y
+623,4,Voie communale,,,2,En courbe à gauche,5,Intersection à plus de 4 branches
+624,4,Voie communale,,,2,En courbe à gauche,6,Giratoire
+625,4,Voie communale,,,2,En courbe à gauche,7,Place
+626,4,Voie communale,,,2,En courbe à gauche,8,Passage à niveau
+627,4,Voie communale,,,2,En courbe à gauche,9,Autre intersection
+628,4,Voie communale,,,3,En courbe à droite,1,Hors intersection
+629,4,Voie communale,,,3,En courbe à droite,2,Intersection en X
+630,4,Voie communale,,,3,En courbe à droite,3,Intersection en T
+631,4,Voie communale,,,3,En courbe à droite,4,Intersection en Y
+632,4,Voie communale,,,3,En courbe à droite,6,Giratoire
+633,4,Voie communale,,,3,En courbe à droite,7,Place
+634,4,Voie communale,,,3,En courbe à droite,9,Autre intersection
+635,4,Voie communale,,,4,En « S »,1,Hors intersection
+636,4,Voie communale,,,4,En « S »,2,Intersection en X
+637,4,Voie communale,,,4,En « S »,4,Intersection en Y
+638,4,Voie communale,,,4,En « S »,6,Giratoire
+639,4,Voie communale,,,4,En « S »,8,Passage à niveau
+640,4,Voie communale,,,4,En « S »,9,Autre intersection
+641,4,Voie communale,,,,,1,Hors intersection
+642,4,Voie communale,,,,,2,Intersection en X
+643,4,Voie communale,,,,,3,Intersection en T
+644,4,Voie communale,,,,,4,Intersection en Y
+645,4,Voie communale,,,,,9,Autre intersection
+646,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+647,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+648,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+649,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+650,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+651,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,7,Place
+652,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,8,Passage à niveau
+653,5,Hors réseau public,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+654,5,Hors réseau public,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+655,5,Hors réseau public,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+656,5,Hors réseau public,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+657,5,Hors réseau public,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+658,5,Hors réseau public,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+659,5,Hors réseau public,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+660,5,Hors réseau public,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+661,5,Hors réseau public,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+662,5,Hors réseau public,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+663,5,Hors réseau public,80-90 km/h,4,4,En « S »,1,Hors intersection
+664,5,Hors réseau public,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+665,5,Hors réseau public,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+666,5,Hors réseau public,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+667,5,Hors réseau public,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+668,5,Hors réseau public,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+669,5,Hors réseau public,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+670,5,Hors réseau public,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+671,5,Hors réseau public,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+672,5,Hors réseau public,<= 30 km/h,1,4,En « S »,1,Hors intersection
+673,5,Hors réseau public,<= 30 km/h,1,4,En « S »,7,Place
+674,5,Hors réseau public,,,1,Partie rectiligne,1,Hors intersection
+675,5,Hors réseau public,,,1,Partie rectiligne,6,Giratoire
+676,5,Hors réseau public,,,1,Partie rectiligne,7,Place
+677,5,Hors réseau public,,,1,Partie rectiligne,8,Passage à niveau
+678,5,Hors réseau public,,,1,Partie rectiligne,9,Autre intersection
+679,5,Hors réseau public,,,2,En courbe à gauche,1,Hors intersection
+680,5,Hors réseau public,,,3,En courbe à droite,1,Hors intersection
+681,5,Hors réseau public,,,3,En courbe à droite,9,Autre intersection
+682,5,Hors réseau public,,,4,En « S »,1,Hors intersection
+683,5,Hors réseau public,,,4,En « S »,9,Autre intersection
+684,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+685,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+686,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+687,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+688,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+689,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,7,Place
+690,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+691,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+692,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+693,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,2,En courbe à gauche,7,Place
+694,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+695,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+696,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+697,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+698,6,Parc de stationnement ouvert à la circulation publique,40-50 km/h,2,4,En « S »,1,Hors intersection
+699,6,Parc de stationnement ouvert à la circulation publique,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+700,6,Parc de stationnement ouvert à la circulation publique,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+701,6,Parc de stationnement ouvert à la circulation publique,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+702,6,Parc de stationnement ouvert à la circulation publique,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+703,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+704,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+705,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+706,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+707,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,1,Partie rectiligne,7,Place
+708,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+709,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+710,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+711,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,2,En courbe à gauche,7,Place
+712,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+713,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+714,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,3,En courbe à droite,2,Intersection en X
+715,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,3,En courbe à droite,3,Intersection en T
+716,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,3,En courbe à droite,6,Giratoire
+717,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,3,En courbe à droite,7,Place
+718,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+719,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,4,En « S »,1,Hors intersection
+720,6,Parc de stationnement ouvert à la circulation publique,<= 30 km/h,1,4,En « S »,9,Autre intersection
+721,6,Parc de stationnement ouvert à la circulation publique,,,1,Partie rectiligne,1,Hors intersection
+722,6,Parc de stationnement ouvert à la circulation publique,,,1,Partie rectiligne,2,Intersection en X
+723,6,Parc de stationnement ouvert à la circulation publique,,,1,Partie rectiligne,3,Intersection en T
+724,6,Parc de stationnement ouvert à la circulation publique,,,1,Partie rectiligne,6,Giratoire
+725,6,Parc de stationnement ouvert à la circulation publique,,,1,Partie rectiligne,7,Place
+726,6,Parc de stationnement ouvert à la circulation publique,,,1,Partie rectiligne,9,Autre intersection
+727,6,Parc de stationnement ouvert à la circulation publique,,,2,En courbe à gauche,1,Hors intersection
+728,6,Parc de stationnement ouvert à la circulation publique,,,2,En courbe à gauche,7,Place
+729,6,Parc de stationnement ouvert à la circulation publique,,,2,En courbe à gauche,9,Autre intersection
+730,6,Parc de stationnement ouvert à la circulation publique,,,3,En courbe à droite,1,Hors intersection
+731,6,Parc de stationnement ouvert à la circulation publique,,,3,En courbe à droite,6,Giratoire
+732,6,Parc de stationnement ouvert à la circulation publique,,,3,En courbe à droite,9,Autre intersection
+733,6,Parc de stationnement ouvert à la circulation publique,,,,,3,Intersection en T
+734,7,Route de métropole urbaine,100-110 km/h,5,1,Partie rectiligne,1,Hors intersection
+735,7,Route de métropole urbaine,100-110 km/h,5,1,Partie rectiligne,9,Autre intersection
+736,7,Route de métropole urbaine,100-110 km/h,5,2,En courbe à gauche,1,Hors intersection
+737,7,Route de métropole urbaine,100-110 km/h,5,3,En courbe à droite,1,Hors intersection
+738,7,Route de métropole urbaine,100-110 km/h,5,3,En courbe à droite,6,Giratoire
+739,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+740,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+741,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+742,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+743,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,5,Intersection à plus de 4 branches
+744,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+745,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,7,Place
+746,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,8,Passage à niveau
+747,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+748,7,Route de métropole urbaine,40-50 km/h,2,1,Partie rectiligne,,
+749,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+750,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,2,Intersection en X
+751,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,3,Intersection en T
+752,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,4,Intersection en Y
+753,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,5,Intersection à plus de 4 branches
+754,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+755,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,7,Place
+756,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,8,Passage à niveau
+757,7,Route de métropole urbaine,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+758,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+759,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,2,Intersection en X
+760,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+761,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,4,Intersection en Y
+762,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,5,Intersection à plus de 4 branches
+763,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,6,Giratoire
+764,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,7,Place
+765,7,Route de métropole urbaine,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+766,7,Route de métropole urbaine,40-50 km/h,2,4,En « S »,1,Hors intersection
+767,7,Route de métropole urbaine,40-50 km/h,2,4,En « S »,2,Intersection en X
+768,7,Route de métropole urbaine,40-50 km/h,2,4,En « S »,3,Intersection en T
+769,7,Route de métropole urbaine,40-50 km/h,2,4,En « S »,4,Intersection en Y
+770,7,Route de métropole urbaine,40-50 km/h,2,4,En « S »,6,Giratoire
+771,7,Route de métropole urbaine,40-50 km/h,2,4,En « S »,9,Autre intersection
+772,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+773,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,2,Intersection en X
+774,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,3,Intersection en T
+775,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,4,Intersection en Y
+776,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,5,Intersection à plus de 4 branches
+777,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,6,Giratoire
+778,7,Route de métropole urbaine,60-70 km/h,3,1,Partie rectiligne,9,Autre intersection
+779,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,1,Hors intersection
+780,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,2,Intersection en X
+781,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,3,Intersection en T
+782,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,4,Intersection en Y
+783,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,5,Intersection à plus de 4 branches
+784,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,6,Giratoire
+785,7,Route de métropole urbaine,60-70 km/h,3,2,En courbe à gauche,9,Autre intersection
+786,7,Route de métropole urbaine,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+787,7,Route de métropole urbaine,60-70 km/h,3,3,En courbe à droite,2,Intersection en X
+788,7,Route de métropole urbaine,60-70 km/h,3,3,En courbe à droite,3,Intersection en T
+789,7,Route de métropole urbaine,60-70 km/h,3,3,En courbe à droite,4,Intersection en Y
+790,7,Route de métropole urbaine,60-70 km/h,3,3,En courbe à droite,6,Giratoire
+791,7,Route de métropole urbaine,60-70 km/h,3,3,En courbe à droite,9,Autre intersection
+792,7,Route de métropole urbaine,60-70 km/h,3,4,En « S »,1,Hors intersection
+793,7,Route de métropole urbaine,60-70 km/h,3,4,En « S »,2,Intersection en X
+794,7,Route de métropole urbaine,60-70 km/h,3,4,En « S »,3,Intersection en T
+795,7,Route de métropole urbaine,60-70 km/h,3,4,En « S »,4,Intersection en Y
+796,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+797,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,2,Intersection en X
+798,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,3,Intersection en T
+799,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,4,Intersection en Y
+800,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,5,Intersection à plus de 4 branches
+801,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,6,Giratoire
+802,7,Route de métropole urbaine,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+803,7,Route de métropole urbaine,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+804,7,Route de métropole urbaine,80-90 km/h,4,2,En courbe à gauche,2,Intersection en X
+805,7,Route de métropole urbaine,80-90 km/h,4,2,En courbe à gauche,3,Intersection en T
+806,7,Route de métropole urbaine,80-90 km/h,4,2,En courbe à gauche,4,Intersection en Y
+807,7,Route de métropole urbaine,80-90 km/h,4,2,En courbe à gauche,6,Giratoire
+808,7,Route de métropole urbaine,80-90 km/h,4,2,En courbe à gauche,9,Autre intersection
+809,7,Route de métropole urbaine,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+810,7,Route de métropole urbaine,80-90 km/h,4,3,En courbe à droite,2,Intersection en X
+811,7,Route de métropole urbaine,80-90 km/h,4,3,En courbe à droite,3,Intersection en T
+812,7,Route de métropole urbaine,80-90 km/h,4,3,En courbe à droite,4,Intersection en Y
+813,7,Route de métropole urbaine,80-90 km/h,4,3,En courbe à droite,6,Giratoire
+814,7,Route de métropole urbaine,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+815,7,Route de métropole urbaine,80-90 km/h,4,4,En « S »,1,Hors intersection
+816,7,Route de métropole urbaine,80-90 km/h,4,4,En « S »,3,Intersection en T
+817,7,Route de métropole urbaine,80-90 km/h,4,4,En « S »,4,Intersection en Y
+818,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+819,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+820,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+821,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,4,Intersection en Y
+822,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,5,Intersection à plus de 4 branches
+823,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+824,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,7,Place
+825,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,8,Passage à niveau
+826,7,Route de métropole urbaine,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+827,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+828,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,2,Intersection en X
+829,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,3,Intersection en T
+830,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,4,Intersection en Y
+831,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,5,Intersection à plus de 4 branches
+832,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+833,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,7,Place
+834,7,Route de métropole urbaine,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+835,7,Route de métropole urbaine,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+836,7,Route de métropole urbaine,<= 30 km/h,1,3,En courbe à droite,2,Intersection en X
+837,7,Route de métropole urbaine,<= 30 km/h,1,3,En courbe à droite,4,Intersection en Y
+838,7,Route de métropole urbaine,<= 30 km/h,1,3,En courbe à droite,6,Giratoire
+839,7,Route de métropole urbaine,<= 30 km/h,1,3,En courbe à droite,7,Place
+840,7,Route de métropole urbaine,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+841,7,Route de métropole urbaine,<= 30 km/h,1,4,En « S »,1,Hors intersection
+842,7,Route de métropole urbaine,<= 30 km/h,1,4,En « S »,9,Autre intersection
+843,7,Route de métropole urbaine,,,1,Partie rectiligne,1,Hors intersection
+844,7,Route de métropole urbaine,,,1,Partie rectiligne,2,Intersection en X
+845,7,Route de métropole urbaine,,,1,Partie rectiligne,3,Intersection en T
+846,7,Route de métropole urbaine,,,1,Partie rectiligne,4,Intersection en Y
+847,7,Route de métropole urbaine,,,1,Partie rectiligne,5,Intersection à plus de 4 branches
+848,7,Route de métropole urbaine,,,1,Partie rectiligne,6,Giratoire
+849,7,Route de métropole urbaine,,,1,Partie rectiligne,9,Autre intersection
+850,7,Route de métropole urbaine,,,2,En courbe à gauche,1,Hors intersection
+851,7,Route de métropole urbaine,,,2,En courbe à gauche,4,Intersection en Y
+852,7,Route de métropole urbaine,,,2,En courbe à gauche,6,Giratoire
+853,7,Route de métropole urbaine,,,3,En courbe à droite,1,Hors intersection
+854,7,Route de métropole urbaine,,,3,En courbe à droite,2,Intersection en X
+855,7,Route de métropole urbaine,,,3,En courbe à droite,4,Intersection en Y
+856,7,Route de métropole urbaine,,,3,En courbe à droite,9,Autre intersection
+857,7,Route de métropole urbaine,,,4,En « S »,1,Hors intersection
+858,7,Route de métropole urbaine,,,4,En « S »,2,Intersection en X
+859,7,Route de métropole urbaine,,,4,En « S »,4,Intersection en Y
+860,7,Route de métropole urbaine,,,,,1,Hors intersection
+861,7,Route de métropole urbaine,,,,,4,Intersection en Y
+862,9,Autre,100-110 km/h,5,1,Partie rectiligne,1,Hors intersection
+863,9,Autre,40-50 km/h,2,1,Partie rectiligne,1,Hors intersection
+864,9,Autre,40-50 km/h,2,1,Partie rectiligne,2,Intersection en X
+865,9,Autre,40-50 km/h,2,1,Partie rectiligne,3,Intersection en T
+866,9,Autre,40-50 km/h,2,1,Partie rectiligne,4,Intersection en Y
+867,9,Autre,40-50 km/h,2,1,Partie rectiligne,6,Giratoire
+868,9,Autre,40-50 km/h,2,1,Partie rectiligne,7,Place
+869,9,Autre,40-50 km/h,2,1,Partie rectiligne,8,Passage à niveau
+870,9,Autre,40-50 km/h,2,1,Partie rectiligne,9,Autre intersection
+871,9,Autre,40-50 km/h,2,2,En courbe à gauche,1,Hors intersection
+872,9,Autre,40-50 km/h,2,2,En courbe à gauche,2,Intersection en X
+873,9,Autre,40-50 km/h,2,2,En courbe à gauche,3,Intersection en T
+874,9,Autre,40-50 km/h,2,2,En courbe à gauche,6,Giratoire
+875,9,Autre,40-50 km/h,2,2,En courbe à gauche,7,Place
+876,9,Autre,40-50 km/h,2,2,En courbe à gauche,8,Passage à niveau
+877,9,Autre,40-50 km/h,2,2,En courbe à gauche,9,Autre intersection
+878,9,Autre,40-50 km/h,2,3,En courbe à droite,1,Hors intersection
+879,9,Autre,40-50 km/h,2,3,En courbe à droite,3,Intersection en T
+880,9,Autre,40-50 km/h,2,3,En courbe à droite,4,Intersection en Y
+881,9,Autre,40-50 km/h,2,3,En courbe à droite,6,Giratoire
+882,9,Autre,40-50 km/h,2,3,En courbe à droite,7,Place
+883,9,Autre,40-50 km/h,2,3,En courbe à droite,9,Autre intersection
+884,9,Autre,40-50 km/h,2,4,En « S »,1,Hors intersection
+885,9,Autre,40-50 km/h,2,4,En « S »,6,Giratoire
+886,9,Autre,40-50 km/h,2,4,En « S »,9,Autre intersection
+887,9,Autre,40-50 km/h,2,,,6,Giratoire
+888,9,Autre,60-70 km/h,3,1,Partie rectiligne,1,Hors intersection
+889,9,Autre,60-70 km/h,3,1,Partie rectiligne,2,Intersection en X
+890,9,Autre,60-70 km/h,3,1,Partie rectiligne,3,Intersection en T
+891,9,Autre,60-70 km/h,3,1,Partie rectiligne,8,Passage à niveau
+892,9,Autre,60-70 km/h,3,1,Partie rectiligne,9,Autre intersection
+893,9,Autre,60-70 km/h,3,2,En courbe à gauche,1,Hors intersection
+894,9,Autre,60-70 km/h,3,2,En courbe à gauche,2,Intersection en X
+895,9,Autre,60-70 km/h,3,2,En courbe à gauche,6,Giratoire
+896,9,Autre,60-70 km/h,3,3,En courbe à droite,1,Hors intersection
+897,9,Autre,60-70 km/h,3,3,En courbe à droite,4,Intersection en Y
+898,9,Autre,60-70 km/h,3,3,En courbe à droite,9,Autre intersection
+899,9,Autre,60-70 km/h,3,4,En « S »,1,Hors intersection
+900,9,Autre,80-90 km/h,4,1,Partie rectiligne,1,Hors intersection
+901,9,Autre,80-90 km/h,4,1,Partie rectiligne,2,Intersection en X
+902,9,Autre,80-90 km/h,4,1,Partie rectiligne,3,Intersection en T
+903,9,Autre,80-90 km/h,4,1,Partie rectiligne,4,Intersection en Y
+904,9,Autre,80-90 km/h,4,1,Partie rectiligne,5,Intersection à plus de 4 branches
+905,9,Autre,80-90 km/h,4,1,Partie rectiligne,8,Passage à niveau
+906,9,Autre,80-90 km/h,4,1,Partie rectiligne,9,Autre intersection
+907,9,Autre,80-90 km/h,4,2,En courbe à gauche,1,Hors intersection
+908,9,Autre,80-90 km/h,4,2,En courbe à gauche,6,Giratoire
+909,9,Autre,80-90 km/h,4,2,En courbe à gauche,9,Autre intersection
+910,9,Autre,80-90 km/h,4,3,En courbe à droite,1,Hors intersection
+911,9,Autre,80-90 km/h,4,3,En courbe à droite,6,Giratoire
+912,9,Autre,80-90 km/h,4,3,En courbe à droite,9,Autre intersection
+913,9,Autre,80-90 km/h,4,4,En « S »,1,Hors intersection
+914,9,Autre,<= 30 km/h,1,1,Partie rectiligne,1,Hors intersection
+915,9,Autre,<= 30 km/h,1,1,Partie rectiligne,2,Intersection en X
+916,9,Autre,<= 30 km/h,1,1,Partie rectiligne,3,Intersection en T
+917,9,Autre,<= 30 km/h,1,1,Partie rectiligne,4,Intersection en Y
+918,9,Autre,<= 30 km/h,1,1,Partie rectiligne,5,Intersection à plus de 4 branches
+919,9,Autre,<= 30 km/h,1,1,Partie rectiligne,6,Giratoire
+920,9,Autre,<= 30 km/h,1,1,Partie rectiligne,7,Place
+921,9,Autre,<= 30 km/h,1,1,Partie rectiligne,8,Passage à niveau
+922,9,Autre,<= 30 km/h,1,1,Partie rectiligne,9,Autre intersection
+923,9,Autre,<= 30 km/h,1,2,En courbe à gauche,1,Hors intersection
+924,9,Autre,<= 30 km/h,1,2,En courbe à gauche,3,Intersection en T
+925,9,Autre,<= 30 km/h,1,2,En courbe à gauche,4,Intersection en Y
+926,9,Autre,<= 30 km/h,1,2,En courbe à gauche,6,Giratoire
+927,9,Autre,<= 30 km/h,1,2,En courbe à gauche,9,Autre intersection
+928,9,Autre,<= 30 km/h,1,3,En courbe à droite,1,Hors intersection
+929,9,Autre,<= 30 km/h,1,3,En courbe à droite,9,Autre intersection
+930,9,Autre,<= 30 km/h,1,4,En « S »,1,Hors intersection
+931,9,Autre,<= 30 km/h,1,4,En « S »,9,Autre intersection
+932,9,Autre,,,1,Partie rectiligne,1,Hors intersection
+933,9,Autre,,,1,Partie rectiligne,2,Intersection en X
+934,9,Autre,,,1,Partie rectiligne,3,Intersection en T
+935,9,Autre,,,1,Partie rectiligne,7,Place
+936,9,Autre,,,1,Partie rectiligne,8,Passage à niveau
+937,9,Autre,,,1,Partie rectiligne,9,Autre intersection
+938,9,Autre,,,2,En courbe à gauche,1,Hors intersection
+939,9,Autre,,,2,En courbe à gauche,6,Giratoire
+940,9,Autre,,,2,En courbe à gauche,9,Autre intersection
+941,9,Autre,,,3,En courbe à droite,1,Hors intersection
+942,9,Autre,,,3,En courbe à droite,9,Autre intersection
+943,9,Autre,,,4,En « S »,1,Hors intersection
+944,9,Autre,,,4,En « S »,9,Autre intersection

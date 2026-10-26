@@ -1,0 +1,32 @@
+catv,catv_label,vehicle_group,is_two_wheeler,is_motorised_two_wheeler,is_bicycle,is_personal_mobility,is_heavy_vehicle
+0,Indéterminable,Autre / indéterminé,false,false,false,false,false
+1,Bicyclette,Vélo (y.c. VAE),true,false,true,false,false
+2,Cyclomoteur <50cm3,Cyclomoteur <= 50 cm3,true,true,false,false,false
+3,Voiturette (quadricycle à moteur carrossé),Voiturette,false,false,false,false,false
+7,VL seul,Voiture (VL),false,false,false,false,false
+10,"VU seul 1,5T <= PTAC <= 3,5T avec ou sans remorque",Utilitaire (VU),false,false,false,false,false
+13,"PL seul 3,5T < PTCA <= 7,5T",Poids lourd,false,false,false,false,true
+14,"PL seul > 7,5T",Poids lourd,false,false,false,false,true
+15,"PL > 3,5T + remorque",Poids lourd,false,false,false,false,true
+16,Tracteur routier seul,Poids lourd,false,false,false,false,true
+17,Tracteur routier + semi-remorque,Poids lourd,false,false,false,false,true
+20,Engin spécial,Engin spécial / agricole,false,false,false,false,false
+21,Tracteur agricole,Engin spécial / agricole,false,false,false,false,false
+30,Scooter < 50 cm3,Cyclomoteur <= 50 cm3,true,true,false,false,false
+31,Motocyclette > 50 cm3 et <= 125 cm3,Moto 50-125 cm3,true,true,false,false,false
+32,Scooter > 50 cm3 et <= 125 cm3,Moto 50-125 cm3,true,true,false,false,false
+33,Motocyclette > 125 cm3,Moto > 125 cm3,true,true,false,false,false
+34,Scooter > 125 cm3,Moto > 125 cm3,true,true,false,false,false
+35,Quad léger <= 50 cm3,Quad,false,false,false,false,false
+36,Quad lourd > 50 cm3,Quad,false,false,false,false,false
+37,Autobus,Bus / car,false,false,false,false,true
+38,Autocar,Bus / car,false,false,false,false,true
+39,Train,Train / tramway,false,false,false,false,false
+40,Tramway,Train / tramway,false,false,false,false,false
+41,3RM <= 50 cm3,Cyclomoteur <= 50 cm3,true,true,false,false,false
+42,3RM > 50 cm3 <= 125 cm3,Moto 50-125 cm3,true,true,false,false,false
+43,3RM > 125 cm3,Moto > 125 cm3,true,true,false,false,false
+50,EDP à moteur,EDP motorisé (trottinette...),true,false,false,true,false
+60,EDP sans moteur,EDP non motorisé,true,false,false,true,false
+80,VAE,Vélo (y.c. VAE),true,false,true,false,false
+99,Autre véhicule,Autre / indéterminé,false,false,false,false,false

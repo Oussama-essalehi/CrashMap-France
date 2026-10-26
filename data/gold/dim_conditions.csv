@@ -1,0 +1,296 @@
+conditions_key,lum,lum_label,atm,atm_label,surf,surf_label,night
+1,1,Plein jour,1,Normale,1,Normale,false
+2,1,Plein jour,1,Normale,2,Mouillée,false
+3,1,Plein jour,1,Normale,3,Flaques,false
+4,1,Plein jour,1,Normale,4,Inondée,false
+5,1,Plein jour,1,Normale,5,Enneigée,false
+6,1,Plein jour,1,Normale,6,Boue,false
+7,1,Plein jour,1,Normale,7,Verglacée,false
+8,1,Plein jour,1,Normale,8,Corps gras - huile,false
+9,1,Plein jour,1,Normale,9,Autre,false
+10,1,Plein jour,1,Normale,,,false
+11,1,Plein jour,2,Pluie légère,1,Normale,false
+12,1,Plein jour,2,Pluie légère,2,Mouillée,false
+13,1,Plein jour,2,Pluie légère,3,Flaques,false
+14,1,Plein jour,2,Pluie légère,4,Inondée,false
+15,1,Plein jour,2,Pluie légère,5,Enneigée,false
+16,1,Plein jour,2,Pluie légère,6,Boue,false
+17,1,Plein jour,2,Pluie légère,7,Verglacée,false
+18,1,Plein jour,2,Pluie légère,8,Corps gras - huile,false
+19,1,Plein jour,2,Pluie légère,9,Autre,false
+20,1,Plein jour,2,Pluie légère,,,false
+21,1,Plein jour,3,Pluie forte,1,Normale,false
+22,1,Plein jour,3,Pluie forte,2,Mouillée,false
+23,1,Plein jour,3,Pluie forte,3,Flaques,false
+24,1,Plein jour,3,Pluie forte,4,Inondée,false
+25,1,Plein jour,3,Pluie forte,5,Enneigée,false
+26,1,Plein jour,3,Pluie forte,6,Boue,false
+27,1,Plein jour,3,Pluie forte,7,Verglacée,false
+28,1,Plein jour,3,Pluie forte,8,Corps gras - huile,false
+29,1,Plein jour,3,Pluie forte,9,Autre,false
+30,1,Plein jour,4,Neige - grêle,1,Normale,false
+31,1,Plein jour,4,Neige - grêle,2,Mouillée,false
+32,1,Plein jour,4,Neige - grêle,3,Flaques,false
+33,1,Plein jour,4,Neige - grêle,4,Inondée,false
+34,1,Plein jour,4,Neige - grêle,5,Enneigée,false
+35,1,Plein jour,4,Neige - grêle,6,Boue,false
+36,1,Plein jour,4,Neige - grêle,7,Verglacée,false
+37,1,Plein jour,4,Neige - grêle,9,Autre,false
+38,1,Plein jour,5,Brouillard - fumée,1,Normale,false
+39,1,Plein jour,5,Brouillard - fumée,2,Mouillée,false
+40,1,Plein jour,5,Brouillard - fumée,5,Enneigée,false
+41,1,Plein jour,5,Brouillard - fumée,6,Boue,false
+42,1,Plein jour,5,Brouillard - fumée,7,Verglacée,false
+43,1,Plein jour,5,Brouillard - fumée,8,Corps gras - huile,false
+44,1,Plein jour,5,Brouillard - fumée,9,Autre,false
+45,1,Plein jour,6,Vent fort - tempête,1,Normale,false
+46,1,Plein jour,6,Vent fort - tempête,2,Mouillée,false
+47,1,Plein jour,6,Vent fort - tempête,3,Flaques,false
+48,1,Plein jour,6,Vent fort - tempête,4,Inondée,false
+49,1,Plein jour,6,Vent fort - tempête,7,Verglacée,false
+50,1,Plein jour,6,Vent fort - tempête,8,Corps gras - huile,false
+51,1,Plein jour,6,Vent fort - tempête,9,Autre,false
+52,1,Plein jour,7,Temps éblouissant,1,Normale,false
+53,1,Plein jour,7,Temps éblouissant,2,Mouillée,false
+54,1,Plein jour,7,Temps éblouissant,5,Enneigée,false
+55,1,Plein jour,7,Temps éblouissant,6,Boue,false
+56,1,Plein jour,7,Temps éblouissant,7,Verglacée,false
+57,1,Plein jour,7,Temps éblouissant,8,Corps gras - huile,false
+58,1,Plein jour,7,Temps éblouissant,9,Autre,false
+59,1,Plein jour,7,Temps éblouissant,,,false
+60,1,Plein jour,8,Temps couvert,1,Normale,false
+61,1,Plein jour,8,Temps couvert,2,Mouillée,false
+62,1,Plein jour,8,Temps couvert,3,Flaques,false
+63,1,Plein jour,8,Temps couvert,4,Inondée,false
+64,1,Plein jour,8,Temps couvert,5,Enneigée,false
+65,1,Plein jour,8,Temps couvert,6,Boue,false
+66,1,Plein jour,8,Temps couvert,7,Verglacée,false
+67,1,Plein jour,8,Temps couvert,8,Corps gras - huile,false
+68,1,Plein jour,8,Temps couvert,9,Autre,false
+69,1,Plein jour,8,Temps couvert,,,false
+70,1,Plein jour,9,Autre,1,Normale,false
+71,1,Plein jour,9,Autre,2,Mouillée,false
+72,1,Plein jour,9,Autre,3,Flaques,false
+73,1,Plein jour,9,Autre,5,Enneigée,false
+74,1,Plein jour,9,Autre,6,Boue,false
+75,1,Plein jour,9,Autre,7,Verglacée,false
+76,1,Plein jour,9,Autre,8,Corps gras - huile,false
+77,1,Plein jour,9,Autre,9,Autre,false
+78,1,Plein jour,,,1,Normale,false
+79,1,Plein jour,,,,,false
+80,2,Crépuscule ou aube,1,Normale,1,Normale,false
+81,2,Crépuscule ou aube,1,Normale,2,Mouillée,false
+82,2,Crépuscule ou aube,1,Normale,3,Flaques,false
+83,2,Crépuscule ou aube,1,Normale,5,Enneigée,false
+84,2,Crépuscule ou aube,1,Normale,6,Boue,false
+85,2,Crépuscule ou aube,1,Normale,7,Verglacée,false
+86,2,Crépuscule ou aube,1,Normale,8,Corps gras - huile,false
+87,2,Crépuscule ou aube,1,Normale,9,Autre,false
+88,2,Crépuscule ou aube,1,Normale,,,false
+89,2,Crépuscule ou aube,2,Pluie légère,1,Normale,false
+90,2,Crépuscule ou aube,2,Pluie légère,2,Mouillée,false
+91,2,Crépuscule ou aube,2,Pluie légère,3,Flaques,false
+92,2,Crépuscule ou aube,2,Pluie légère,4,Inondée,false
+93,2,Crépuscule ou aube,2,Pluie légère,5,Enneigée,false
+94,2,Crépuscule ou aube,2,Pluie légère,6,Boue,false
+95,2,Crépuscule ou aube,2,Pluie légère,7,Verglacée,false
+96,2,Crépuscule ou aube,2,Pluie légère,8,Corps gras - huile,false
+97,2,Crépuscule ou aube,2,Pluie légère,9,Autre,false
+98,2,Crépuscule ou aube,3,Pluie forte,1,Normale,false
+99,2,Crépuscule ou aube,3,Pluie forte,2,Mouillée,false
+100,2,Crépuscule ou aube,3,Pluie forte,3,Flaques,false
+101,2,Crépuscule ou aube,3,Pluie forte,4,Inondée,false
+102,2,Crépuscule ou aube,3,Pluie forte,7,Verglacée,false
+103,2,Crépuscule ou aube,3,Pluie forte,8,Corps gras - huile,false
+104,2,Crépuscule ou aube,3,Pluie forte,9,Autre,false
+105,2,Crépuscule ou aube,4,Neige - grêle,1,Normale,false
+106,2,Crépuscule ou aube,4,Neige - grêle,2,Mouillée,false
+107,2,Crépuscule ou aube,4,Neige - grêle,4,Inondée,false
+108,2,Crépuscule ou aube,4,Neige - grêle,5,Enneigée,false
+109,2,Crépuscule ou aube,4,Neige - grêle,7,Verglacée,false
+110,2,Crépuscule ou aube,4,Neige - grêle,9,Autre,false
+111,2,Crépuscule ou aube,5,Brouillard - fumée,1,Normale,false
+112,2,Crépuscule ou aube,5,Brouillard - fumée,2,Mouillée,false
+113,2,Crépuscule ou aube,5,Brouillard - fumée,3,Flaques,false
+114,2,Crépuscule ou aube,5,Brouillard - fumée,5,Enneigée,false
+115,2,Crépuscule ou aube,5,Brouillard - fumée,6,Boue,false
+116,2,Crépuscule ou aube,5,Brouillard - fumée,7,Verglacée,false
+117,2,Crépuscule ou aube,5,Brouillard - fumée,9,Autre,false
+118,2,Crépuscule ou aube,6,Vent fort - tempête,1,Normale,false
+119,2,Crépuscule ou aube,6,Vent fort - tempête,2,Mouillée,false
+120,2,Crépuscule ou aube,7,Temps éblouissant,1,Normale,false
+121,2,Crépuscule ou aube,7,Temps éblouissant,2,Mouillée,false
+122,2,Crépuscule ou aube,7,Temps éblouissant,6,Boue,false
+123,2,Crépuscule ou aube,7,Temps éblouissant,7,Verglacée,false
+124,2,Crépuscule ou aube,7,Temps éblouissant,8,Corps gras - huile,false
+125,2,Crépuscule ou aube,7,Temps éblouissant,9,Autre,false
+126,2,Crépuscule ou aube,8,Temps couvert,1,Normale,false
+127,2,Crépuscule ou aube,8,Temps couvert,2,Mouillée,false
+128,2,Crépuscule ou aube,8,Temps couvert,3,Flaques,false
+129,2,Crépuscule ou aube,8,Temps couvert,5,Enneigée,false
+130,2,Crépuscule ou aube,8,Temps couvert,6,Boue,false
+131,2,Crépuscule ou aube,8,Temps couvert,7,Verglacée,false
+132,2,Crépuscule ou aube,8,Temps couvert,8,Corps gras - huile,false
+133,2,Crépuscule ou aube,8,Temps couvert,9,Autre,false
+134,2,Crépuscule ou aube,9,Autre,1,Normale,false
+135,2,Crépuscule ou aube,9,Autre,2,Mouillée,false
+136,2,Crépuscule ou aube,9,Autre,5,Enneigée,false
+137,2,Crépuscule ou aube,9,Autre,6,Boue,false
+138,2,Crépuscule ou aube,9,Autre,7,Verglacée,false
+139,2,Crépuscule ou aube,9,Autre,9,Autre,false
+140,2,Crépuscule ou aube,9,Autre,,,false
+141,2,Crépuscule ou aube,,,1,Normale,false
+142,2,Crépuscule ou aube,,,,,false
+143,3,Nuit sans éclairage public,1,Normale,1,Normale,true
+144,3,Nuit sans éclairage public,1,Normale,2,Mouillée,true
+145,3,Nuit sans éclairage public,1,Normale,3,Flaques,true
+146,3,Nuit sans éclairage public,1,Normale,4,Inondée,true
+147,3,Nuit sans éclairage public,1,Normale,5,Enneigée,true
+148,3,Nuit sans éclairage public,1,Normale,6,Boue,true
+149,3,Nuit sans éclairage public,1,Normale,7,Verglacée,true
+150,3,Nuit sans éclairage public,1,Normale,8,Corps gras - huile,true
+151,3,Nuit sans éclairage public,1,Normale,9,Autre,true
+152,3,Nuit sans éclairage public,1,Normale,,,true
+153,3,Nuit sans éclairage public,2,Pluie légère,1,Normale,true
+154,3,Nuit sans éclairage public,2,Pluie légère,2,Mouillée,true
+155,3,Nuit sans éclairage public,2,Pluie légère,3,Flaques,true
+156,3,Nuit sans éclairage public,2,Pluie légère,4,Inondée,true
+157,3,Nuit sans éclairage public,2,Pluie légère,5,Enneigée,true
+158,3,Nuit sans éclairage public,2,Pluie légère,6,Boue,true
+159,3,Nuit sans éclairage public,2,Pluie légère,7,Verglacée,true
+160,3,Nuit sans éclairage public,2,Pluie légère,8,Corps gras - huile,true
+161,3,Nuit sans éclairage public,3,Pluie forte,1,Normale,true
+162,3,Nuit sans éclairage public,3,Pluie forte,2,Mouillée,true
+163,3,Nuit sans éclairage public,3,Pluie forte,3,Flaques,true
+164,3,Nuit sans éclairage public,3,Pluie forte,4,Inondée,true
+165,3,Nuit sans éclairage public,3,Pluie forte,6,Boue,true
+166,3,Nuit sans éclairage public,3,Pluie forte,7,Verglacée,true
+167,3,Nuit sans éclairage public,3,Pluie forte,8,Corps gras - huile,true
+168,3,Nuit sans éclairage public,3,Pluie forte,9,Autre,true
+169,3,Nuit sans éclairage public,4,Neige - grêle,2,Mouillée,true
+170,3,Nuit sans éclairage public,4,Neige - grêle,3,Flaques,true
+171,3,Nuit sans éclairage public,4,Neige - grêle,5,Enneigée,true
+172,3,Nuit sans éclairage public,4,Neige - grêle,7,Verglacée,true
+173,3,Nuit sans éclairage public,4,Neige - grêle,9,Autre,true
+174,3,Nuit sans éclairage public,5,Brouillard - fumée,1,Normale,true
+175,3,Nuit sans éclairage public,5,Brouillard - fumée,2,Mouillée,true
+176,3,Nuit sans éclairage public,5,Brouillard - fumée,3,Flaques,true
+177,3,Nuit sans éclairage public,5,Brouillard - fumée,5,Enneigée,true
+178,3,Nuit sans éclairage public,5,Brouillard - fumée,6,Boue,true
+179,3,Nuit sans éclairage public,5,Brouillard - fumée,7,Verglacée,true
+180,3,Nuit sans éclairage public,5,Brouillard - fumée,8,Corps gras - huile,true
+181,3,Nuit sans éclairage public,5,Brouillard - fumée,9,Autre,true
+182,3,Nuit sans éclairage public,6,Vent fort - tempête,1,Normale,true
+183,3,Nuit sans éclairage public,6,Vent fort - tempête,2,Mouillée,true
+184,3,Nuit sans éclairage public,6,Vent fort - tempête,3,Flaques,true
+185,3,Nuit sans éclairage public,6,Vent fort - tempête,4,Inondée,true
+186,3,Nuit sans éclairage public,6,Vent fort - tempête,6,Boue,true
+187,3,Nuit sans éclairage public,6,Vent fort - tempête,7,Verglacée,true
+188,3,Nuit sans éclairage public,6,Vent fort - tempête,9,Autre,true
+189,3,Nuit sans éclairage public,7,Temps éblouissant,1,Normale,true
+190,3,Nuit sans éclairage public,7,Temps éblouissant,2,Mouillée,true
+191,3,Nuit sans éclairage public,8,Temps couvert,1,Normale,true
+192,3,Nuit sans éclairage public,8,Temps couvert,2,Mouillée,true
+193,3,Nuit sans éclairage public,8,Temps couvert,3,Flaques,true
+194,3,Nuit sans éclairage public,8,Temps couvert,4,Inondée,true
+195,3,Nuit sans éclairage public,8,Temps couvert,6,Boue,true
+196,3,Nuit sans éclairage public,8,Temps couvert,7,Verglacée,true
+197,3,Nuit sans éclairage public,8,Temps couvert,8,Corps gras - huile,true
+198,3,Nuit sans éclairage public,8,Temps couvert,9,Autre,true
+199,3,Nuit sans éclairage public,9,Autre,1,Normale,true
+200,3,Nuit sans éclairage public,9,Autre,2,Mouillée,true
+201,3,Nuit sans éclairage public,9,Autre,4,Inondée,true
+202,3,Nuit sans éclairage public,9,Autre,5,Enneigée,true
+203,3,Nuit sans éclairage public,9,Autre,7,Verglacée,true
+204,3,Nuit sans éclairage public,9,Autre,9,Autre,true
+205,4,Nuit avec éclairage public non allumé,1,Normale,1,Normale,true
+206,4,Nuit avec éclairage public non allumé,1,Normale,2,Mouillée,true
+207,4,Nuit avec éclairage public non allumé,1,Normale,3,Flaques,true
+208,4,Nuit avec éclairage public non allumé,1,Normale,6,Boue,true
+209,4,Nuit avec éclairage public non allumé,1,Normale,7,Verglacée,true
+210,4,Nuit avec éclairage public non allumé,1,Normale,8,Corps gras - huile,true
+211,4,Nuit avec éclairage public non allumé,1,Normale,9,Autre,true
+212,4,Nuit avec éclairage public non allumé,2,Pluie légère,1,Normale,true
+213,4,Nuit avec éclairage public non allumé,2,Pluie légère,2,Mouillée,true
+214,4,Nuit avec éclairage public non allumé,2,Pluie légère,3,Flaques,true
+215,4,Nuit avec éclairage public non allumé,2,Pluie légère,7,Verglacée,true
+216,4,Nuit avec éclairage public non allumé,2,Pluie légère,9,Autre,true
+217,4,Nuit avec éclairage public non allumé,3,Pluie forte,2,Mouillée,true
+218,4,Nuit avec éclairage public non allumé,3,Pluie forte,3,Flaques,true
+219,4,Nuit avec éclairage public non allumé,3,Pluie forte,4,Inondée,true
+220,4,Nuit avec éclairage public non allumé,3,Pluie forte,8,Corps gras - huile,true
+221,4,Nuit avec éclairage public non allumé,4,Neige - grêle,2,Mouillée,true
+222,4,Nuit avec éclairage public non allumé,4,Neige - grêle,5,Enneigée,true
+223,4,Nuit avec éclairage public non allumé,4,Neige - grêle,7,Verglacée,true
+224,4,Nuit avec éclairage public non allumé,5,Brouillard - fumée,1,Normale,true
+225,4,Nuit avec éclairage public non allumé,5,Brouillard - fumée,2,Mouillée,true
+226,4,Nuit avec éclairage public non allumé,5,Brouillard - fumée,7,Verglacée,true
+227,4,Nuit avec éclairage public non allumé,5,Brouillard - fumée,9,Autre,true
+228,4,Nuit avec éclairage public non allumé,6,Vent fort - tempête,1,Normale,true
+229,4,Nuit avec éclairage public non allumé,6,Vent fort - tempête,2,Mouillée,true
+230,4,Nuit avec éclairage public non allumé,8,Temps couvert,1,Normale,true
+231,4,Nuit avec éclairage public non allumé,8,Temps couvert,2,Mouillée,true
+232,4,Nuit avec éclairage public non allumé,8,Temps couvert,7,Verglacée,true
+233,4,Nuit avec éclairage public non allumé,8,Temps couvert,9,Autre,true
+234,4,Nuit avec éclairage public non allumé,9,Autre,1,Normale,true
+235,4,Nuit avec éclairage public non allumé,9,Autre,2,Mouillée,true
+236,4,Nuit avec éclairage public non allumé,9,Autre,7,Verglacée,true
+237,4,Nuit avec éclairage public non allumé,9,Autre,9,Autre,true
+238,5,Nuit avec éclairage public allumé,1,Normale,1,Normale,true
+239,5,Nuit avec éclairage public allumé,1,Normale,2,Mouillée,true
+240,5,Nuit avec éclairage public allumé,1,Normale,3,Flaques,true
+241,5,Nuit avec éclairage public allumé,1,Normale,5,Enneigée,true
+242,5,Nuit avec éclairage public allumé,1,Normale,6,Boue,true
+243,5,Nuit avec éclairage public allumé,1,Normale,7,Verglacée,true
+244,5,Nuit avec éclairage public allumé,1,Normale,8,Corps gras - huile,true
+245,5,Nuit avec éclairage public allumé,1,Normale,9,Autre,true
+246,5,Nuit avec éclairage public allumé,1,Normale,,,true
+247,5,Nuit avec éclairage public allumé,2,Pluie légère,1,Normale,true
+248,5,Nuit avec éclairage public allumé,2,Pluie légère,2,Mouillée,true
+249,5,Nuit avec éclairage public allumé,2,Pluie légère,3,Flaques,true
+250,5,Nuit avec éclairage public allumé,2,Pluie légère,5,Enneigée,true
+251,5,Nuit avec éclairage public allumé,2,Pluie légère,7,Verglacée,true
+252,5,Nuit avec éclairage public allumé,2,Pluie légère,8,Corps gras - huile,true
+253,5,Nuit avec éclairage public allumé,2,Pluie légère,9,Autre,true
+254,5,Nuit avec éclairage public allumé,2,Pluie légère,,,true
+255,5,Nuit avec éclairage public allumé,3,Pluie forte,1,Normale,true
+256,5,Nuit avec éclairage public allumé,3,Pluie forte,2,Mouillée,true
+257,5,Nuit avec éclairage public allumé,3,Pluie forte,3,Flaques,true
+258,5,Nuit avec éclairage public allumé,3,Pluie forte,4,Inondée,true
+259,5,Nuit avec éclairage public allumé,3,Pluie forte,7,Verglacée,true
+260,5,Nuit avec éclairage public allumé,3,Pluie forte,8,Corps gras - huile,true
+261,5,Nuit avec éclairage public allumé,3,Pluie forte,9,Autre,true
+262,5,Nuit avec éclairage public allumé,4,Neige - grêle,1,Normale,true
+263,5,Nuit avec éclairage public allumé,4,Neige - grêle,2,Mouillée,true
+264,5,Nuit avec éclairage public allumé,4,Neige - grêle,5,Enneigée,true
+265,5,Nuit avec éclairage public allumé,4,Neige - grêle,7,Verglacée,true
+266,5,Nuit avec éclairage public allumé,4,Neige - grêle,9,Autre,true
+267,5,Nuit avec éclairage public allumé,5,Brouillard - fumée,1,Normale,true
+268,5,Nuit avec éclairage public allumé,5,Brouillard - fumée,2,Mouillée,true
+269,5,Nuit avec éclairage public allumé,5,Brouillard - fumée,7,Verglacée,true
+270,5,Nuit avec éclairage public allumé,5,Brouillard - fumée,8,Corps gras - huile,true
+271,5,Nuit avec éclairage public allumé,5,Brouillard - fumée,9,Autre,true
+272,5,Nuit avec éclairage public allumé,6,Vent fort - tempête,1,Normale,true
+273,5,Nuit avec éclairage public allumé,6,Vent fort - tempête,2,Mouillée,true
+274,5,Nuit avec éclairage public allumé,6,Vent fort - tempête,4,Inondée,true
+275,5,Nuit avec éclairage public allumé,7,Temps éblouissant,1,Normale,true
+276,5,Nuit avec éclairage public allumé,7,Temps éblouissant,2,Mouillée,true
+277,5,Nuit avec éclairage public allumé,8,Temps couvert,1,Normale,true
+278,5,Nuit avec éclairage public allumé,8,Temps couvert,2,Mouillée,true
+279,5,Nuit avec éclairage public allumé,8,Temps couvert,3,Flaques,true
+280,5,Nuit avec éclairage public allumé,8,Temps couvert,5,Enneigée,true
+281,5,Nuit avec éclairage public allumé,8,Temps couvert,7,Verglacée,true
+282,5,Nuit avec éclairage public allumé,8,Temps couvert,8,Corps gras - huile,true
+283,5,Nuit avec éclairage public allumé,8,Temps couvert,9,Autre,true
+284,5,Nuit avec éclairage public allumé,8,Temps couvert,,,true
+285,5,Nuit avec éclairage public allumé,9,Autre,1,Normale,true
+286,5,Nuit avec éclairage public allumé,9,Autre,2,Mouillée,true
+287,5,Nuit avec éclairage public allumé,9,Autre,3,Flaques,true
+288,5,Nuit avec éclairage public allumé,9,Autre,7,Verglacée,true
+289,5,Nuit avec éclairage public allumé,9,Autre,8,Corps gras - huile,true
+290,5,Nuit avec éclairage public allumé,9,Autre,9,Autre,true
+291,5,Nuit avec éclairage public allumé,9,Autre,,,true
+292,5,Nuit avec éclairage public allumé,,,1,Normale,true
+293,,,1,Normale,1,Normale,
+294,,,,,1,Normale,
+295,,,,,,,
