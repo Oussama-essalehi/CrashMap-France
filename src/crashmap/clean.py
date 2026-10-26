@@ -368,7 +368,7 @@ def add_accident_derived(a: pd.DataFrame, departments: pd.DataFrame) -> tuple[pd
 
 ACCIDENT_COLUMNS = [
     "accident_id", "year", "date", "month", "day_of_week", "weekday", "is_weekend", "hrmn", "hour",
-    "minute", "time_band", "dep_code", "dep_name", "region_name", "zone", "com_code", "in_town",
+    "minute", "time_band", "dep_code", "dep_name", "region_name", "zone", "com_code", "adr", "in_town",
     "agg", "agg_label", "lum", "lum_label", "night", "atm", "atm_label", "int", "int_label",
     "col", "col_label", "catr", "catr_label", "vma", "vma_band", "vma_implausible", "plan",
     "plan_label", "surf", "surf_label", "prof", "prof_label", "circ", "circ_label", "vosp",
