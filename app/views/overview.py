@@ -1,4 +1,4 @@
-"""Vue d'ensemble: KPIs, trend by year, monthly pattern."""
+"""Vue d'ensemble / Overview: KPIs, trend by year, monthly pattern."""
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -6,6 +6,7 @@ import streamlit as st
 from plotly.subplots import make_subplots
 
 import helpers as h
+from i18n import months, num, t
 
 
 def kpis(acc: pd.DataFrame, f: h.Filters) -> dict:
@@ -30,10 +31,9 @@ def render() -> None:
     acc_all = h.load_accidents()
     acc = h.apply_filters(acc_all, f)
 
-    st.title("CrashMap France")
-    st.markdown("**Où, quand et dans quelles conditions se produisent les accidents de la route les plus graves "
-                "en France ?** Analyse des accidents corporels recensés par l'ONISR de 2019 à 2024.")
-    st.caption(f"Sélection : {f.describe()} · {h.fr(len(acc))} accidents")
+    st.title(t("ov_title"))
+    st.markdown(t("ov_pitch"))
+    st.caption(t("selection_n", desc=f.describe(), n=num(len(acc))))
 
     k = kpis(acc, f)
     delta = {}
@@ -41,55 +41,47 @@ def render() -> None:
         prev_f = h.Filters((f.years[0] - 1, f.years[0] - 1), f.regions, f.departments, f.localisation, f.threshold)
         prev = kpis(h.apply_filters(acc_all, prev_f), prev_f)
         if prev["accidents"]:
-            delta["accidents"] = (k["accidents"] / prev["accidents"] - 1) * 100
+            delta["accidents"] = num((k["accidents"] / prev["accidents"] - 1) * 100, 1, t("vs_prev"))
         if prev["killed"]:
-            delta["killed"] = (k["killed"] / prev["killed"] - 1) * 100
+            delta["killed"] = num((k["killed"] / prev["killed"] - 1) * 100, 1, t("vs_prev"))
 
     cols = st.columns(6)
-    cols[0].metric("Accidents", h.fr(k["accidents"]),
-                   h.fr(delta.get("accidents"), 1, " % vs N-1") if "accidents" in delta else None, delta_color="inverse")
-    cols[1].metric("Tués", h.fr(k["killed"]),
-                   h.fr(delta.get("killed"), 1, " % vs N-1") if "killed" in delta else None, delta_color="inverse")
-    cols[2].metric("Tués pour 100 accidents", h.fr(k["killed_per_100"], 2))
-    cols[3].metric("Tués / 100 000 hab. / an", h.fr(k["killed_per_100k"], 1),
-                   help="Population INSEE 2023 des départements sélectionnés ; moyenne annuelle.")
-    cols[4].metric("Part d'accidents de nuit", h.fr(k["night_share"], 1, " %"), help="Entre 21h et 6h.")
-    cols[5].metric("Tués hors agglomération", h.fr(k["out_of_town_killed"], 1, " %"),
-                   help="Part des tués dans des accidents hors agglomération.")
+    cols[0].metric(t("kpi_accidents"), num(k["accidents"]), delta.get("accidents"), delta_color="inverse")
+    cols[1].metric(t("kpi_killed"), num(k["killed"]), delta.get("killed"), delta_color="inverse")
+    cols[2].metric(t("kpi_rate"), num(k["killed_per_100"], 2))
+    cols[3].metric(t("kpi_100k"), num(k["killed_per_100k"], 1), help=t("kpi_100k_help"))
+    cols[4].metric(t("kpi_night"), num(k["night_share"], 1, " %"), help=t("kpi_night_help"))
+    cols[5].metric(t("kpi_out"), num(k["out_of_town_killed"], 1, " %"), help=t("kpi_out_help"))
 
-    st.subheader("Évolution par année")
+    st.subheader(t("ov_by_year"))
     yearly = acc.groupby("year").agg(accidents=("accident_id", "size"), killed=("n_killed", "sum")).reset_index()
-    colors = [h.GREY if y == h.COVID_YEAR else h.BLUE for y in yearly["year"]]
-    fig = make_subplots(rows=1, cols=2, subplot_titles=("Accidents corporels", "Personnes tuées"), horizontal_spacing=0.08)
+    colors = [h.color("grey") if y == h.COVID_YEAR else h.color("blue") for y in yearly["year"]]
+    fig = make_subplots(rows=1, cols=2, subplot_titles=(t("injury_accidents"), t("people_killed")),
+                        horizontal_spacing=0.08)
     for i, col in enumerate(("accidents", "killed"), start=1):
         fig.add_bar(x=yearly["year"].astype(str), y=yearly[col], marker_color=colors, showlegend=False,
-                    text=[h.fr(v) for v in yearly[col]], textposition="outside", cliponaxis=False, row=1, col=i,
+                    text=[num(v) for v in yearly[col]], textposition="outside", cliponaxis=False, row=1, col=i,
                     hovertemplate="%{x} : %{y:,}<extra></extra>")
     fig.update_yaxes(rangemode="tozero")
     fig.update_layout(height=360, margin=dict(t=50))
+    fig.update_annotations(font_color=h.color("text"))
     h.show(fig, "overview_yearly")
-    st.caption("En gris : 2020, année des confinements, à ne pas comparer directement aux autres années.")
+    st.caption(t("covid_grey"))
 
-    st.subheader("Accidents par mois")
+    st.subheader(t("ov_by_month"))
     monthly = acc.groupby(["year", "month"]).size().rename("accidents").reset_index()
     fig = go.Figure()
-    palette = [h.BLUE, h.ORANGE, h.AQUA, h.YELLOW, "#e87ba4", "#008300", "#6250d6", h.RED]
+    palette = h.categorical()
+    labels = months()
     for i, (year, grp) in enumerate(monthly.groupby("year")):
-        fig.add_scatter(x=[h.MONTHS[m - 1] for m in grp["month"]], y=grp["accidents"], mode="lines+markers",
+        fig.add_scatter(x=[labels[m - 1] for m in grp["month"]], y=grp["accidents"], mode="lines+markers",
                         name=str(year), line=dict(width=2, color=palette[i % len(palette)],
                                                   dash="dot" if year == h.COVID_YEAR else "solid"),
-                        hovertemplate=f"{year} %{{x}} : %{{y:,}} accidents<extra></extra>")
-    fig.update_yaxes(rangemode="tozero", title_text="Accidents")
+                        hovertemplate=f"{year} %{{x}} : %{{y:,}}<extra></extra>")
+    fig.update_yaxes(rangemode="tozero", title_text=t("accidents_axis"))
     fig.update_layout(height=380)
     h.show(fig, "overview_monthly")
 
     with st.container(border=True):
-        st.markdown(
-            "**À retenir (France entière, 2019-2024)**\n"
-            "- Hors agglomération : **36 %** des accidents mais **67 %** des tués.\n"
-            "- La nuit (21h-6h) : **16,5 %** des accidents, **26 %** des tués.\n"
-            "- La vitesse maximale autorisée est le facteur le plus lié à la mortalité.\n"
-            "- Motards, piétons, cyclistes et seniors sont les usagers les plus exposés.\n"
-            "- **3 432 tués en 2024**, -1,9 % seulement par rapport à 2019."
-        )
+        st.markdown(t("ov_key_points"))
     h.small_sample_note(f.threshold)
