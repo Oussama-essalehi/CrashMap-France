@@ -60,12 +60,22 @@ Une version web interactive reprend toute l'analyse, avec des filtres par année
 département, localisation et seuil d'affichage des taux : vue d'ensemble, carte de France, « Quand ? »,
 « Dans quelles conditions ? », « Qui ? », points noirs à Toulouse et méthode.
 
+* **En français et en anglais** : sélecteur dans la barre latérale, langue du navigateur par défaut,
+  et lien direct possible avec `?lang=en` ou `?lang=fr`. Les libellés des données (luminosité, types
+  de route, usagers…) sont aussi traduits.
+* **Thème clair ou sombre** : selon le réglage du système, ou dans le menu ⋮ > *Settings* ; les
+  graphiques et les cartes changent de couleurs avec le thème.
+* **Fenêtre d'accueil** à la première visite, qui présente le projet et son utilisation ; elle se
+  rouvre avec le bouton « À propos du projet ».
+
 *Lien public : à ajouter après le déploiement sur Streamlit Community Cloud (voir « Lancer le projet »).*
 
-| Vue d'ensemble | Carte de France |
+| Fenêtre d'accueil | Vue d'ensemble |
 |---|---|
-| ![Application - vue d'ensemble](reports/figures/app_vue_ensemble.png) | ![Application - carte](reports/figures/app_carte.png) |
-| **Qui ?** | **Points noirs à Toulouse** |
+| ![Application - accueil](reports/figures/app_welcome.png) | ![Application - vue d'ensemble](reports/figures/app_vue_ensemble.png) |
+| **Carte de France** | **Map of France (English, dark theme)** |
+| ![Application - carte](reports/figures/app_carte.png) | ![Application - carte en anglais, thème sombre](reports/figures/app_map_dark_en.png) |
+| **Qui ?** | **Toulouse black spots (English, dark theme)** |
 | ![Application - qui](reports/figures/app_qui.png) | ![Application - points noirs](reports/figures/app_points_noirs.png) |
 
 ### Tableau de bord Power BI
@@ -117,7 +127,7 @@ département, localisation et seuil d'affichage des taux : vue d'ensemble, carte
 * **Statistiques** : intervalles de Wilson, khi-deux et V de Cramér, régression logistique
   (rapports de cotes), contrôle prédictif scikit-learn (test sur 2024 : ROC AUC 0,78), DBSCAN pour
   les points noirs. Aucun taux n'est affiché sous 100 accidents.
-* Contrôles : 87 tests automatisés (58 pour le pipeline, 29 pour l'application web), résultats SQL
+* Contrôles : 112 tests automatisés (58 pour le pipeline, 54 pour l'application web), résultats SQL
   et Python identiques, totaux conformes aux bilans ONISR.
 
 Détails : [`docs/methodology.md`](docs/methodology.md), [`docs/cleaning_report.md`](docs/cleaning_report.md),
