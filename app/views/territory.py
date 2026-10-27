@@ -1,16 +1,15 @@
-"""Carte de France: rates by department (choropleth) and rankings."""
+"""Carte de France / Map of France: rates by department (choropleth) and rankings."""
 
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
 import helpers as h
+from i18n import t, tv_series
 
-METRICS = {
-    "Tués pour 100 000 habitants par an": ("killed_per_100k", 1),
-    "Accidents pour 100 000 habitants par an": ("accidents_per_100k", 1),
-    "Tués pour 100 accidents": ("killed_per_100", 2),
-}
+# metric key -> (column, decimals)
+METRICS = {"m_killed_100k": ("killed_per_100k", 1), "m_acc_100k": ("accidents_per_100k", 1),
+           "m_killed_100": ("killed_per_100", 2)}
 
 
 def department_rates(acc: pd.DataFrame, f: h.Filters) -> pd.DataFrame:
@@ -29,10 +28,11 @@ def department_rates(acc: pd.DataFrame, f: h.Filters) -> pd.DataFrame:
 def render() -> None:
     f: h.Filters = st.session_state["filters"]
     acc = h.apply_filters(h.load_accidents(), f)
-    st.title("Carte de France")
-    st.caption(f"Sélection : {f.describe()}")
-    label = st.radio("Indicateur", list(METRICS), horizontal=True, key="map_metric")
-    column, digits = METRICS[label]
+    st.title(t("map_title"))
+    st.caption(t("selection", desc=f.describe()))
+    metric = st.radio(t("indicator"), list(METRICS), format_func=t, horizontal=True, key="map_metric")
+    column, digits = METRICS[metric]
+    label = t(metric)
     rates = department_rates(acc, f)
     metro = rates[rates["zone"] == "Métropole"]
 
@@ -40,34 +40,36 @@ def render() -> None:
     with left:
         fig = px.choropleth(
             metro, geojson=h.load_geojson(), locations="dep_code", featureidkey="properties.code",
-            color=column, color_continuous_scale=h.SEQUENTIAL_RED, hover_name="dep_name",
+            color=column, color_continuous_scale=h.color("seq_red"), hover_name="dep_name",
             hover_data={"dep_code": True, column: f":.{digits}f", "accidents": ":,", "killed": ":,"},
-            labels={column: label, "accidents": "Accidents", "killed": "Tués", "dep_code": "Code"},
+            labels={column: label, "accidents": t("col_accidents"), "killed": t("col_killed"), "dep_code": t("col_code")},
         )
-        fig.update_geos(fitbounds="locations", visible=False, projection_type="mercator")
+        fig.update_geos(fitbounds="locations", visible=False, projection_type="mercator", bgcolor="rgba(0,0,0,0)")
+        fig.update_traces(marker_line_color=h.color("grid"))
         fig.update_layout(height=640, margin=dict(l=0, r=0, t=0, b=0),
                           coloraxis_colorbar=dict(title="", thickness=12, len=0.6))
         h.show(fig, "map_choropleth")
-        st.caption("Départements en gris : moins d'accidents que le seuil choisi, ou hors de la sélection.")
+        st.caption(t("map_grey"))
     with right:
         ranked = rates.dropna(subset=[column]).sort_values(column, ascending=False)
         table = ranked[["dep_name", column, "accidents", "killed"]].rename(columns={
-            "dep_name": "Département", column: "Taux", "accidents": "Accidents", "killed": "Tués"})
-        config = {"Taux": st.column_config.NumberColumn(format=f"%.{digits}f", help=label),
-                  "Accidents": st.column_config.NumberColumn(format="localized"),
-                  "Tués": st.column_config.NumberColumn(format="localized")}
-        st.markdown(f"**Les 10 départements les plus touchés** · {label.lower()}")
+            "dep_name": t("col_department"), column: t("col_rate"), "accidents": t("col_accidents"),
+            "killed": t("col_killed")})
+        config = {t("col_rate"): st.column_config.NumberColumn(format=f"%.{digits}f", help=label),
+                  t("col_accidents"): st.column_config.NumberColumn(format="localized"),
+                  t("col_killed"): st.column_config.NumberColumn(format="localized")}
+        st.markdown(f"**{t('top10')}** · {label.lower()}")
         st.dataframe(table.head(10), hide_index=True, column_config=config)
-        st.markdown(f"**Les 10 départements les moins touchés** · {label.lower()}")
+        st.markdown(f"**{t('bottom10')}** · {label.lower()}")
         st.dataframe(table.tail(10).iloc[::-1], hide_index=True, column_config=config)
 
-    st.subheader("Outre-mer")
-    overseas = rates[rates["zone"] != "Métropole"].sort_values(column, ascending=False)
+    st.subheader(t("overseas"))
+    overseas = rates[rates["zone"] != "Métropole"].sort_values(column, ascending=False).copy()
+    overseas["zone"] = tv_series(overseas["zone"])
     st.dataframe(overseas[["dep_name", "zone", column, "accidents", "killed", "population"]].rename(columns={
-        "dep_name": "Territoire", "zone": "Zone", column: label, "accidents": "Accidents", "killed": "Tués",
-        "population": "Population 2023"}), hide_index=True,
+        "dep_name": t("col_territory"), "zone": t("col_zone"), column: label, "accidents": t("col_accidents"),
+        "killed": t("col_killed"), "population": t("col_population")}), hide_index=True,
         column_config={label: st.column_config.NumberColumn(format=f"%.{digits}f"),
-                       "Population 2023": st.column_config.NumberColumn(format="localized")})
-    st.caption("Mayotte, Wallis-et-Futuna, la Polynésie française et la Nouvelle-Calédonie n'ont pas de "
-               "population de référence INSEE 2023 : pas de taux par habitant.")
+                       t("col_population"): st.column_config.NumberColumn(format="localized")})
+    st.caption(t("overseas_note"))
     h.small_sample_note(f.threshold)

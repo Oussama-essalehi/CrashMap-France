@@ -1,9 +1,15 @@
-[theme]
-base = "light"
+# Light and dark themes: visitors switch in the ⋮ menu > Settings (default: their system setting).
+[theme.light]
 primaryColor = "#1F5FAE"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#F4F5F7"
 textColor = "#1F2933"
+
+[theme.dark]
+primaryColor = "#5AA9F0"
+backgroundColor = "#0F1419"
+secondaryBackgroundColor = "#1A2129"
+textColor = "#E6E9EE"
 
 [server]
 headless = true
@@ -12,4 +18,5 @@ headless = true
 gatherUsageStats = false
 
 [client]
-toolbarMode = "minimal"
+# "viewer" keeps the theme switch and hides developer options (deploy, rerun...).
+toolbarMode = "viewer"

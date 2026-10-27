@@ -1,4 +1,4 @@
-"""Data loading, filters, rates and chart style shared by the pages of the web app."""
+"""Data loading, filters, rates, theme-aware chart style shared by the pages of the web app."""
 
 from __future__ import annotations
 
@@ -9,50 +9,81 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
-import plotly.io as pio
 import streamlit as st
+
+from i18n import LANGUAGES, default_lang, plotly_separators, t, tv
 
 DATA = Path(__file__).resolve().parent / "data"
 REPO_URL = "https://github.com/Oussama-essalehi/CrashMap-France"
-SOURCE = "Source : ONISR, accidents corporels 2019-2024 (data.gouv.fr), INSEE 2023"
-
-# Same colour rules as the static figures: categorical hues in a fixed order, single-hue ramps.
-BLUE, ORANGE, AQUA, YELLOW, RED, GREY = "#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#d1342b", "#8a8985"
-TEXT, TEXT_SECONDARY, GRID, SURFACE = "#0b0b0b", "#52514e", "#e6e5e1", "#ffffff"
-SEQUENTIAL_BLUE = ["#eef4fc", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
-SEQUENTIAL_RED = ["#fdf0ee", "#f9d2cc", "#f2a99e", "#e87b6c", "#d1342b", "#a82720", "#7a1b16"]
-
-WEEKDAYS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-MONTHS = ["Janv.", "Févr.", "Mars", "Avr.", "Mai", "Juin", "Juil.", "Août", "Sept.", "Oct.", "Nov.", "Déc."]
+COVID_YEAR = 2020
 TIME_BANDS = ["Matin (6h-10h)", "Journée (10h-17h)", "Soirée (17h-21h)", "Nuit (21h-6h)"]
 SPEED_BANDS = ["<= 30 km/h", "40-50 km/h", "60-70 km/h", "80-90 km/h", "100-110 km/h", "130 km/h"]
 AGE_BANDS = ["0-13 ans", "14-17 ans", "18-24 ans", "25-34 ans", "35-44 ans", "45-54 ans", "55-64 ans",
              "65-74 ans", "75 ans et +"]
-COVID_YEAR = 2020
 
-pio.templates["crashmap_web"] = go.layout.Template(layout=go.Layout(
-    font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=13, color=TEXT),
-    paper_bgcolor=SURFACE, plot_bgcolor=SURFACE, colorway=[BLUE, ORANGE, AQUA, YELLOW, RED],
-    xaxis=dict(showgrid=False, zeroline=False, linecolor=GRID, tickfont=dict(color=TEXT_SECONDARY),
-               title_font=dict(color=TEXT_SECONDARY)),
-    yaxis=dict(gridcolor=GRID, zeroline=False, tickfont=dict(color=TEXT_SECONDARY),
-               title_font=dict(color=TEXT_SECONDARY)),
-    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
-    margin=dict(l=10, r=10, t=40, b=10), separators=", ", hoverlabel=dict(font_size=13),
-))
-pio.templates.default = "crashmap_web"
+# Colour slots per theme: categorical hues in a fixed order (validated for colour-vision deficiencies),
+# single-hue sequential ramps running from the background colour towards high contrast.
+PALETTES = {
+    "light": {
+        "blue": "#2a78d6", "orange": "#eb6834", "aqua": "#1baf7a", "yellow": "#eda100", "magenta": "#e87ba4",
+        "green": "#008300", "violet": "#6250d6", "red": "#d1342b", "grey": "#8a8985",
+        "text": "#1f2933", "text_secondary": "#52514e", "grid": "#e6e5e1",
+        "seq_red": ["#fdf0ee", "#f9d2cc", "#f2a99e", "#e87b6c", "#d1342b", "#a82720", "#7a1b16"],
+        "seq_blue": ["#eef4fc", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"],
+        "map_style": "open-street-map", "legend_bg": "rgba(255,255,255,0.85)",
+    },
+    "dark": {
+        "blue": "#3987e5", "orange": "#d95926", "aqua": "#199e70", "yellow": "#c98500", "magenta": "#d55181",
+        "green": "#008300", "violet": "#9085e9", "red": "#e66767", "grey": "#8a8985",
+        "text": "#e6e9ee", "text_secondary": "#aab2bd", "grid": "#2c3440",
+        "seq_red": ["#2b1210", "#4a1a15", "#6e221a", "#96291f", "#c03226", "#e5483a", "#ff6f5e"],
+        "seq_blue": ["#0f1e33", "#132c4d", "#183b69", "#1f4f8c", "#2866b5", "#3987e5", "#6fb1ff"],
+        "map_style": "carto-darkmatter", "legend_bg": "rgba(15,20,25,0.85)",
+    },
+}
+
+
+def theme() -> str:
+    """'dark' or 'light', as chosen by the visitor (menu > Settings) or their system."""
+    try:
+        return "dark" if st.context.theme.type == "dark" else "light"
+    except Exception:  # no browser context (tests)
+        return "light"
+
+
+def color(name: str):
+    return PALETTES[theme()][name]
+
+
+def categorical() -> list[str]:
+    return [color(c) for c in ("blue", "orange", "aqua", "yellow", "magenta", "green", "violet", "red")]
+
+
+def template() -> go.layout.Template:
+    """Plotly template for the current theme and language (transparent backgrounds)."""
+    return go.layout.Template(layout=go.Layout(
+        font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=13, color=color("text")),
+        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", colorway=categorical(),
+        xaxis=dict(showgrid=False, zeroline=False, linecolor=color("grid"), tickfont=dict(color=color("text_secondary")),
+                   title_font=dict(color=color("text_secondary"))),
+        yaxis=dict(gridcolor=color("grid"), zeroline=False, tickfont=dict(color=color("text_secondary")),
+                   title_font=dict(color=color("text_secondary"))),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, font=dict(color=color("text"))),
+        margin=dict(l=10, r=10, t=40, b=10), separators=plotly_separators(), hoverlabel=dict(font_size=13),
+        coloraxis=dict(colorbar=dict(tickfont=dict(color=color("text_secondary")))),
+    ))
 
 
 # --------------------------------------------------------------------------------------------
 # Data
 # --------------------------------------------------------------------------------------------
 
-@st.cache_data(show_spinner="Chargement des données…")
+@st.cache_data(show_spinner=False)
 def load_accidents() -> pd.DataFrame:
     return pd.read_parquet(DATA / "accidents.parquet")
 
 
-@st.cache_data(show_spinner="Chargement des victimes…")
+@st.cache_data(show_spinner=False)
 def load_victims() -> pd.DataFrame:
     return pd.read_parquet(DATA / "victims.parquet")
 
@@ -73,6 +104,12 @@ def load_hotspots(city: str = "toulouse") -> pd.DataFrame:
     return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
 
+@st.cache_data
+def load_odds_ratios() -> pd.DataFrame:
+    path = DATA / "odds_ratios.csv"
+    return pd.read_csv(path) if path.exists() else pd.DataFrame()
+
+
 # --------------------------------------------------------------------------------------------
 # Filters
 # --------------------------------------------------------------------------------------------
@@ -82,7 +119,7 @@ class Filters:
     years: tuple[int, int]
     regions: list[str]
     departments: list[str]
-    localisation: str
+    localisation: str  # "all", "in", "out"
     threshold: int
 
     @property
@@ -94,12 +131,25 @@ class Filters:
         if self.departments:
             parts.append(", ".join(self.departments[:3]) + ("…" if len(self.departments) > 3 else ""))
         elif self.regions:
-            parts.append(", ".join(self.regions[:3]) + ("…" if len(self.regions) > 3 else ""))
+            parts.append(", ".join(tv(r) for r in self.regions[:3]) + ("…" if len(self.regions) > 3 else ""))
         else:
-            parts.append("France entière")
-        if self.localisation != "Toutes":
-            parts.append(self.localisation.lower())
+            parts.append(t("whole_country"))
+        if self.localisation != "all":
+            parts.append(t(f"loc_{self.localisation}").lower())
         return " · ".join(parts)
+
+
+def language_selector() -> None:
+    """FR / EN switch synced with the URL, so a shared link opens in the right language.
+
+    The bound widget writes its label (?lang=English); the short codes ?lang=en / ?lang=fr are read here.
+    """
+    code = st.query_params.get("lang", "").lower()
+    if "lang" not in st.session_state and code in LANGUAGES:
+        st.session_state["lang"] = code
+    default = {} if "lang" in st.session_state else {"default": default_lang()}
+    st.segmented_control(t("language"), list(LANGUAGES), format_func=LANGUAGES.get, key="lang",
+                         required=True, bind="query-params", **default)
 
 
 def sidebar_filters() -> Filters:
@@ -108,19 +158,17 @@ def sidebar_filters() -> Filters:
     deps = load_departments()
     years = sorted(acc["year"].unique().tolist())
     with st.sidebar:
-        st.header("Filtres")
-        year_range = st.slider("Années", years[0], years[-1], (years[0], years[-1]), key="f_years")
-        regions = st.multiselect("Région", sorted(deps["region_name"].dropna().unique()), key="f_regions",
-                                 placeholder="Toutes les régions")
+        st.header(t("filters"))
+        year_range = st.slider(t("years"), years[0], years[-1], (years[0], years[-1]), key="f_years")
+        regions = st.multiselect(t("region"), sorted(deps["region_name"].dropna().unique()), key="f_regions",
+                                 placeholder=t("all_regions"), format_func=tv)
         dep_choices = deps if not regions else deps[deps["region_name"].isin(regions)]
-        departments = st.multiselect("Département", sorted(dep_choices["dep_name"].unique()), key="f_deps",
-                                     placeholder="Tous les départements")
-        localisation = st.radio("Localisation", ["Toutes", "En agglomération", "Hors agglomération"],
+        departments = st.multiselect(t("department"), sorted(dep_choices["dep_name"].unique()), key="f_deps",
+                                     placeholder=t("all_departments"))
+        localisation = st.radio(t("location"), ["all", "in", "out"], format_func=lambda k: t(f"loc_{k}"),
                                 key="f_loc")
-        threshold = st.slider("Seuil minimal d'accidents pour afficher un taux", 0, 1000, 100, step=10,
-                              key="f_threshold",
-                              help="Sous ce nombre d'accidents, un taux n'est pas affiché : il serait trop instable.")
-        st.caption("2020 : année COVID (confinements), à lire comme une anomalie.")
+        threshold = st.slider(t("threshold"), 0, 1000, 100, step=10, key="f_threshold", help=t("threshold_help"))
+        st.caption(t("covid_note"))
     return Filters(year_range, regions, departments, localisation, threshold)
 
 
@@ -132,9 +180,9 @@ def apply_filters(df: pd.DataFrame, f: Filters) -> pd.DataFrame:
         mask &= df["dep_code"].isin(names.loc[f.departments].tolist())
     elif f.regions:
         mask &= df["region_name"].isin(f.regions)
-    if f.localisation == "En agglomération":
+    if f.localisation == "in":
         mask &= df["in_town"].fillna(False).astype(bool)
-    elif f.localisation == "Hors agglomération":
+    elif f.localisation == "out":
         mask &= ~df["in_town"].fillna(True).astype(bool)
     return df[mask]
 
@@ -199,40 +247,34 @@ def with_population(acc: pd.DataFrame) -> pd.DataFrame:
 
 
 # --------------------------------------------------------------------------------------------
-# Formatting and charts
+# Charts
 # --------------------------------------------------------------------------------------------
 
-def fr(value, digits: int = 0, suffix: str = "") -> str:
-    """French number formatting (narrow no-break space thousands, decimal comma); '-' when missing."""
-    if value is None or (isinstance(value, float) and np.isnan(value)):
-        return "-"
-    text = f"{value:,.{digits}f}".replace(",", " ").replace(".", ",")
-    return text + suffix
-
-
-def dot_ci(tbl: pd.DataFrame, label: str, value: str = "pct_fatal", color: str = BLUE,
-           x_title: str = "% d'accidents mortels (IC 95 % Wilson)", height: int | None = None) -> go.Figure:
-    """Horizontal dot plot with Wilson error bars, sorted by value."""
+def dot_ci(tbl: pd.DataFrame, label: str, value: str = "pct_fatal", color_name: str = "blue",
+           x_title: str | None = None, height: int | None = None) -> go.Figure:
+    """Horizontal dot plot with Wilson error bars, sorted by value; labels translated for display."""
     tbl = tbl.dropna(subset=[value]).sort_values(value)
+    c = color(color_name)
+    counts = tbl["n_accidents"] if "n_accidents" in tbl else tbl["n_persons"]
     fig = go.Figure(go.Scatter(
-        x=tbl[value], y=tbl[label].astype(str), mode="markers", marker=dict(size=11, color=color),
+        x=tbl[value], y=[str(tv(v)) for v in tbl[label]], mode="markers", marker=dict(size=11, color=c),
         error_x=dict(type="data", symmetric=False, array=tbl["ci_high"] - tbl[value],
-                     arrayminus=tbl[value] - tbl["ci_low"], color=color, thickness=2, width=4),
-        customdata=np.stack([tbl.get("n_accidents", tbl.get("n_persons")), tbl["ci_low"], tbl["ci_high"]], axis=-1),
-        hovertemplate="<b>%{y}</b><br>%{x:.1f} % (IC %{customdata[1]:.1f}-%{customdata[2]:.1f})"
-                      "<br>%{customdata[0]:,} cas<extra></extra>"))
-    fig.update_xaxes(title_text=x_title, rangemode="tozero")
+                     arrayminus=tbl[value] - tbl["ci_low"], color=c, thickness=2, width=4),
+        customdata=np.stack([counts, tbl["ci_low"], tbl["ci_high"]], axis=-1),
+        hovertemplate="<b>%{y}</b><br>%{x:.1f} % (" + t("hover_ci") + " %{customdata[1]:.1f}-%{customdata[2]:.1f})"
+                      "<br>%{customdata[0]:,} " + t("hover_cases") + "<extra></extra>"))
+    fig.update_xaxes(title_text=x_title or t("pct_fatal_axis"), rangemode="tozero")
     fig.update_layout(height=height or max(260, 42 * len(tbl) + 90), showlegend=False)
     return fig
 
 
 def show(fig: go.Figure, key: str | None = None) -> None:
-    """Render with the project template (Streamlit replaces Plotly's default template when it loads)."""
-    fig.update_layout(template=pio.templates["crashmap_web"])
+    """Render with the theme and language template (Streamlit replaces Plotly's default template)."""
+    fig.update_layout(template=template())
     fig.update_xaxes(automargin=True)
     fig.update_yaxes(automargin=True)
-    st.plotly_chart(fig, theme=None, key=key, config={"displaylogo": False, "locale": "fr"})
+    st.plotly_chart(fig, theme=None, key=key, config={"displaylogo": False})
 
 
 def small_sample_note(threshold: int) -> None:
-    st.caption(f"Taux masqués pour les groupes de moins de {threshold} accidents. {SOURCE}.")
+    st.caption(t("small_sample", n=threshold, source=t("source")))
