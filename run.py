@@ -2,7 +2,8 @@
 
 Usage:
     python run.py all
-    python run.py download | clean | load | analyze | maps | export | test
+    python run.py download | clean | load | analyze | maps | export | web | test
+    python run.py app        # start the Streamlit web app locally
 """
 
 from __future__ import annotations
@@ -58,6 +59,16 @@ def task_export() -> None:
     export_gold.main()
 
 
+def task_web() -> None:
+    from crashmap import export_web
+
+    export_web.main()
+
+
+def task_app() -> None:
+    subprocess.run([sys.executable, "-m", "streamlit", "run", str(ROOT / "app" / "streamlit_app.py")], cwd=ROOT)
+
+
 def task_test() -> None:
     result = subprocess.run([sys.executable, "-m", "pytest", "-q"], cwd=ROOT)
     if result.returncode != 0:
@@ -71,9 +82,11 @@ TASKS = {
     "analyze": task_analyze,
     "maps": task_maps,
     "export": task_export,
+    "web": task_web,
+    "app": task_app,
     "test": task_test,
 }
-PIPELINE = ["download", "clean", "test", "load", "analyze", "maps", "export"]
+PIPELINE = ["download", "clean", "test", "load", "analyze", "maps", "export", "web"]
 
 
 def main() -> None:

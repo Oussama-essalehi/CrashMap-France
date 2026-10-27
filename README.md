@@ -54,6 +54,20 @@ Détail, intervalles de confiance et limites : [`reports/findings.md`](reports/f
 Cartes interactives : [`reports/maps/`](reports/maps/) (fichiers HTML à télécharger et ouvrir dans
 un navigateur).
 
+### Application web (Streamlit)
+
+Une version web interactive reprend toute l'analyse, avec des filtres par année, région,
+département, localisation et seuil d'affichage des taux : vue d'ensemble, carte de France, « Quand ? »,
+« Dans quelles conditions ? », « Qui ? », points noirs à Toulouse et méthode.
+
+*Lien public : à ajouter après le déploiement sur Streamlit Community Cloud (voir « Lancer le projet »).*
+
+| Vue d'ensemble | Carte de France |
+|---|---|
+| ![Application - vue d'ensemble](reports/figures/app_vue_ensemble.png) | ![Application - carte](reports/figures/app_carte.png) |
+| **Qui ?** | **Points noirs à Toulouse** |
+| ![Application - qui](reports/figures/app_qui.png) | ![Application - points noirs](reports/figures/app_points_noirs.png) |
+
 ### Tableau de bord Power BI
 
 *Captures à venir* : `reports/figures/dashboard_1_vue_ensemble.png`,
@@ -103,8 +117,8 @@ un navigateur).
 * **Statistiques** : intervalles de Wilson, khi-deux et V de Cramér, régression logistique
   (rapports de cotes), contrôle prédictif scikit-learn (test sur 2024 : ROC AUC 0,78), DBSCAN pour
   les points noirs. Aucun taux n'est affiché sous 100 accidents.
-* Contrôles : 58 tests unitaires, résultats SQL et Python identiques, totaux conformes aux bilans
-  ONISR.
+* Contrôles : 87 tests automatisés (58 pour le pipeline, 29 pour l'application web), résultats SQL
+  et Python identiques, totaux conformes aux bilans ONISR.
 
 Détails : [`docs/methodology.md`](docs/methodology.md), [`docs/cleaning_report.md`](docs/cleaning_report.md),
 [`docs/data_dictionary.md`](docs/data_dictionary.md), [`docs/sql_python_crosscheck.md`](docs/sql_python_crosscheck.md).
@@ -122,6 +136,7 @@ flowchart LR
     D --> M["Cartes HTML<br/>folium, DBSCAN"]
     D --> H["Export gold<br/>CSV en étoile"]
     H --> P["Power BI<br/>TMDL + PBIR"]
+    D --> W["Application web<br/>Streamlit"]
     F --> R["reports/<br/>figures, findings"]
 ```
 
@@ -129,7 +144,8 @@ flowchart LR
 
 Python 3.11+ (pandas, numpy, pyarrow, SQLAlchemy, psycopg, scipy, statsmodels, scikit-learn,
 plotly + kaleido, folium, PyYAML, requests, pytest) · PostgreSQL 16 (Docker) · Power BI Desktop
-(projet `.pbip`, modèle TMDL, rapport PBIR, thème personnalisé) · Make / `run.py`.
+(projet `.pbip`, modèle TMDL, rapport PBIR, thème personnalisé) · Streamlit (application web) ·
+Make / `run.py`.
 
 ## Lancer le projet
 
@@ -144,7 +160,7 @@ docker compose up -d                 # PostgreSQL 16
 python run.py all                    # ou : make all
 ```
 
-`python run.py all` enchaîne `download`, `clean`, `test`, `load`, `analyze`, `maps` et `export`
+`python run.py all` enchaîne `download`, `clean`, `test`, `load`, `analyze`, `maps`, `export` et `web`
 (environ 5 minutes, dont le téléchargement d'environ 200 Mo). Chaque étape peut être lancée
 seule (`python run.py clean`). Sans base PostgreSQL : `python run.py all --skip-load`. Les figures
 PNG utilisent kaleido, qui a besoin de Chrome : lancer une fois `plotly_get_chrome` s'il n'est pas
@@ -154,17 +170,28 @@ installé.
 chemin absolu de `data/gold`, puis actualiser. Le pas-à-pas complet, page par page, est dans
 [`powerbi/BUILD_GUIDE.md`](powerbi/BUILD_GUIDE.md).
 
+**Application web** : `python run.py app` (ou `streamlit run app/streamlit_app.py`) ouvre
+l'application sur `http://localhost:8501`. Elle lit les fichiers compacts de `app/data/` (12 Mo,
+versionnés), produits par `python run.py web` : elle fonctionne donc sans relancer le pipeline.
+
+Mise en ligne gratuite sur [Streamlit Community Cloud](https://share.streamlit.io) : se connecter avec
+GitHub, *Create app* > *Deploy a public app from GitHub*, dépôt `Oussama-essalehi/CrashMap-France`,
+branche `main`, fichier `app/streamlit_app.py`, puis choisir l'adresse (par exemple
+`crashmap-france.streamlit.app`). Les dépendances sont lues dans `app/requirements.txt` et le thème
+dans `.streamlit/config.toml`.
+
 ## Structure du dépôt
 
 ```
 config.yaml          années, ville cible, seuils
-run.py / Makefile    pipeline (download, clean, load, analyze, maps, export, test, all)
+run.py / Makefile    pipeline (download, clean, load, analyze, maps, export, web, app, test, all)
 src/crashmap/        code Python (téléchargement, standardisation, nettoyage, SQL, analyse, cartes)
 sql/                 schéma en étoile, vues, requêtes d'analyse
 tests/               tests et petits fichiers CSV de test
 notebooks/           exploration avec sorties
 reports/             figures, cartes HTML, tables, résultats SQL, findings.md
 powerbi/             projet Power BI (TMDL + PBIR), thème, guide de construction
+app/                 application web Streamlit (pages, données compactes dans app/data/)
 docs/                méthodologie, rapport de nettoyage, dictionnaire de données
 data/gold/           dimensions exportées (les faits, plus de 50 Mo, sont régénérés)
 ```

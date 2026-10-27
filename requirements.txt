@@ -16,3 +16,4 @@ nbformat>=5.9
 nbconvert>=7.16
 ipykernel>=6.29
 jsonschema>=4.18
+streamlit>=1.40

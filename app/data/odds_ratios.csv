@@ -1,0 +1,38 @@
+variable,variable_label,level,reference,n_accidents,odds_ratio,ci_low,ci_high,p_value
+speed,Vitesse maximale autorisée,130 km/h,40-50 km/h,6211,6.339,5.575,7.209,1.9764748631528328e-174
+intersection,Intersection,Passage à niveau,Hors intersection,640,4.699,3.772,5.854,2.329182178990702e-43
+speed,Vitesse maximale autorisée,80-90 km/h,40-50 km/h,71316,1.945,1.819,2.081,2.2006609000873995e-83
+location,Localisation,Hors agglomération,En agglomération,116202,1.91,1.789,2.039,1.173096763878853e-83
+light,Luminosité,Nuit avec éclairage public non allumé,Plein jour,3163,1.78,1.552,2.041,1.483038531233644e-16
+speed,Vitesse maximale autorisée,100-110 km/h,40-50 km/h,11546,1.761,1.588,1.954,1.026601646609295e-26
+road,Catégorie de route,Route départementale,Voie communale,119976,1.715,1.637,1.796,9.793393908836459e-115
+vehicles,Nombre de véhicules,1 véhicule,2 véhicules,122015,1.672,1.61,1.736,4.66575074190951e-158
+speed,Vitesse maximale autorisée,60-70 km/h,40-50 km/h,24314,1.582,1.472,1.701,2.4994570238063843e-35
+light,Luminosité,Nuit sans éclairage public,Plein jour,32589,1.449,1.364,1.539,3.263812418611131e-33
+pedestrian,Piéton impliqué,Oui,Non,52364,1.406,1.332,1.484,2.3660010861539246e-35
+weather,Météo,Temps éblouissant,Normale,5647,1.382,1.247,1.531,6.563160915215682e-10
+road,Catégorie de route,Route de métropole urbaine,Voie communale,9679,1.372,1.241,1.517,6.360250046749639e-10
+road,Catégorie de route,Autre / parking,Voie communale,4112,1.365,1.175,1.586,4.599255772478844e-05
+road,Catégorie de route,Route nationale,Voie communale,20753,1.349,1.259,1.445,2.0145233968200794e-17
+weather,Météo,Autre,Normale,1470,1.279,1.057,1.548,0.011501064330865453
+weather,Météo,Brouillard - fumée,Normale,2230,1.244,1.088,1.422,0.0014272405739276443
+time_band,Tranche horaire,Nuit (21h-6h),Journée (10h-17h),53125,1.199,1.122,1.282,8.378447769784022e-08
+weather,Météo,Temps couvert,Normale,12661,1.163,1.074,1.26,0.00021570390668901543
+light,Luminosité,Crépuscule ou aube,Plein jour,21126,1.153,1.08,1.231,2.0630780941441262e-05
+weather,Météo,Vent fort - tempête,Normale,945,1.118,0.897,1.394,0.32194675015266405
+light,Luminosité,Nuit avec éclairage public allumé,Plein jour,50674,1.099,1.027,1.177,0.0067738433691556235
+weather,Météo,Neige - grêle,Normale,1010,1.057,0.801,1.396,0.6935972014232038
+day_type,Type de jour,Week-end,Semaine,84133,1.051,1.016,1.087,0.004346729130488232
+vehicles,Nombre de véhicules,3 véhicules et +,2 véhicules,22617,1.042,0.975,1.114,0.22196996846901906
+surface,Surface,Mouillée,Normale,60688,1.01,0.945,1.078,0.7759535889163544
+two_wheeler,Deux-roues ou EDP impliqué,Oui,Non,147747,0.951,0.918,0.986,0.0058427634557182365
+time_band,Tranche horaire,Matin (6h-10h),Journée (10h-17h),55945,0.929,0.883,0.976,0.003484884073382874
+time_band,Tranche horaire,Soirée (17h-21h),Journée (10h-17h),88961,0.843,0.805,0.884,9.96465658787439e-13
+surface,Surface,Autre,Normale,2370,0.836,0.714,0.979,0.02651488789911891
+weather,Météo,Pluie,Normale,43671,0.806,0.746,0.871,4.3615822359898146e-08
+speed,Vitesse maximale autorisée,<= 30 km/h,40-50 km/h,42714,0.794,0.74,0.852,1.528122860278836e-10
+intersection,Intersection,Autre intersection,Hors intersection,19210,0.74,0.683,0.802,2.830241896462493e-13
+surface,Surface,Neige / verglas,Normale,1644,0.692,0.559,0.856,0.0006989375012068191
+intersection,Intersection,Intersection X/T/Y,Hors intersection,81826,0.689,0.657,0.722,9.472515692341414e-53
+intersection,Intersection,Giratoire,Hors intersection,13714,0.595,0.538,0.659,8.971803201937872e-24
+road,Catégorie de route,Autoroute,Voie communale,30659,0.349,0.318,0.383,3.5861747954085047e-110
