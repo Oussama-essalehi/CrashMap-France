@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: all download clean load analyze maps export test db-up db-down
+.PHONY: all download clean load analyze maps export web app test db-up db-down
 
 all: ## Full pipeline from an empty data/ folder
 	$(PYTHON) run.py all
@@ -22,6 +22,12 @@ maps: ## Interactive HTML maps
 
 export: ## Export the star schema as CSV to data/gold/ for Power BI
 	$(PYTHON) run.py export
+
+web: ## Compact dataset for the Streamlit web app (app/data/)
+	$(PYTHON) run.py web
+
+app: ## Start the Streamlit web app locally
+	$(PYTHON) run.py app
 
 test: ## Unit tests
 	$(PYTHON) run.py test
