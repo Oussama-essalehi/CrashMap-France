@@ -55,7 +55,7 @@ risque, conditions, profils des victimes et points noirs à Toulouse.
 | **Statistiques** | Intervalles de confiance, khi-deux, régression logistique, modèle prédictif (ROC AUC 0,78) |
 | **Cartographie** | Cartes interactives, détection de points noirs par clustering (DBSCAN) |
 | **Restitution** | Application web Streamlit bilingue, figures, rapport de résultats |
-| **Qualité** | 112 tests automatisés ; totaux de tués identiques aux bilans officiels de l'ONISR |
+| **Qualité** | 108 tests automatisés ; totaux de tués identiques aux bilans officiels de l'ONISR |
 
 **Outils** : Python (pandas, scikit-learn, statsmodels, plotly), PostgreSQL, SQL, Streamlit, Git.
 

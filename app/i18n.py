@@ -22,7 +22,6 @@ UI: dict[str, tuple[str, str]] = {
     "nav_conditions": ("Dans quelles conditions ?", "Under what conditions?"),
     "nav_who": ("Qui ?", "Who?"),
     "nav_hotspots": ("Points noirs à Toulouse", "Toulouse black spots"),
-    "nav_about": ("Méthode et sources", "Method and sources"),
     # Sidebar
     "language": ("Langue", "Language"),
     "about_button": ("À propos du projet", "About this project"),
@@ -267,77 +266,6 @@ UI: dict[str, tuple[str, str]] = {
     "col_from": ("Depuis", "From"),
     "col_to": ("Jusqu'à", "To"),
     "osm_credit": ("Fond de carte © les contributeurs d'OpenStreetMap.", "Base map © OpenStreetMap contributors."),
-    # About
-    "about_md": (
-        """
-### Données
-* **ONISR**, bases annuelles des accidents corporels de la circulation routière, 2019 à 2024 :
-  4 fichiers par an (caractéristiques, lieux, véhicules, usagers), téléchargés via l'API de data.gouv.fr.
-  La structure a changé en 2019 : les années antérieures sont exclues.
-* **INSEE**, populations de référence 2023, pour les taux par habitant.
-* **Contours des départements** : IGN Admin Express via le projet *france-geojson* (Licence Ouverte).
-
-### Méthode
-* **Trois grains séparés** (accident, véhicule, personne). Joindre les 4 fichiers donne une ligne par
-  personne (745 158 lignes pour 327 628 accidents) : compter des accidents sur cette jointure les
-  surestimerait de 2,3 fois. Les accidents sont donc toujours comptés au grain accident.
-* Codes `-1` et « non renseigné » convertis en valeurs vides, jamais en catégorie ; tous les codes
-  décodés d'après la documentation officielle de l'ONISR.
-* **Tués** (décès dans les 30 jours) comme indicateur principal : la catégorie « blessé hospitalisé »
-  n'est plus labellisée depuis 2019.
-* **Taux masqués** sous un seuil d'accidents (100 par défaut, réglable dans la barre latérale).
-* **Intervalles de confiance de Wilson** à 95 % pour les parts d'accidents mortels.
-* **Régression logistique** pour mesurer chaque facteur à autres facteurs égaux ; **DBSCAN** pour les
-  points noirs.
-* Contrôles : tests automatisés ; tués par an identiques aux bilans officiels de l'ONISR ; résultats
-  SQL et Python identiques.
-
-### Limites
-* Pas de données de trafic : les taux sont rapportés aux habitants, pas aux kilomètres parcourus.
-* Tous les accidents ne sont pas géolocalisés précisément ; certaines données personnelles sont occultées.
-* Les écarts liés à l'équipement de sécurité ou aux conditions décrivent des **associations**, pas des
-  causes.
-
-### Le projet
-Pipeline complet (Python, PostgreSQL, tableau de bord Power BI) : [{repo}]({repo})
-
-**Oussama Essalehi** · [LinkedIn](https://www.linkedin.com/in/oussama-essalehi) ·
-[oussama-essalehi.dev](https://oussama-essalehi.dev)
-""",
-        """
-### Data
-* **ONISR** (French road safety observatory), annual road injury accident databases, 2019 to 2024:
-  4 files per year (characteristics, places, vehicles, users), downloaded through the data.gouv.fr API.
-  The format changed in 2019, so earlier years are excluded.
-* **INSEE**, 2023 reference populations, for per-inhabitant rates.
-* **Department outlines**: IGN Admin Express via the *france-geojson* project (Open Licence).
-
-### Method
-* **Three separate grains** (accident, vehicle, person). Joining the 4 files gives one row per person
-  (745,158 rows for 327,628 accidents): counting accidents on that join would overstate them 2.3 times.
-  Accidents are therefore always counted at the accident grain.
-* `-1` and "not filled in" codes are turned into missing values, never into a category; every code is
-  decoded from ONISR's official documentation.
-* **Deaths** (within 30 days) as the main indicator: the "hospitalised" category has not been certified
-  as official statistics since 2019.
-* **Rates hidden** below a minimum number of accidents (100 by default, adjustable in the sidebar).
-* **Wilson 95% confidence intervals** for shares of fatal accidents.
-* **Logistic regression** to measure each factor all else being equal; **DBSCAN** for black spots.
-* Checks: automated tests; yearly deaths identical to ONISR's official reports; SQL and Python results
-  identical.
-
-### Limitations
-* No traffic data: rates are per inhabitant, not per kilometre driven.
-* Not every accident is precisely geolocated; some personal details are withheld in the open data.
-* Differences linked to safety equipment or conditions describe **associations**, not causes.
-
-### The project
-Full pipeline (Python, PostgreSQL, Power BI dashboard): [{repo}]({repo})
-
-**Oussama Essalehi** · [LinkedIn](https://www.linkedin.com/in/oussama-essalehi) ·
-[oussama-essalehi.dev](https://oussama-essalehi.dev)
-""",
-    ),
 }
 
 WEEKDAYS = {"fr": ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
