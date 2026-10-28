@@ -7,7 +7,8 @@
 2. TMDL structural checks (TMDL has no JSON schema): tab indentation, known object keywords and
    properties, every relationship / sortByColumn / DAX reference / report field resolves to an
    existing table, column or measure, Power Query column lists match the gold CSV headers, every
-   measure has a description, a format string and a display folder.
+   measure has a description, a format string and a display folder, no DAX variable is named
+   after a reserved keyword.
 
 This is not a substitute for opening the project in Power BI Desktop (see BUILD_GUIDE.md), but it
 catches schema errors and broken references before that step.
@@ -35,6 +36,10 @@ REPORT = PBI / "CrashMapFrance.Report"
 SCHEMA_HOST = "https://developer.microsoft.com/json-schemas/"
 
 errors: list[str] = []
+# DAX keywords that cannot name a variable (CURRENT is refused by Power BI Desktop even if rarely listed)
+DAX_RESERVED = {"abs", "asc", "at", "by", "column", "columns", "current", "define", "dense", "desc", "evaluate",
+                "false", "in", "measure", "none", "not", "order", "rel", "return", "rows", "skip", "start",
+                "table", "true", "var"}
 
 
 def error(message: str) -> None:
@@ -208,6 +213,9 @@ def check_model(tables: dict[str, dict]) -> None:
             dax = " ".join(m["dax"])
             if not dax:
                 error(f"{t['file']}: measure [{name}] has an empty expression")
+            for var in re.findall(r"\bVAR\s+(\w+)", dax):
+                if var.lower() in DAX_RESERVED:
+                    error(f"{t['file']}: measure [{name}] uses the reserved word {var} as a variable name")
             if dax.count("(") != dax.count(")"):
                 error(f"{t['file']}: measure [{name}] has unbalanced parentheses")
             for tbl, col in DAX_COLUMN.findall(dax):
