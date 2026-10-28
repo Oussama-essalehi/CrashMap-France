@@ -530,7 +530,8 @@ def slicers(prefix: str, y: int = 8) -> list[dict]:
              ("agglo", IN_TOWN, "Localisation", 230), ("seuil", THRESHOLD, "Seuil accidents (taux)", 200)]
     out, x = [], 20
     for key, field, title, width in specs:
-        objects = {"data": [{"properties": {"mode": lit("Dropdown")}}]}
+        objects = {"data": [{"properties": {"mode": lit("Dropdown")}}],
+                   "header": [{"properties": {"show": lit(False)}}]}  # title already names the field
         if key == "seuil":
             objects["selection"] = [{"properties": {"singleSelect": lit(True)}}]
         out.append(visual(f"{prefix}_slc_{key}", "slicer", x, y, width, 70, title, {"Values": [field]},
