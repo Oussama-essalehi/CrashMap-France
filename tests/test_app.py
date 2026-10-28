@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 
 APP_DIR = Path(__file__).resolve().parents[1] / "app"
-PAGES = ["overview", "territory", "when", "conditions", "who", "hotspots", "about"]
+PAGES = ["overview", "territory", "when", "conditions", "who", "hotspots"]
 
 pytest.importorskip("streamlit")
 from streamlit.testing.v1 import AppTest  # noqa: E402

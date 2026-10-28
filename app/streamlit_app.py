@@ -8,7 +8,7 @@ import streamlit as st
 
 from helpers import REPO_URL, language_selector, sidebar_filters
 from i18n import t
-from views import about, conditions, hotspots, overview, territory, when, who
+from views import conditions, hotspots, overview, territory, when, who
 
 st.set_page_config(page_title="CrashMap France", page_icon="🚦", layout="wide",
                    menu_items={"About": f"CrashMap France - 2019-2024. {REPO_URL}"})
@@ -53,6 +53,5 @@ pages = st.navigation([
     st.Page(conditions.render, title=t("nav_conditions"), icon=":material/rainy:", url_path="conditions"),
     st.Page(who.render, title=t("nav_who"), icon=":material/group:", url_path="qui"),
     st.Page(hotspots.render, title=t("nav_hotspots"), icon=":material/location_on:", url_path="points-noirs"),
-    st.Page(about.render, title=t("nav_about"), icon=":material/menu_book:", url_path="methode"),
 ])
 pages.run()
