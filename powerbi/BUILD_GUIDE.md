@@ -104,7 +104,7 @@ Toutes ont une description (visible au survol dans le volet Données) et un form
 | | Accidents pour 100k hab | accidents / (population × nb d'années) × 100 000, vide sous le seuil |
 | | Tués pour 100k hab | tués / (population × nb d'années) × 100 000, vide sous le seuil |
 | 3. Évolution | Nb Accidents N-1, Nb Tués N-1 | `SAMEPERIODLASTYEAR(dim_date[date])` |
-| | Évolution Accidents %, Évolution Tués % | (N - N-1) / N-1, pour une seule année, vide sous le seuil |
+| | Évolution Accidents %, Évolution Tués % | dernière année sélectionnée par rapport à l'année précédente, vide sous le seuil |
 | 4. Classement | Rang Département Mortalité | `RANKX` des départements visibles sur Tués pour 100k hab |
 | 5. Parts | Part Accidents de Nuit % | accidents 21h-6h / accidents, vide sous le seuil |
 | | Part Deux-Roues % | accidents avec deux-roues ou EDP / accidents, vide sous le seuil |
@@ -135,29 +135,29 @@ Canevas 1 280 × 720 px, « Ajuster à la page ». Positions en pixels (x, y, la
 
 ### Bandeau de segments (identique sur les 5 pages)
 
-Cinq segments en liste déroulante, en haut de page (y = 8, hauteur 70), **synchronisés** entre
+Cinq segments en liste déroulante, en haut de page (y = 8, hauteur 80, en-tête du segment masqué), **synchronisés** entre
 les pages (*Affichage > Synchroniser les segments*, groupes `sync_annee`, `sync_region`…) :
 
 | Segment | Champ | Position |
 |---|---|---|
-| Année | `dim_date[year]` | 20, 8, 210 × 70 |
-| Région | `dim_population[region_name]` | 245, 8, 230 × 70 |
-| Département | `dim_population[dep_name]` | 490, 8, 230 × 70 |
-| Localisation | `dim_location[in_town_label]` | 735, 8, 230 × 70 |
-| Seuil accidents (taux) | `'Seuil accidents'[Seuil accidents]`, sélection unique | 980, 8, 200 × 70 |
+| Année | `dim_date[year]` | 20, 8, 210 × 80 |
+| Région | `dim_population[region_name]` | 245, 8, 230 × 80 |
+| Département | `dim_population[dep_name]` | 490, 8, 230 × 80 |
+| Localisation | `dim_location[in_town_label]` | 735, 8, 230 × 80 |
+| Seuil accidents (taux) | `'Seuil accidents'[Seuil accidents]`, sélection unique | 980, 8, 200 × 80 |
 
 ### Page 1 - Vue d'ensemble
 
 | Visuel | Type | Champs | Position | Mise en forme |
 |---|---|---|---|---|
-| Accidents | Carte | Nb Accidents | 20, 95, 195 × 105 | |
+| Accidents | Carte | Nb Accidents | 20, 95, 195 × 105 | étiquette de catégorie masquée sur les six cartes |
 | Tués | Carte | Nb Tués | 227, 95 | |
 | Tués / 100 accidents | Carte | Taux Mortalité (tués / 100 accidents) | 434, 95 | |
 | Tués / 100 000 hab. / an | Carte | Tués pour 100k hab | 641, 95 | |
-| Évolution des tués vs N-1 | Carte | Évolution Tués % | 848, 95 | s'affiche quand une seule année est sélectionnée |
+| Tués vs année précédente | Carte | Évolution Tués % | 848, 95 | sans filtre : 2024 par rapport à 2023 |
 | Part d'accidents de nuit | Carte | Part Accidents de Nuit % | 1055, 95 | |
 | Tués par an (2020 : année COVID) | Histogramme groupé | Axe X : `dim_date[year]` ; Y : Nb Tués | 20, 215, 610 × 490 | étiquettes de données ; mettre la barre 2020 en gris (*Colonnes > Couleur > fx*, ou couleur manuelle) |
-| Accidents par mois, une courbe par année | Graphique en courbes | Axe X : `dim_date[month_name]` ; Y : Nb Accidents ; Légende : `dim_date[year]` | 645, 215, 615 × 490 | |
+| Accidents par mois, une courbe par année | Graphique en courbes | Axe X : `dim_date[month_name]` ; Y : Nb Accidents ; Légende : `dim_date[year]` | 645, 215, 615 × 490 | titre de la légende masqué |
 
 ### Page 2 - Carte de France
 
@@ -228,8 +228,8 @@ par = `dim_location[in_town_label]`, `dim_road[catr_label]`, `dim_road[vma_band]
    types).
 3. **Totaux** : 327 628 accidents et 19 877 tués sans filtre ; 3 432 tués en 2024.
 4. **Table de dates** : *Outils de table > Marquer comme table de dates* doit afficher `dim_date`
-   avec la colonne `date` (sinon le faire à la main). Tester Évolution Tués % en sélectionnant 2024
-   (+1,0 % attendu par rapport à 2023).
+   avec la colonne `date` (sinon le faire à la main). Évolution Tués % doit afficher
+   +1,0 % sans filtre (2024 par rapport à 2023).
 5. **Relations** : vue Modèle, 11 relations plusieurs-à-un, à sens unique.
 6. **Paramètre Seuil accidents** : passer à 1 000 doit vider les taux des petits départements.
 7. **Thème** appliqué (bleu signalisation sur les premiers graphiques).

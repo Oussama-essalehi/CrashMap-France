@@ -33,6 +33,21 @@
         }
       }
     },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -47,7 +62,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Évolution des tués vs N-1'"
+                  "Value": "'Tués vs année précédente'"
                 }
               }
             }

@@ -160,23 +160,21 @@ MEASURES: list[tuple[str, str, str, str, list[str]]] = [
      "Tués sur la même période un an plus tôt.",
      ["CALCULATE ( [Nb Tués], SAMEPERIODLASTYEAR ( dim_date[date] ) )"]),
     ("Évolution Accidents %", "3. Évolution", "+0.0 %;-0.0 %;0.0 %",
-     "Évolution des accidents par rapport à N-1, pour une année donnée. Vide si N ou N-1 est sous le seuil.",
-     ["VAR current = [Nb Accidents]",
-      "VAR previous = [Nb Accidents N-1]",
+     "Évolution des accidents de la dernière année sélectionnée par rapport à l'année précédente. Vide sous le seuil.",
+     ["VAR lastYear = MAX ( dim_date[year] )",
+      "VAR current = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )",
+      "VAR previous = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )",
       "RETURN",
-      "    IF (",
-      f"        HASONEVALUE ( dim_date[year] ) && MIN ( current, previous ) >= {SEUIL},",
-      "        DIVIDE ( current - previous, previous )",
-      "    )"]),
+      f"    IF ( MIN ( current, previous ) >= {SEUIL}, DIVIDE ( current - previous, previous ) )"]),
     ("Évolution Tués %", "3. Évolution", "+0.0 %;-0.0 %;0.0 %",
-     "Évolution des tués par rapport à N-1, pour une année donnée. Vide si les accidents de N ou N-1 sont sous le seuil.",
-     ["VAR current = [Nb Tués]",
-      "VAR previous = [Nb Tués N-1]",
+     "Évolution des tués de la dernière année sélectionnée par rapport à l'année précédente. Vide sous le seuil.",
+     ["VAR lastYear = MAX ( dim_date[year] )",
+      "VAR current = CALCULATE ( [Nb Tués], dim_date[year] = lastYear )",
+      "VAR previous = CALCULATE ( [Nb Tués], dim_date[year] = lastYear - 1 )",
+      "VAR accCurrent = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )",
+      "VAR accPrevious = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )",
       "RETURN",
-      "    IF (",
-      f"        HASONEVALUE ( dim_date[year] ) && MIN ( [Nb Accidents], [Nb Accidents N-1] ) >= {SEUIL},",
-      "        DIVIDE ( current - previous, previous )",
-      "    )"]),
+      f"    IF ( MIN ( accCurrent, accPrevious ) >= {SEUIL}, DIVIDE ( current - previous, previous ) )"]),
     ("Rang Département Mortalité", "4. Classement", "0",
      "Rang du département sur les tués pour 100 000 habitants (1 = le plus touché) parmi les départements "
      "visibles ayant un taux.",
@@ -534,7 +532,7 @@ def slicers(prefix: str, y: int = 8) -> list[dict]:
                    "header": [{"properties": {"show": lit(False)}}]}  # title already names the field
         if key == "seuil":
             objects["selection"] = [{"properties": {"singleSelect": lit(True)}}]
-        out.append(visual(f"{prefix}_slc_{key}", "slicer", x, y, width, 70, title, {"Values": [field]},
+        out.append(visual(f"{prefix}_slc_{key}", "slicer", x, y, width, 80, title, {"Values": [field]},
                           objects=objects,
                           sync_group=f"sync_{key}", z=len(out)))
         x += width + 15
@@ -542,21 +540,23 @@ def slicers(prefix: str, y: int = 8) -> list[dict]:
 
 
 def card(name: str, mname: str, x: int, y: int, title: str, z: int, w: int = 195) -> dict:
-    return visual(name, "card", x, y, w, 105, title, {"Values": [M[mname]]}, z=z)
+    return visual(name, "card", x, y, w, 105, title, {"Values": [M[mname]]}, z=z,
+                  objects={"categoryLabels": [{"properties": {"show": lit(False)}}]})  # title already says it
 
 
 def page_overview() -> list[dict]:
     p = "ve"
     v = slicers(p)
     kpis = [("Nb Accidents", "Accidents"), ("Nb Tués", "Tués"), ("Taux Mortalité (tués / 100 accidents)", "Tués / 100 accidents"),
-            ("Tués pour 100k hab", "Tués / 100 000 hab. / an"), ("Évolution Tués %", "Évolution des tués vs N-1"),
+            ("Tués pour 100k hab", "Tués / 100 000 hab. / an"), ("Évolution Tués %", "Tués vs année précédente"),
             ("Part Accidents de Nuit %", "Part d'accidents de nuit")]
     for i, (mname, title) in enumerate(kpis):
         v.append(card(f"{p}_kpi_{i}", mname, 20 + i * 207, 95, title, 10 + i))
     v.append(visual(f"{p}_tues_annee", "clusteredColumnChart", 20, 215, 610, 490, "Tués par an (2020 : année COVID)",
                     {"Category": [YEAR], "Y": [M["Nb Tués"]]}, objects=data_labels(), z=20))
     v.append(visual(f"{p}_acc_mois", "lineChart", 645, 215, 615, 490, "Accidents par mois, une courbe par année",
-                    {"Category": [column("dim_date", "month_name")], "Y": [M["Nb Accidents"]], "Series": [YEAR]}, z=21))
+                    {"Category": [column("dim_date", "month_name")], "Y": [M["Nb Accidents"]], "Series": [YEAR]}, z=21,
+                    objects={"legend": [{"properties": {"showTitle": lit(False)}}]}))
     return v
 
 

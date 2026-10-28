@@ -97,28 +97,26 @@ table _Mesures
 		displayFolder: 3. Évolution
 		lineageTag: 8b15675e-0ddc-57d2-951a-7a6e845f588a
 
-	/// Évolution des accidents par rapport à N-1, pour une année donnée. Vide si N ou N-1 est sous le seuil.
+	/// Évolution des accidents de la dernière année sélectionnée par rapport à l'année précédente. Vide sous le seuil.
 	measure 'Évolution Accidents %' =
-			VAR current = [Nb Accidents]
-			VAR previous = [Nb Accidents N-1]
+			VAR lastYear = MAX ( dim_date[year] )
+			VAR current = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )
+			VAR previous = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )
 			RETURN
-			    IF (
-			        HASONEVALUE ( dim_date[year] ) && MIN ( current, previous ) >= [Valeur Seuil accidents],
-			        DIVIDE ( current - previous, previous )
-			    )
+			    IF ( MIN ( current, previous ) >= [Valeur Seuil accidents], DIVIDE ( current - previous, previous ) )
 		formatString: +0.0 %;-0.0 %;0.0 %
 		displayFolder: 3. Évolution
 		lineageTag: 1ce95483-a6bf-51ef-ba3c-d7a45beea965
 
-	/// Évolution des tués par rapport à N-1, pour une année donnée. Vide si les accidents de N ou N-1 sont sous le seuil.
+	/// Évolution des tués de la dernière année sélectionnée par rapport à l'année précédente. Vide sous le seuil.
 	measure 'Évolution Tués %' =
-			VAR current = [Nb Tués]
-			VAR previous = [Nb Tués N-1]
+			VAR lastYear = MAX ( dim_date[year] )
+			VAR current = CALCULATE ( [Nb Tués], dim_date[year] = lastYear )
+			VAR previous = CALCULATE ( [Nb Tués], dim_date[year] = lastYear - 1 )
+			VAR accCurrent = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )
+			VAR accPrevious = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )
 			RETURN
-			    IF (
-			        HASONEVALUE ( dim_date[year] ) && MIN ( [Nb Accidents], [Nb Accidents N-1] ) >= [Valeur Seuil accidents],
-			        DIVIDE ( current - previous, previous )
-			    )
+			    IF ( MIN ( accCurrent, accPrevious ) >= [Valeur Seuil accidents], DIVIDE ( current - previous, previous ) )
 		formatString: +0.0 %;-0.0 %;0.0 %
 		displayFolder: 3. Évolution
 		lineageTag: d9a3e5c0-af3f-5461-b0b9-7041fe7ca44f
