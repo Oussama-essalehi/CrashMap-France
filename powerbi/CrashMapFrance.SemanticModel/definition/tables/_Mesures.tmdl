@@ -100,10 +100,10 @@ table _Mesures
 	/// Évolution des accidents de la dernière année sélectionnée par rapport à l'année précédente. Vide sous le seuil.
 	measure 'Évolution Accidents %' =
 			VAR lastYear = MAX ( dim_date[year] )
-			VAR current = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )
-			VAR previous = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )
+			VAR valueNow = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )
+			VAR valueBefore = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )
 			RETURN
-			    IF ( MIN ( current, previous ) >= [Valeur Seuil accidents], DIVIDE ( current - previous, previous ) )
+			    IF ( MIN ( valueNow, valueBefore ) >= [Valeur Seuil accidents], DIVIDE ( valueNow - valueBefore, valueBefore ) )
 		formatString: +0.0 %;-0.0 %;0.0 %
 		displayFolder: 3. Évolution
 		lineageTag: 1ce95483-a6bf-51ef-ba3c-d7a45beea965
@@ -111,12 +111,12 @@ table _Mesures
 	/// Évolution des tués de la dernière année sélectionnée par rapport à l'année précédente. Vide sous le seuil.
 	measure 'Évolution Tués %' =
 			VAR lastYear = MAX ( dim_date[year] )
-			VAR current = CALCULATE ( [Nb Tués], dim_date[year] = lastYear )
-			VAR previous = CALCULATE ( [Nb Tués], dim_date[year] = lastYear - 1 )
-			VAR accCurrent = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )
-			VAR accPrevious = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )
+			VAR valueNow = CALCULATE ( [Nb Tués], dim_date[year] = lastYear )
+			VAR valueBefore = CALCULATE ( [Nb Tués], dim_date[year] = lastYear - 1 )
+			VAR accNow = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear )
+			VAR accBefore = CALCULATE ( [Nb Accidents], dim_date[year] = lastYear - 1 )
 			RETURN
-			    IF ( MIN ( accCurrent, accPrevious ) >= [Valeur Seuil accidents], DIVIDE ( current - previous, previous ) )
+			    IF ( MIN ( accNow, accBefore ) >= [Valeur Seuil accidents], DIVIDE ( valueNow - valueBefore, valueBefore ) )
 		formatString: +0.0 %;-0.0 %;0.0 %
 		displayFolder: 3. Évolution
 		lineageTag: d9a3e5c0-af3f-5461-b0b9-7041fe7ca44f
