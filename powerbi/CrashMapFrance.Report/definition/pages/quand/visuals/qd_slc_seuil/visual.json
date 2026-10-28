@@ -6,7 +6,7 @@
     "y": 8,
     "z": 4,
     "width": 200,
-    "height": 70,
+    "height": 80,
     "tabOrder": 4
   },
   "visual": {
@@ -41,6 +41,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
