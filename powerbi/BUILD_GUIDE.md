@@ -236,8 +236,8 @@ par = `dim_location[in_town_label]`, `dim_road[catr_label]`, `dim_road[vma_band]
 8. **Carte** : les départements sont bien coloriés (sinon voir l'alternative Azure Maps / Carte de
    formes ci-dessus) et l'info-bulle de page s'affiche au survol.
 9. **Mise en forme conditionnelle** des deux matrices de la page « Quand ? ».
-10. Faire des captures d'écran des 5 pages et les enregistrer dans
-    `reports/figures/dashboard_1_vue_ensemble.png` … `dashboard_5_qui.png` (références du README).
+10. Faire des captures d'écran des pages et les enregistrer dans `reports/figures/powerbi/`, sous
+    les noms listés dans [`reports/figures/powerbi/README.md`](../reports/figures/powerbi/README.md).
 
 ## 7. Régénérer et valider le projet
 
