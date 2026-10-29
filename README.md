@@ -4,7 +4,7 @@
 France ?** Analyse de 327 628 accidents corporels de 2019 à 2024, à partir des données publiques de
 l'ONISR.
 
-**Application en ligne :** *lien à venir* · Disponible en français et en anglais, thème clair ou sombre.
+**Application en ligne : [crashmap-france.streamlit.app](https://crashmap-france.streamlit.app/)** · Disponible en français et en anglais, thème clair ou sombre.
 
 ![Tués pour 100 000 habitants par département](reports/figures/map_france_deaths_per_100k.png)
 
@@ -34,6 +34,8 @@ Analyse complète, avec les intervalles de confiance et les limites :
 [`reports/findings.md`](reports/findings.md).
 
 ## L'application web
+
+👉 **[Ouvrir l'application](https://crashmap-france.streamlit.app/)** · [accès direct à la carte de France](https://crashmap-france.streamlit.app/carte)
 
 Filtres par année, région, département et type de route ; carte de France, moments les plus à
 risque, conditions, profils des victimes et points noirs à Toulouse.
