@@ -107,3 +107,4 @@ table dim_location
 				    Typed
 
 	annotation PBI_ResultType = Table
+

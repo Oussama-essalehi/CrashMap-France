@@ -216,3 +216,4 @@ table fact_victim
 				    Typed
 
 	annotation PBI_ResultType = Table
+

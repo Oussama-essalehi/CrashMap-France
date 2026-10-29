@@ -4,9 +4,9 @@
     "customTheme": {
       "name": "CrashMapSignalisation.json",
       "reportVersionAtImport": {
-        "visual": "2.13.0",
-        "page": "2.1.0",
-        "report": "3.3.0"
+        "visual": "2.14.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
       },
       "type": "RegisteredResources"
     }
@@ -28,6 +28,7 @@
     "useStylableVisualContainerHeader": true,
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
-    "useEnhancedTooltips": true
+    "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true
   }
 }

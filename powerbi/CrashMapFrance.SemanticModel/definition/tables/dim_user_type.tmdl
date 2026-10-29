@@ -55,3 +55,4 @@ table dim_user_type
 				    Typed
 
 	annotation PBI_ResultType = Table
+

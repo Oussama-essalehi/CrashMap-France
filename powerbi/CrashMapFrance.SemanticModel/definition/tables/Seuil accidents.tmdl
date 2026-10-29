@@ -27,3 +27,4 @@ table 'Seuil accidents'
 		source = GENERATESERIES ( 0, 1000, 10 )
 
 	annotation PBI_Id = 80b2af17c8775d95bb18384e64b4b2ef
+

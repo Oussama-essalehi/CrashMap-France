@@ -234,8 +234,8 @@ table fact_accident
 	column lat
 		dataType: double
 		formatString: 0.000000
-		dataCategory: Latitude
 		lineageTag: 667d209c-d76f-5b39-8ed5-e72b6b27e98c
+		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: lat
 
@@ -243,8 +243,8 @@ table fact_accident
 
 	column lon
 		dataType: string
-		dataCategory: Longitude
 		lineageTag: 73d9c4ea-8a8b-5ffc-b4ce-620c6b821154
+		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: lon
 
@@ -300,3 +300,4 @@ table fact_accident
 				    Typed
 
 	annotation PBI_ResultType = Table
+

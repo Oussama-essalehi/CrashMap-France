@@ -56,3 +56,4 @@ table dim_time_band
 				    Typed
 
 	annotation PBI_ResultType = Table
+

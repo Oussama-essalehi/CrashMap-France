@@ -23,6 +23,8 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column year
 		dataType: int64
 		formatString: 0
@@ -135,3 +137,4 @@ table dim_date
 				    Typed
 
 	annotation PBI_ResultType = Table
+

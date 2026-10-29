@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "cd_trace",
   "position": {
     "x": 20,
     "y": 505,
     "z": 15,
-    "width": 830,
     "height": 200,
+    "width": 830,
     "tabOrder": 15
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_road.intersection_label",
-              "nativeQueryRef": "intersection_label"
+              "nativeQueryRef": "intersection_label",
+              "active": true
             }
           ]
         },
@@ -65,8 +66,7 @@
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": false
+        ]
       }
     },
     "objects": {

@@ -41,3 +41,4 @@ relationship 593dc520-6c3c-52b0-bfef-ef135fd1d95a
 relationship 7de96fd4-0b95-50bd-82ae-c899ede4671f
 	fromColumn: fact_victim.catv
 	toColumn: dim_vehicle_type.catv
+

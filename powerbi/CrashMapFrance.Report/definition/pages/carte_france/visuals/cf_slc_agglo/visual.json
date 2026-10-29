@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "cf_slc_agglo",
   "position": {
     "x": 735,
     "y": 8,
     "z": 3,
-    "width": 230,
     "height": 80,
+    "width": 230,
     "tabOrder": 3
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_location.in_town_label",
-              "nativeQueryRef": "in_town_label"
+              "nativeQueryRef": "in_town_label",
+              "active": true
             }
           ]
         }

@@ -1,5 +1,6 @@
 /// Dossier contenant les CSV de data/gold (chemin absolu). À adapter puis Actualiser.
-expression DataFolder = "C:\CrashMapFrance\data\gold" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+expression DataFolder = "C:\Users\oussa\OneDrive\Bureau\My projects\CrashMap-France\data\gold" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: e7056396-96c6-5419-8449-fc9cb98c3f95
 
 	annotation PBI_ResultType = Text
+

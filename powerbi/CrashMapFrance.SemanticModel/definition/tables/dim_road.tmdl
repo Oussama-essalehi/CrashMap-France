@@ -107,3 +107,4 @@ table dim_road
 				    Typed
 
 	annotation PBI_ResultType = Table
+

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "cf_carte",
   "position": {
     "x": 20,
     "y": 95,
     "z": 10,
-    "width": 640,
     "height": 610,
+    "width": 640,
     "tabOrder": 10
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_population.dep_geo",
-              "nativeQueryRef": "dep_geo"
+              "nativeQueryRef": "dep_geo",
+              "active": true
             }
           ]
         },

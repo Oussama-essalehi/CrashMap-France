@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "qd_tranche",
   "position": {
     "x": 860,
     "y": 405,
     "z": 14,
-    "width": 400,
     "height": 300,
+    "width": 400,
     "tabOrder": 14
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_time_band.time_band",
-              "nativeQueryRef": "time_band"
+              "nativeQueryRef": "time_band",
+              "active": true
             }
           ]
         },

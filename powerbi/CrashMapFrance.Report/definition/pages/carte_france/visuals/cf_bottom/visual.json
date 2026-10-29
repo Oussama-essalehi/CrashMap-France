@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "cf_bottom",
   "position": {
     "x": 675,
     "y": 405,
     "z": 12,
-    "width": 585,
     "height": 300,
+    "width": 585,
     "tabOrder": 12
   },
   "visual": {
@@ -117,8 +117,7 @@
             },
             "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": false
+        ]
       }
     },
     "visualContainerObjects": {

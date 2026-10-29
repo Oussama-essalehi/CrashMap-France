@@ -62,8 +62,8 @@ table dim_population
 
 	column dep_geo
 		dataType: string
-		dataCategory: County
 		lineageTag: 14152bbe-d8a2-5a53-8d2b-20f801acaece
+		dataCategory: County
 		summarizeBy: none
 		sourceColumn: dep_geo
 
@@ -90,3 +90,4 @@ table dim_population
 				    WithGeo
 
 	annotation PBI_ResultType = Table
+

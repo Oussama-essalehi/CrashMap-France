@@ -1,0 +1,191 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1586.0307616540028,
+            "y": 475.08826031712942
+          },
+          "nodeIndex": "_Mesures",
+          "nodeLineageTag": "dce62937-96bb-5316-902c-7177f57ae6c5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 627.32593936099533,
+            "y": -50
+          },
+          "nodeIndex": "dim_conditions",
+          "nodeLineageTag": "31cb8866-8f69-52e6-9be8-b69a4cc9716d",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 516.393431991918
+          },
+          "nodeIndex": "dim_date",
+          "nodeLineageTag": "40b33395-fdf8-53a0-8fc1-fb7f6500f721",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 599.31344956663406,
+            "y": 900.17652063425885
+          },
+          "nodeIndex": "dim_location",
+          "nodeLineageTag": "fdd04628-c2fa-5e3a-ae03-657b1448879f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 337.48109848902834,
+            "y": 217.73196845212715
+          },
+          "nodeIndex": "dim_population",
+          "nodeLineageTag": "c02d807c-8559-5d8b-805d-7cfc3c28cc68",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 289.91377278307232,
+            "y": 895.16966145493393
+          },
+          "nodeIndex": "dim_road",
+          "nodeLineageTag": "153fe86d-30ca-5e8d-b25a-28d1853cd0bc",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 979.37886811387534,
+            "y": -44.862050175281183
+          },
+          "nodeIndex": "dim_time_band",
+          "nodeLineageTag": "c241a45e-8743-55b5-aba6-1deb6ba0e266",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1352.0307616540026,
+            "y": 294.72071403665677
+          },
+          "nodeIndex": "dim_user_type",
+          "nodeLineageTag": "3dd26c6f-de06-5b97-96a3-3c20240224b8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1297.2279464394894,
+            "y": 738.150057164817
+          },
+          "nodeIndex": "dim_vehicle_type",
+          "nodeLineageTag": "7e0e8824-5ff6-5a2d-aa44-67bd4a3e38c5",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 579.8074518413257,
+            "y": 542.87575901179378
+          },
+          "nodeIndex": "fact_accident",
+          "nodeLineageTag": "42f65246-3345-52e2-99fc-1d00a51e780f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 889.26070573103766,
+            "y": 738.42598038852452
+          },
+          "nodeIndex": "fact_vehicle",
+          "nodeLineageTag": "5bf81a6c-687f-5739-bb0c-b2fa33294586",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1062.0604189301425,
+            "y": 381.19928494508929
+          },
+          "nodeIndex": "fact_victim",
+          "nodeLineageTag": "17993552-62a6-590d-b31d-f0e6495fc462",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1870.0307616540028,
+            "y": 513.08826031712942
+          },
+          "nodeIndex": "Seuil accidents",
+          "nodeLineageTag": "15460cb3-3eec-5668-9134-9188614c1b51",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

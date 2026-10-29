@@ -7,11 +7,11 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-	annotation __PBI_TimeIntelligenceEnabled = 0
+annotation __PBI_TimeIntelligenceEnabled = 0
 
-	annotation PBI_QueryOrder = ["DataFolder", "dim_date", "dim_time_band", "dim_location", "dim_population", "dim_conditions", "dim_road", "dim_user_type", "dim_vehicle_type", "fact_accident", "fact_vehicle", "fact_victim", "_Mesures"]
+annotation PBI_QueryOrder = ["DataFolder", "dim_date", "dim_time_band", "dim_location", "dim_population", "dim_conditions", "dim_road", "dim_user_type", "dim_vehicle_type", "fact_accident", "fact_vehicle", "fact_victim", "_Mesures"]
 
-	annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode"]
 
 ref table dim_date
 ref table dim_time_band
@@ -26,3 +26,4 @@ ref table fact_vehicle
 ref table fact_victim
 ref table _Mesures
 ref table 'Seuil accidents'
+

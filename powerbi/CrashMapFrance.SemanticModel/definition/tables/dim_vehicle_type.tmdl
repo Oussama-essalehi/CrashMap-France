@@ -88,3 +88,4 @@ table dim_vehicle_type
 				    Typed
 
 	annotation PBI_ResultType = Table
+

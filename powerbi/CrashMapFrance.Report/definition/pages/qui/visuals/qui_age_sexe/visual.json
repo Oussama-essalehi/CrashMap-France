@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "qui_age_sexe",
   "position": {
     "x": 20,
     "y": 405,
     "z": 13,
-    "width": 620,
     "height": 300,
+    "width": 620,
     "tabOrder": 13
   },
   "visual": {
@@ -27,25 +27,8 @@
                 }
               },
               "queryRef": "fact_victim.age_band",
-              "nativeQueryRef": "age_band"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Mesures"
-                    }
-                  },
-                  "Property": "Nb Tués"
-                }
-              },
-              "queryRef": "_Mesures.Nb Tués",
-              "nativeQueryRef": "Nb Tués"
+              "nativeQueryRef": "age_band",
+              "active": true
             }
           ]
         },
@@ -64,6 +47,24 @@
               },
               "queryRef": "fact_victim.sex",
               "nativeQueryRef": "sex"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mesures"
+                    }
+                  },
+                  "Property": "Nb Tués"
+                }
+              },
+              "queryRef": "_Mesures.Nb Tués",
+              "nativeQueryRef": "Nb Tués"
             }
           ]
         }

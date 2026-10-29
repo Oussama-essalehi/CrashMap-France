@@ -132,3 +132,4 @@ table fact_vehicle
 				    Typed
 
 	annotation PBI_ResultType = Table
+

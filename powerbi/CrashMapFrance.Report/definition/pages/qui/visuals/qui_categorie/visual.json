@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "qui_categorie",
   "position": {
     "x": 860,
     "y": 95,
     "z": 12,
-    "width": 400,
     "height": 300,
+    "width": 400,
     "tabOrder": 12
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_user_type.catu_label",
-              "nativeQueryRef": "catu_label"
+              "nativeQueryRef": "catu_label",
+              "active": true
             }
           ]
         },

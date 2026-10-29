@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "qd_mois_acc",
   "position": {
     "x": 20,
     "y": 405,
     "z": 12,
-    "width": 410,
     "height": 300,
+    "width": 410,
     "tabOrder": 12
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_date.month_name",
-              "nativeQueryRef": "month_name"
+              "nativeQueryRef": "month_name",
+              "active": true
             }
           ]
         },
